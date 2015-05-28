@@ -11,4 +11,8 @@ Relay Computer 2
 * Will have about 3000 relays:
 
 * Clock frequency 40-50Hz.
+* 
+ГыуUse DipTrace 2.3 or higher  to open project files
+
+Use Splan 7 to open spl7 files - there are some structures.
 
