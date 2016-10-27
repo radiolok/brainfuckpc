@@ -2,19 +2,17 @@ Relay Computer 2
 
 * Brainfuck arch with RLE support
 
-* 16-bit address - Use SRAM IC;
+* 16-bit Address Ptr - Use 65536 x 16 SRAM or you can use different memory types and linear address space;
 
 * 16-bit IP;
 
-* 8-bit Data;
-
-* 8-stage while loop stack;
+* 16-bit Data/ Or you can enable 8-bit data mode for executing 8-bit programms;
 
 * Use reed switch relay only;
 
-* Main logic takes 1800 relays, and we need about 200 relays for control signal routing
+* Main logic takes 520 relays, and we need about 200 relays for control signal routing
 
-* Clock frequency 40-50Hz.
+* Clock frequency up to 100 Hz.
 
 Brainfuck is an esoteric programming language created in 1993 by Urban Müller, and notable for its extreme minimalism.
 
@@ -43,6 +41,8 @@ Classic Brainfuck arch has eight commands:
 As each relay has very big latency I add RLE compressing of +- and <> commands.
 
 If source file contain "+++++" or "-----" sequence, when listing will be loaded this sequence will be transformed into "+Constant" command - My computer has fully - functional 8-bit ADD-er for Data and 16-bit Adder for Address and this hack improve computer performance in many times.
+
+Loop command are work as JZ to the end of the cycle and LZN to begin using second Adder input and 12-bit jump
 
 Use DipTrace 2.3 or higher  to open project files
 
