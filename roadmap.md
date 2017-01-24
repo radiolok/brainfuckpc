@@ -8,10 +8,10 @@
 |D-TRIGGER          | Done        |    0/4      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Not started  |
 |Base board         | Done        |    0/2      |    0/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  Not started  |
 |Base/Switch board  | Done        |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    |  Not started  |
-|Memory board       | In progress |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
+|Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
 ## Equipment
-1. Roaster temperature regulator
-2. Solder mask frame table
+1. Roaster temperature regulator - In work
+2. Solder mask frame table   - Not started
 
 # 2. Soldering
 | Module            | Components  | Soldered    | Checked  |    Status    |
@@ -24,7 +24,8 @@
 |Base/Switch board  |  Not check  |   0/1       |    0     |  Not started |
 |Memory board       |  Not check  |   0/1       |    0     |  Routing     |
 ## Equipment
-
+1. Relay tester - Not started
+2. Modules tester - Not started
 
 # 3. Wire Wrapping
 |Block               |     Status    |     
