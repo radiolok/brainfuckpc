@@ -3,14 +3,14 @@
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
 |ADD+C              | Done        |    4/4      |    2/2      |    0/2     |      0/2    |   0/2   |  2     |  16    |  layer image  |
-|2AND/2OR           | Done        |    0/4      |    0/2      |    0/2     |      0/2    |   0/2   |  2(?)  |  16(?) |  Not started  |
+|2AND/2OR           | Done        |    ***4***/4      |    0/2      |    0/2     |      0/2    |   0/2   |  2(?)  |  16(?) | ***Photomask***  |
 |5AND               | Done        |    0/4      |    0/4      |    0/4     |      0/4    |   0/4   |  4     |  32    |  Not started  |
 |D-TRIGGER          | Done        |    0/4      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Not started  |
 |Base board         | Done        |    0/2      |    0/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  Not started  |
-|Base/Switch board  | Done        |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    |  Not started  |
+|Base/Switch board  | Done        |    ***2***/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    |  Not started  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
 ## Equipment
-1. Roaster temperature regulator - In work
+1. Roaster temperature regulator - ***Done, need tuning, video on work***
 2. Solder mask frame table   - Not started
 
 # 2. Soldering
