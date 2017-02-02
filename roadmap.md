@@ -6,11 +6,11 @@
 |2AND/2OR           | Done        |    ***4***/4      |    0/2      |    0/2     |      0/2    |   0/2   |  2(?)  |  16(?) | ***Photomask***  |
 |5AND               | Done        |    0/4      |    0/4      |    0/4     |      0/4    |   0/4   |  4     |  32    |  Not started  |
 |D-TRIGGER          | Done        |    0/4      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Not started  |
-|Base board         | Done        |    0/2      |    0/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  Not started  |
-|Base/Switch board  | Done        |    ***2***/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    |  Not started  |
+|Base board         | Done        |    ***2***/2      |    0/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  ***Photomask***  |
+|Base/Switch board  | Done        |    ***2***/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | ***Photomask***  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
 ## Equipment
-1. Roaster temperature regulator - ***Done, need tuning, video on work***
+1. Roaster temperature regulator - ***Done***
 2. Solder mask frame table   - Not started
 
 # 2. Soldering
