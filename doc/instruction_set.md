@@ -22,8 +22,8 @@ All instructions are 16-bit wide.
 |and m16     |9X XX  |DP ← DP AND m16 | None | Logical AND of current data value with negative constant|
 |or m16      |aX XX  |DP ← DP OR m16 | None | Logical OR of current data value with positive constant|
 |or m16      |bX XX  |DP ← DP OR m16 | None | Logical OR of current data value with negative constant|
-|in          |c0 00  |DP ← CIN  | ','  | Read one symbol from console. If Cin buffer is empty, wait it |
-|out         |c0 01  |COUT ← IP | '.'  | Write symbol to console |
+|in          |c0 00  |DP ← CIN  | ','  | Read one m8 symbol from console. If Cin buffer is empty, wait it |
+|out         |c0 01  |COUT ← IP | '.'  | Write m8 symbol to console |
 |clr.ap      |d0 01  |AP ← 0 | None  | Clear AP register. Can be combined with other clr commands |
 |clr.ip      |d0 02  |IP ← 0 | None  | Clear IP register. Can be combined with other clr commands |
 |clr.dp      |d0 04  |DP ← 0 | '[+]' or '[-]'  | Clear current data cell. Can be combined with other clr commands |
@@ -31,7 +31,7 @@ All instructions are 16-bit wide.
 |set.ip      |d0 20  |IP ← DP | None  | Write current data value to IP register |
 |get.ap      |d1 00  |DP ← AP | None  | Read current data value from AP register |
 |get.ip      |d2 00  |DP ← IP | None  | Read current data value from IP register |
-|mode.b8     |e1 00  |        | None  | 8-bit mode activated  |
+|mode.b8     |e1 00  |        | None  | 8-bit mode activated(1)  |
 |mode.b16    |e2 00  |        | None  | 16-bit mode activated |
 |halt        |f0 00  |        | None  | halt machine          |
 
@@ -40,3 +40,6 @@ All instructions are 16-bit wide.
 * DP - Current Data cell
 * CIN - Console input
 * COUT - console output
+
+
+1. When 8-bit mode activated all arithimetic operations continue to perform in 16-bit mode. But JZ and JNZ branches start depends on only least data byte -  (DP & 0x00FF == 0)? and (DP & 0x00FF != 0)? Console Input and Output are always read and write only least byte of 16-bit Word.
