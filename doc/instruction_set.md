@@ -30,13 +30,13 @@ All instructions are 16-bit wide.
 |set.ap      |d0 10  |AP ← DP | None  | Write current data value to AP register |
 |set.ip      |d0 20  |IP ← DP | None  | Write current data value to IP register |
 |get.ap      |d1 00  |DP ← AP | None  | Read current data value from AP register |
-|get.ip      |d2 00  |DP ← IP | None  | Read current data value fromt IP register |
+|get.ip      |d2 00  |DP ← IP | None  | Read current data value from IP register |
 |mode.b8     |e1 00  |        | None  | 8-bit mode activated  |
 |mode.b16    |e2 00  |        | None  | 16-bit mode activated |
 |halt        |f0 00  |        | None  | halt machine          |
 
-AP - Address pointer Register
-IP - Instruction pointer register
-DP - Current Data cell
-CIN - Console input
-COUT - console output
+* AP - Address pointer Register
+* IP - Instruction pointer register
+* DP - Current Data cell
+* CIN - Console input
+* COUT - console output
