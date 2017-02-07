@@ -3,21 +3,23 @@
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
 |ADD+C              | Done        |    4/4      |    2/2      |    0/2     |      0/2    |   0/2   |  2     |  16    |  layer image  |
-|2AND/2OR           | Done        |    ***4***/4      |    0/2      |    0/2     |      0/2    |   0/2   |  2(?)  |  16(?) | ***Photomask***  |
+|2AND/2OR           | Done        |    4/4      |    ***4***/2      |    0/2     |      0/2    |   0/2   |  2(?)  |  16(?) | ***Layer Image***  |
 |5AND               | Done        |    0/4      |    0/4      |    0/4     |      0/4    |   0/4   |  4     |  32    |  Not started  |
 |D-TRIGGER          | Done        |    0/4      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Not started  |
-|Base board         | Done        |    ***2***/2      |    0/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  ***Photomask***  |
-|Base/Switch board  | Done        |    ***2***/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | ***Photomask***  |
+|Base board         | Done        |    2/2      |    ***5***/5      |    0/5     |      0/5    |   0/5   |  5     |   5    |  ***Layer Image***  |
+|Base/Switch board  | Done        |    2/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
 ## Equipment
-1. Roaster temperature regulator - ***Done***
+1. Roaster temperature regulator - Done
 2. Solder mask frame table   - Not started
+3. ***Etching bath - Not started***
+4. ***CNC milling machine tuning - Not started***
 
 # 2. Soldering
 | Module            | Components  | Soldered    | Checked  |    Status    |
 |-------------------|-------------|-------------|----------|--------------|
-|ADD+C              |  Not check  |   0/16      |    0     | layer image  |
-|2AND/2OR           |  Not check  |   0/16      |    0     | Not started  |
+|ADD+C              |  Not check  |   0/16      |    0     |  Not started |
+|2AND/2OR           |  Not check  |   0/16      |    0     |  Not started |
 |5AND               |  Not check  |   0/32      |    0     |  Not started |
 |D-TRIGGER          |  Not check  |   0/64      |    0     |  Not started |
 |Base board         |  Not check  |   0/5       |    0     |  Not started |
