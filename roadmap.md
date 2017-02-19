@@ -3,15 +3,16 @@
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
 |ADD+C              | Done        |    4/4      |    2/2      |    0/2     |      0/2    |   0/2   |  2     |  16    |  Layer image  |
-|2AND/2OR           | Done        |    4/4      |    4/2      |    3/2     |      0/2    |   0/2   |  2(?)  |  16(?) | ***Layer Etch***  |
+|2AND/2OR           | Done        |    4/4      |    4/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | ***Layer Etch***  |
 |5AND               | Done        |    ***4***/4      |    ***4***/4      |    0/4     |      0/4    |   0/4   |  4     |  32    | ***Layer Image***  |
 |D-TRIGGER          | Need Fix        |    0/4      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Not started  |
 |Base board         | Done        |    2/2      |    5/5      |    2/5     |      0/5    |   0/5   |  5     |   5    |  ***Layer Etch***  |
 |Base/Switch board  | Done        |    2/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
+| Summary   | N/A |   16/20  |    17/24(?) |    5/24    |   0/24   |   0/24  |   24   |   151(?)  | |
 ## Equipment
 1. Roaster temperature regulator - Done
-2. Solder mask frame table   - Not started
+2. ***Solder mask frame table   - Making plywood parts***
 3. ***Etching bath - First successfull test***
 4. CNC milling machine tuning - Not started
 
