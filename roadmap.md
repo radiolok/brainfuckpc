@@ -2,14 +2,15 @@
 
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
-|ADD+C              | Done        |    ***2/2***      |    ***1***/2      |    0/2     |      0/2    |   0/2   |  2     |  16    |  Layer Image  |
+|ADD+C              | Done        |    ***2/2***      |    ***2***/2      |    0/2     |      0/2    |   0/2   |  2     |  16    |  Layer Image  |
 |2AND/2OR           | Done        |    4/4      |    3/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | ***Layer Etch***  |
-|5AND               | Done        |    ***4***/4      |    ***4***/4      |    0/4     |      0/4    |   0/4   |  4     |  32    | ***Layer Image***  |
-|D-TRIGGER          | Done       |    ***2/2***      |    2/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Layer Image  |
+|5AND               | Done        |    ***4***/4  |    ***1***/4      |    0/4     |      0/4    |   0/4   |  4     |  32    | ***Layer Image***  |
+|D-TRIGGER          | Done       |    ***2/2***    |    ***7***/8      |    0/8     |      0/8    |   0/8   |  8     |  64    |  Layer Image  |
+|Diode module       | Done        |    0/2      |    0/2      |    0/2     |      0/2    |   0/2   |  2     |   16    |  Routing  |
 |Base board         | Done        |    2/2      |    5/5      |    2/5     |      0/5    |   0/5   |  5     |   5    |  ***Layer Etch***  |
-|Base/Switch board  | Done        |    0/0      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
+|Base/Switch board  | Done        |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
-| Summary   | N/A |   16/20  |    17/24(?) |    5/24    |   0/24   |   0/24  |   24   |   151(?)  | |
+| Summary   | N/A |   14/18  |    18/26(?) |    5/26    |   0/26   |   0/26  |   26   |   166(?)  | |
 ## Equipment
 1. Roaster temperature regulator - Done
 2. ***Solder mask frame table   - Making plywood parts***
