@@ -2,19 +2,20 @@
 
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
-|ADD+C              | Done        |    2/2      |    2/2      |    ***2***/2     |      0/2    |   0/2   |  2     |  16    |  ***Layer Etch***  |
-|2AND/2OR           | Done        |    4/4      |    3/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | ***Layer Etch***  |
-|5AND               | Done        |    4/4  |    1/4      |    ***1***/4     |      0/4    |   0/4   |  4     |  32    | ***Layer Image***  |
-|D-TRIGGER          | Done       |    2/2    |    6/8      |    ***6***/8     |      0/8    |   0/8   |  8     |  64    |  ***Layer Etch***  |
-|Diode module       | Done        |    0/2      |    0/2      |    0/2     |      0/2    |   0/2   |  2     |   16    |  Routing  |
-|Base board         | Done        |    2/2      |    5/5      |    ***5***/5     |      0/5    |   0/5   |  5     |   5    |  ***Layer Etch***  |
-|Base/Switch board  | Done        |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
+|ADD+C              | Done        |    2/2      |    2/2      |   2/2     |      0/2    |   0/2   |  2     |  16    |  Layer Etch |
+|2AND/2OR           | Done        |    4/4      |    ***4***/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | Layer Etch  |
+|5AND               | Done        |    4/4  |    ***4***/4      |    1/4     |      0/4    |   0/4   |  4     |  32    | Layer Image |
+|D-TRIGGER          | Done        |    2/2    |    ***8***/8      |    6/8     |      0/8    |   0/8   |  8     |  64    | Layer Etch |
+|Diode module       | Done        |    0/2      |    0/2      |    0/?     |      0/?    |   0/?   |  ?     |   ?    |  Routing  |
+|2ANDx4 module      | In work     |    0/4      |    0/?      |    0/?     |      0/?    |   0/?   |  ?     |   ?    |  Routing  |
+|Base board         | Done        |    2/2      |    5/6      |    5/6     |      0/6    |   0/6   |  6      |  6    |  Layer Etch  |
+|Base/Switch board(?)  | Done     |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
 |Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
-| Summary   | N/A |   14/18  |    17/26(?) |    17/26    |   0/26   |   0/26  |   26   |   166(?)  | |
+| Summary           | N/A         |   14/22     |    17/30    |    17/30    |   0/30     |   0/30  |   30   |   198  | |
 ## Equipment
 1. Roaster temperature regulator - Done
-2. ***Solder mask frame table   - Making plywood parts***
-3. ***Etching bath - First successfull test***
+2. ***Solder mask frame table   - Ready for use***
+3. Etching bath - First successfull test
 4. CNC milling machine tuning - Not started
 
 # 2. Soldering
@@ -28,7 +29,7 @@
 |Base/Switch board  |  Not check  |   0/1       |    0     |  Not started |
 |Memory board       |  Not check  |   0/1       |    0     |  Routing     |
 ## Equipment
-1. ***Relay tester - Found appropriate connectors***
+1. Relay tester - Found appropriate connectors
 2. Modules tester - Not started
 
 # 3. Wire Wrapping
@@ -57,7 +58,12 @@
 
 # 6. Progress updates:
 
-## Udate 25/02/2017:
+## Update 04/03/2017:
+* Put image on another 6 plates and want to etch them in near future - 3x5AND, 1x2AND/2OR, 2xD-trigger.
+* Almost finished with Memory Board routing. Need to fix power lines and check all connections.
+* Prepare plywood table for photomask - it's ready for use and I want to start when finished with all known boards.
+
+## Update 25/02/2017:
 * Etched additional 12 pcb's - 6 pcb of D-trigger, 2 ADD+C, 1 5AND, 3 base boards.
 
 ## Update 23/02/2017:
