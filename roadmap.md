@@ -63,7 +63,7 @@
 
 # 6. Progress updates:
 
-## Update 04/03/2017:
+## Update 08/03/2017:
 * I'm done with all known modules etching 30 pcbs! All adder modules, all register modules are ecthed;
 * Created and etched some modules for logic block - I have 64 modules capacity on it and have only preliminarty schematic for microcode;
 * Next step - apply solder mask on them and send to drilling and milling. After this steps I will start soldering modules.
