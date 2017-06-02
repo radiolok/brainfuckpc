@@ -2,37 +2,40 @@
 
 | Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
 |-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
-|ADD+C              | Done        |    2/2      |    2/2      |   2/2     |      0/2    |   0/2   |  2     |  16    |  Layer Etch |
+|2AND/2XOR(carry chain Adder)     | Done    |    2/2      |    0/4     |    0/4  |    0/4  |   0/4   |  4  |  32    | Layer Image  |
+|ADD+C(1)           | Done        |    2/2      |    2/2      |   2/2    |      ---   |   ---   |  ---     |  ---    |  [DEPRECATED] |
 |2AND/2OR           | Done        |    4/4      |    4/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | Layer Etch  |
-|5AND               | Done        |    4/4  |    4/4      |    1/4     |      0/4    |   0/4   |  4     |  32    | Layer Image |
+|5AND(2)               | Done        |    4/4  |    4/4      |    4/4      |      ---   |   ---   |  ---     |  ---    |  [DEPRECATED]
 |D-TRIGGER          | Done        |    2/2    |    ***9***/8      |    9/8     |      0/8    |   0/8   |  8     |  64    | Layer Etch |
-|Diode module       | Done        |    2/2      |    0/2      |    0/?     |      0/?    |   0/?   |  ?     |   ?    |  Routing  |
-|2ANDx4 module      | Done     |    2/2      |    2/?      |    ***2/?***     |      0/?    |   0/?   |  ?     |   ?    |  ***Layer Etch***  |
-|2AND-NOTx3+2AND module    | Done     |    2/2      |    2/?      |    ***2/?***     |      0/?    |   0/?   |  ?     |   ?    |  ***Layer Etch***  |
+|Diode module       | Done        |    2/2      |    2/2      |   2/?     |      0/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
+|2ANDx4 module      | Done     |    2/2      |    2/?      |    2/?    |      0/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
+|2AND-NOTx3+2AND module    | Done     |    2/2      |    2/?      |    2/?     |      0/?    |   0/?   |  ?     |   ?  |  Layer Etch  |
 |Base board         | Done        |    2/2      |    5/6      |    5/6     |      0/6    |   0/6   |  6      |  6    |  Layer Etch  |
-|Base/Switch board(1)  | Done     |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | Photomask  |
-|Memory board       | In work     |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Routing      |
-| Summary           | N/A         |   20/22     |    30/30+    |    30/30+    |   0/30     |   0/30  |   30   |   198  | All known modules etched! |
+|Base/Switch board(1)  | Done     |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | [DEPRECATED]  |
+|Memory board       | Done    |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Soldering      |
+| Summary           | N/A         |   20/22     |    30/30+    |    30/30+    |   0/30     |   0/30  |   30   |   198  | ----- |
 
-1. I'm not sure that I need this one;
+1. With Carry-chain version of ADDer I don't need this module for BFPC. Etched plates will be usefull somewhen infuture;
+2. With Carry-chain version of ADDer i don't need this module type for adding operations. But this module type would be very usefull for control logic purposes. Currently I have no idea how much of modules I need. I will do one plate with 9 modules of them. This that would be enough
+3. Doesn't need of this type;
 
 ## Equipment
 1. Roaster temperature regulator - Done
 2. Solder mask frame table   - Ready for use
-3. Etching bath - First successfull test
+3. Etching bath - Ok
 4. CNC milling machine tuning - Not started
-5. ***3D printer - I don't know why I bought it, but think I will find him an application*** 
+5. 3D printer - I don't know why I bought it, but think I will find him an application
 
 # 2. Soldering
 | Module            | Components  | Soldered    | Checked  |    Status    |
 |-------------------|-------------|-------------|----------|--------------|
-|ADD+C              |  Not check  |   0/16      |    0     |  Not started |
 |2AND/2OR           |  Not check  |   0/16      |    0     |  Not started |
-|5AND               |  Not check  |   0/32      |    0     |  Not started |
+|2AND/2XOR          |  Not check  |   0/32      |    0     |  Not started |
+|5AND               |  Not check  |   0/8       |    0     |  Not started |
 |D-TRIGGER          |  Not check  |   0/64      |    0     |  Not started |
-|Base board         |  Not check  |   0/5       |    0     |  Not started |
-|Base/Switch board  |  Not check  |   0/1       |    0     |  Not started |
-|Memory board       |  Not check  |   0/1       |    0     |  Routing     |
+|Base board         |  Not check  |   0/6       |    0     |  Not started |
+|Memory board       |  Not check  |   0/1       |    0     |  Soldering   |
+
 ## Equipment
 1. Relay tester - Found appropriate connectors
 2. Modules tester - Not started
@@ -41,7 +44,7 @@
 |Block               |     Status    |     
 |--------------------|---------------|
 |ADD                 |  Not started  |
-|CARRY               |  Not started  |
+|LATCH BLOCK         |  Not started  |
 |IP/AP REG           |  Not started  |
 |TMP/CMD REG         |  Not started  |
 |LOGIC BLOCK         |  Not started  |
@@ -50,8 +53,8 @@
 # 4. Memory Board 
 | Operation           |  Status       |
 |---------------------|---------------|
-| Schematic           |  In work      |
-| PCB Routing         |  In work      |
+| Schematic           |  Done         |
+| PCB Routing         |  Done         |
 | MCU firmware        |  Not started  |
 
 
@@ -62,6 +65,12 @@
 | Main Frame          | Not started  |
 
 # 6. Progress updates:
+
+## Update 17/04/2017:
+* Rework and optimized ADDer logic. previous version needed 64 modules with 3 different types: ADD+C, 5AND, 2AND/2OR. New version need 32 modules with 2AND/2XOR type; One basic block would be used for latches.
+* Done with memory Board module routing - Already got ready pcb from manufacturer and currently soldering it.
+* Done with prepearing for solder mask operations - will start with this one as soon possible;
+* Thinking about memory module firmware. Start developing it's arch.
 
 ## Update 08/03/2017:
 * I'm done with all known modules etching 30 pcbs! All adder modules, all register modules are ecthed;
