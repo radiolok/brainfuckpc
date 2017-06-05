@@ -7,9 +7,9 @@
 |2AND/2OR           | Done        |    4/4      |    4/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | Layer Etch  |
 |5AND(2)               | Done        |    4/4  |    4/4      |    4/4      |      ---   |   ---   |  ---     |  ---    |  [DEPRECATED]
 |D-TRIGGER          | Done        |    2/2    |    ***9***/8      |    9/8     |      0/8    |   0/8   |  8     |  64    | Layer Etch |
-|Diode module       | Done        |    2/2      |    2/2      |   2/?     |      0/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
-|2ANDx4 module      | Done     |    2/2      |    2/?      |    2/?    |      0/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
-|2AND-NOTx3+2AND module    | Done     |    2/2      |    2/?      |    2/?     |      0/?    |   0/?   |  ?     |   ?  |  Layer Etch  |
+|Diode module       | Done        |    2/2      |    2/2      |   2/?     |      2/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
+|2ANDx4 module      | Done     |    2/2      |    2/?      |    2/?    |      2/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
+|2& module    | Done     |    2/2      |    2/?      |    2/?     |      2/?    |   0/?   |  ?     |   ?  |  Layer Etch  |
 |Base board         | Done        |    2/2      |    5/6      |    5/6     |      0/6    |   0/6   |  6      |  6    |  Layer Etch  |
 |Base/Switch board(1)  | Done     |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | [DEPRECATED]  |
 |Memory board       | Done    |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Soldering      |
@@ -65,6 +65,9 @@
 | Main Frame          | Not started  |
 
 # 6. Progress updates:
+
+## Update 05/06/2017:
+* Only in third attempt I painted some boards with solder mask. It's a diode module, 2ANDx4 module and 2& module - two plates of each type. Currently can start drill and mill them and start assemble the modules.
 
 ## Update 17/04/2017:
 * Rework and optimized ADDer logic. previous version needed 64 modules with 3 different types: ADD+C, 5AND, 2AND/2OR. New version need 32 modules with 2AND/2XOR type; One basic block would be used for latches.
