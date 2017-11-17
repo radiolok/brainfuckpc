@@ -29,16 +29,17 @@
 # 2. Soldering
 | Module            | Components  | Soldered    | Checked  |    Status    |
 |-------------------|-------------|-------------|----------|--------------|
-|2AND/2OR           |  Not check  |   0/16      |    0     |  Not started |
-|2AND/2XOR          |  Not check  |   0/32      |    0     |  Not started |
-|5AND               |  Not check  |   0/8       |    0     |  Not started |
-|D-TRIGGER          |  Not check  |   0/64      |    0     |  Not started |
+|2AND/2OR           |  Not check  |   0/?      |    0     |  Not started |
+|2AND/2XOR          |  Not check  |   35/32+?      |    0     |  Not checked |
+|D-TRIGGER          |  Not check  |   0/64+?      |    0     |  Not started |
+|2&          |  Not check  |   0/64      |    0     |  Not started |
+|Diode module         |  Not check  |   6/?      |    0     |  Not started |
 |Base board         |  Not check  |   0/6       |    0     |  Not started |
 |Memory board       |  Not check  |   0/1       |    0     |  Soldering   |
 
 ## Equipment
 1. Relay tester - Found appropriate connectors
-2. Modules tester - Not started
+2. Modules tester - Done
 
 # 3. Wire Wrapping
 |Block               |     Status    |     
@@ -65,6 +66,12 @@
 | Main Frame          | Not started  |
 
 # 6. Progress updates:
+
+## Update 12/11/2017:
+* Ordered pcbs from easyeda and got it.
+* Soldered all 2AND/2XOR modules for carry-chain adder. Start soldering base plate for it.
+* Done with modules tester - didn't check any relay but will check all modules.
+
 
 ## Update 05/06/2017:
 * Only in third attempt I painted some boards with solder mask. It's a diode module, 2ANDx4 module and 2& module - two plates of each type. Currently can start drill and mill them and start assemble the modules.
