@@ -1,4 +1,5 @@
 ![image](/img/adder_block.png?raw=true "Adder block")
+
 Adder block photo
 
 # GENERAL INFORMATION
