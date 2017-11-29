@@ -155,6 +155,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="binary\Bfheader.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="binary\BinaryDecoder.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -179,6 +182,12 @@
     <Compile Include="driver\addrIO.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="driver\ControlIO.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\ControlIO.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="driver\dataIO.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -191,6 +200,12 @@
     <Compile Include="driver\SPI.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="driver\TLC5941.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\TLC5941.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -200,16 +215,49 @@
     <Compile Include="ram\ExternalRam.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="util\filters.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\filters.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="util\Led.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="util\Led.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="util\log.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="util\macros.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="util\memoryport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\MTask.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\MTask.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\uart.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\Util.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\Util.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

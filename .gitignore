@@ -1,0 +1,10 @@
+fw/fw/Debug/
+sch/switch_module/switch_module_grb/
+sch/IV6_module/iv6_grb/
+*.rar
+sch/full/
+sch/Base_board/Base/
+models/
+*.ods
+*.csv
+*.zip
