@@ -1,50 +1,40 @@
-# 1. PCB Making
+# 1. PCB Making[DEPRACATED]
 
-| Module            | Routing     | Photomask   | Layer Image | Layer Etch | Solder Mask | Milling | Plates | Pcb    |  Make Status  |
-|-------------------|-------------|-------------|-------------|------------|-------------|---------|--------|--------|---------------|
-|2AND/2XOR(carry chain Adder)     | Done    |    2/2      |    0/4     |    0/4  |    0/4  |   0/4   |  4  |  32    | Layer Image  |
-|ADD+C(1)           | Done        |    2/2      |    2/2      |   2/2    |      ---   |   ---   |  ---     |  ---    |  [DEPRECATED] |
-|2AND/2OR           | Done        |    4/4      |    4/4      |    3/4     |      0/4    |   0/4   |  4(?)  |  32(?) | Layer Etch  |
-|5AND(2)               | Done        |    4/4  |    4/4      |    4/4      |      ---   |   ---   |  ---     |  ---    |  [DEPRECATED]
-|D-TRIGGER          | Done        |    2/2    |    ***9***/8      |    9/8     |      0/8    |   0/8   |  8     |  64    | Layer Etch |
-|Diode module       | Done        |    2/2      |    2/2      |   2/?     |      2/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
-|2ANDx4 module      | Done     |    2/2      |    2/?      |    2/?    |      2/?    |   0/?   |  ?     |   ?    |  Layer Etch  |
-|2& module    | Done     |    2/2      |    2/?      |    2/?     |      2/?    |   0/?   |  ?     |   ?  |  Layer Etch  |
-|Base board         | Done        |    2/2      |    5/6      |    5/6     |      0/6    |   0/6   |  6      |  6    |  Layer Etch  |
-|Base/Switch board(1)  | Done     |    0/2      |    0/1      |    0/1     |      0/1    |   0/1   |  1     |   1    | [DEPRECATED]  |
-|Memory board       | Done    |     N/A     |    N/A      |    N/A     |      N/A    |   N/A   |  1     |   1    |  Soldering      |
-| Summary           | N/A         |   20/22     |    30/30+    |    30/30+    |   0/30     |   0/30  |   30   |   198  | ----- |
-
-1. With Carry-chain version of ADDer I don't need this module for BFPC. Etched plates will be usefull somewhen infuture;
-2. With Carry-chain version of ADDer i don't need this module type for adding operations. But this module type would be very usefull for control logic purposes. Currently I have no idea how much of modules I need. I will do one plate with 9 modules of them. This that would be enough
-3. Doesn't need of this type;
+I have no time to finish self-maid boards so ordered full set of pcb's:
+10 pcb - base boards
+10 plates with 24 different modules on each - 240 modules
+2AND/2XOR
+2AND/2OR
+D-trigger
+2&(3C+1A)
+Diode(8)
 
 ## Equipment
 1. Roaster temperature regulator - Done
-2. Solder mask frame table   - Ready for use
+2. Solder mask frame table   - Done
 3. Etching bath - Ok
-4. CNC milling machine tuning - Not started
-5. 3D printer - I don't know why I bought it, but think I will find him an application
+4. CNC milling machine tuning - Not finished yet
+5. 3D printer - In use
 
 # 2. Soldering
 | Module            | Components  | Soldered    | Checked  |    Status    |
 |-------------------|-------------|-------------|----------|--------------|
-|2AND/2OR           |  Not check  |   0/?      |    0     |  Not started |
-|2AND/2XOR          |  Not check  |   35/32+?      |    0     |  Not checked |
-|D-TRIGGER          |  Not check  |   0/64+?      |    0     |  Not started |
-|2&          |  Not check  |   0/64      |    0     |  Not started |
-|Diode module         |  Not check  |   6/?      |    0     |  Not started |
-|Base board         |  Not check  |   0/6       |    0     |  Not started |
-|Memory board       |  Not check  |   0/1       |    0     |  Soldering   |
+|2AND/2OR           |  Check  |   0/?      |    0     |  Not started |
+|2AND/2XOR          |  Check  |   35/32+?      |    0     |  Done |
+|D-TRIGGER          |  Check |   29/64+?      |    0     |  Active |
+|2&          | Check  |   0/64      |    0     |  Not started |
+|Diode module         |  Check  |   6/?      |    0     |  Done |
+|Base board         |  Check |   1/6       |    0     |  Active |
+|Memory board       |  Check |   1/1       |    0     |  Done   |
 
 ## Equipment
-1. Relay tester - Found appropriate connectors
+1. Relay tester - N/A
 2. Modules tester - Done
 
 # 3. Wire Wrapping
 |Block               |     Status    |     
 |--------------------|---------------|
-|ADD                 |  Not started  |
+|ADD                 |  Active  |
 |LATCH BLOCK         |  Not started  |
 |IP/AP REG           |  Not started  |
 |TMP/CMD REG         |  Not started  |
@@ -56,7 +46,7 @@
 |---------------------|---------------|
 | Schematic           |  Done         |
 | PCB Routing         |  Done         |
-| MCU firmware        |  Not started  |
+| MCU firmware        |  Started  |
 
 
 # 5. Housing
@@ -66,6 +56,11 @@
 | Main Frame          | Not started  |
 
 # 6. Progress updates:
+
+## Update 14/12/2017:
+* Soldering D-trigger modules. Need 64+, got half of them
+* Designed indicator board
+* Start wire-wrap of adder block
 
 ## Update 12/11/2017:
 * Ordered pcbs from easyeda and got it.
