@@ -1,0 +1,3 @@
+[submodule "fw/menuosv1"]
+	path = fw/menuosv1
+	url = https://github.com/radiolok/menuosv1/
