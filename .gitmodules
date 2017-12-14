@@ -1,3 +1,6 @@
 [submodule "fw/menuosv1"]
 	path = fw/menuosv1
 	url = https://github.com/radiolok/menuosv1/
+[submodule "fw/bfutils"]
+	path = fw/bfutils
+	url = https://github.com/radiolok/bfutils
