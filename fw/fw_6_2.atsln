@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Atmel Studio Solution File, Format Version 11.00
 VisualStudioVersion = 14.0.25420.1
@@ -6,8 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "memorybrd", "memorybrd\memorybrd.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "iv6brd", "iv6brd\iv6brd.cppproj", "{AB6FC6CA-EB01-4F4E-AB89-B57396D62F65}"
-EndProject
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "MenuOSv1", "menuosv1\MenuOSv1.cppproj", "{A8E30E59-3E10-41D1-80E8-697C8094E404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{AB6FC6CA-EB01-4F4E-AB89-B57396D62F65}.Debug|AVR.Build.0 = Debug|AVR
 		{AB6FC6CA-EB01-4F4E-AB89-B57396D62F65}.Release|AVR.ActiveCfg = Release|AVR
 		{AB6FC6CA-EB01-4F4E-AB89-B57396D62F65}.Release|AVR.Build.0 = Release|AVR
-		{A8E30E59-3E10-41D1-80E8-697C8094E404}.Debug|AVR.ActiveCfg = Debug|AVR
-		{A8E30E59-3E10-41D1-80E8-697C8094E404}.Debug|AVR.Build.0 = Debug|AVR
-		{A8E30E59-3E10-41D1-80E8-697C8094E404}.Release|AVR.ActiveCfg = Release|AVR
-		{A8E30E59-3E10-41D1-80E8-697C8094E404}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
