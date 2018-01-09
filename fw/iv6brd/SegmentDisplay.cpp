@@ -20,8 +20,29 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "SegmentDisplay.h"
 
 // default constructor
-SegmentDisplay::SegmentDisplay()
+SegmentDisplay::SegmentDisplay(uint8_t segmentCount, uint8_t base) : 
+				m_segmentsCount(segmentCount), 
+				m_segments(0),
+				m_currentSegment(0),
+				m_base(base)
+				
 {
+	m_segments = static_cast<uint8_t*>(malloc(sizeof(uint8_t)*m_segmentsCount));
+	if (m_segments != 0)
+	{
+		for (uint8_t i = 0; i < m_segmentsCount; ++i)
+		{
+			m_segments[i] = 0;
+		}
+	}
+	PORTC &= ~((1<< PC0) | (1<< PC1) | (1 << PC2) | (1 << PC3));
+	DDRC |= (1<< PC0) | (1<< PC1) | (1 << PC2) | (1 << PC3);
+	
+	PORTD &= ~( (1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5) | (1<< PD6));
+	DDRD |= (1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5) | (1<< PD6);
+	
+	Reset();
+	
 } //LedOut
 
 // default destructor
@@ -30,27 +51,41 @@ SegmentDisplay::~SegmentDisplay()
 } //~LedOut
 
 
-void SegmentDisplay::Init(uint8_t _Base){
-	DDRA|=0xF0;//digits
-	DDRC|=0xFF;//segments
-	memset(m_digits, sizeof(uint8_t)*SegmentCount);
-	m_digit=0;//current_digit
-	Base = _Base;//current base
-}
 
-SegmentDisplay::operator () (const uint16_t data, const char* prefix, const uint8_t prefix_length)
+
+void SegmentDisplay::operator () (const uint16_t data, const char* prefix, const uint8_t prefix_length)
 {
+	uint16_t result = data;
+	if (m_segments)
+	{
+		for (uint8_t segment = 0; segment < m_segmentsCount; ++segment)
+		{
+			if (result > 0){
 
+				m_segments[segment] = (result % m_base) + ((result % m_base) > 0x09 ? 0x37 : 0x30);
+				result /= m_base;
+			}
+			else
+			{
+				m_segments[segment] = 0;
+			}
+		}
+	}
 }
 
 
-SegmentDisplay::InitDriver()
+void SegmentDisplay::Poll()
 {
-	DDRC |= (1<< PC0) | (1<< PC1) | (1 << PC2) | (1 << PC3);
-	DDRD |= (1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5) | (1<< PD6);
-
+	m_currentSegment++;
+	if (m_currentSegment >= m_segmentsCount)
+	{
+		m_currentSegment = 0;
+	}
+	//reset:
+	Reset();
+	SetSegment(m_currentSegment);
+	SetSymbol(m_segments[m_currentSegment]);	
 }
-
 /*
 void SegmentDisplay::Disp(){//show symbols
 	int16_t DataUnsignedLog=abs(DataLog);//hide 

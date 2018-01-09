@@ -20,8 +20,28 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #ifndef __LEDOUT_H__
 #define __LEDOUT_H__
 
+#include <avr/io.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-template <uint8_t SegmentCount> class SegmentDisplay
+#define F_CPU 1000000
+#include <util/delay.h>
+#include <avr/pgmspace.h>
+
+const uint8_t ascii_table[] __attribute__((progmem)) =  
+{
+/*0x00-0x0F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 
+/*0x10-0x1F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 
+/*0x20-0x2F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
+/*0x30-0x3F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
+/*0x40-0x4F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
+/*0x50-0x5F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
+/*0x60-0x6F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
+/*0x70-0x7F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40
+};
+	
+
+class SegmentDisplay
 {
 //variables
 public:
@@ -30,27 +50,81 @@ private:
 
 //functions
 public:
-	SegmentDisplay();
+	SegmentDisplay(uint8_t segmentCount, uint8_t base);
 	~SegmentDisplay();
 	 void Init(uint8_t _Base);
 	 void Disp(void);//polled function
-	 operator() (const uint16_t data, const char* prefix, const uint8_t prefix_length);
-	
+	 void operator() (const uint16_t data, const char* prefix, const uint8_t prefix_length);
+	 void Poll();
 protected:
 private:
-
+	enum class IC{digLow = 0, digHigh, segLow, segHigh};
+		
 	SegmentDisplay( const SegmentDisplay &c );
 	SegmentDisplay& operator=( const SegmentDisplay &c );
 
-	void InitDriver();
 
-	uint8_t m_digits[SegmentCount];//symbols
-	uint8_t m_digit;//current digit
-	uint8_t Base;//base
-	uint16_t DataLog;
-	uint8_t DataDigit;
+	void Reset()
+	{
+		PORTD &= ~(1<< PD6);
+		_delay_us(10);
+		PORTD |= (1 << PD6);
+	}
 	
-	static uint8_t hexnumber_x[] PROGMEM ={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67,0x77,0x7C,0x39,0x5E,0x79,0x71};
+	void Set(SegmentDisplay::IC num)
+	{
+		uint8_t number = static_cast<uint8_t>(num);
+		if (number <  4)//IC's number
+		{
+			PORTD &= ~((1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5))	;
+			PORTD |= (1 << (number + 2));	
+			_delay_us(10);
+			PORTD &= ~(1 << (number + 2));
+		}	
+	}
+	
+	
+	void SetSegment(uint8_t segment)
+	{
+		if (segment < m_segmentsCount)
+		{
+			uint8_t segmentPosition = (1 << segment);
+			uint8_t segmentLow = segmentPosition & 0x0F;
+			uint8_t segmentHigh = (segmentPosition >> 4) & 0x0F;
+			PORTC &= 0xF0;
+			PORTC |= (segmentLow) & 0x0F;
+			Set(IC::segLow);
+			PORTC &= 0xF0;
+			PORTC |= (segmentHigh) & 0x0F;
+			Set(IC::segHigh);			
+		}
+	}
+	
+	void SetSymbol(uint8_t Symbol)
+	{
+		uint8_t digitCode = 0;
+		if (Symbol < 0x80)
+		{
+			digitCode =  pgm_read_byte(&ascii_table[(Symbol < 0x80)? Symbol : 0]);
+		}
+		uint8_t digitLow = digitCode & 0x0F;
+		uint8_t digitHigh = (digitCode >> 4) & 0x0F;
+		PORTC &= 0xF0;
+		PORTC |= (digitLow) & 0x0F;
+		Set(IC::digLow);
+		PORTC &= 0xF0;
+		PORTC |= (digitHigh) & 0x0F;
+		Set(IC::digHigh);
+	}
+	
+	uint8_t m_segmentsCount;
+	uint8_t *m_segments;//symbols
+	uint8_t m_currentSegment;//current digit
+	uint8_t m_base;//base
+	//uint16_t DataLog;
+	//uint8_t DataDigit;
+	
+	
 
 }; //SegmentDisplay
 

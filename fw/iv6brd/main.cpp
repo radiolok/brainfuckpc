@@ -7,15 +7,15 @@
 
 #include <avr/io.h>
 
-#include "menuos/MTask.h"
+#define F_CPU 1000000
+#include "MTask.h"
 
 static uint32_t SCHEDULER_PERIOD = 10;//ms
-static uint32_t CPU_FREQUENCY = 1000000;//TODO: check fuses
 
-MTask mTask(SCHEDULER_PERIOD, CPU_FREQUENCY);
 
 int main(void)
 {
+	MTaskSingleton::Instance().Setup(SCHEDULER_PERIOD, F_CPU);
     /* Replace with your application code */
     while (1) 
     {

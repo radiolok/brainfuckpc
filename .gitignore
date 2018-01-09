@@ -9,3 +9,11 @@ models/
 *.csv
 *.zip
 fw/memorybrd/Debug/
+~*~
+*.o
+*.d
+*.a
+*.eep
+*.elf
+fw/iv6brd/ATmega168_Debug/
+fw/mcuUtil/ATmega168_Debug/
