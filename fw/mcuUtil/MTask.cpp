@@ -23,7 +23,8 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define TEN_MS_TICK (6) //0.01мс
 
 uint32_t tickPeriod = TEN_MS_TICK;
-
+#define PRESC_COUNT (5)
+uint16_t prescalers[PRESC_COUNT] = {1, 8, 64, 256, 1024};
 
 MTask::MTask()
 {
@@ -33,15 +34,34 @@ MTask::MTask()
 MTask::~MTask(){
 
 }
-void MTask::Setup(uint32_t period, uint32_t frequency){
-		tickPeriod = (period * TEN_MS_TICK)/10;
-		if (tickPeriod == 0)
+void MTask::Init(uint32_t period, uint32_t cpu_frequency){
+	//calc nearest prescaler:
+	uint32_t tick_period = (cpu_frequency / 1000) * period;
+	uint8_t prescaler = 0;
+	uint32_t result = tick_period;
+	while (result > 0xFF)
+	{
+		result = tick_period / prescalers[prescaler];
+		prescaler++;
+		if (prescaler > PRESC_COUNT)
 		{
-			tickPeriod = 1;
+			break;
 		}
+	}
+	if (prescaler == 0)
+	{
+		prescaler = 1;
+	}
+	if (result == 0)
+	{
+		result = 1;
+	}
 	ActiveApp = 0;
 	TCCR1A |= (1<<WGM10);//PWM 8-bit with 0xFF on TOP
 	TCCR1B |= (1<<WGM12);
+	
+	TCCR1B |= prescaler & 0x07;
+	tickPeriod = 255 - result;
 	TCNT1 = tickPeriod;//1мс
 	for (uint8_t slot = 0; slot < PSLOTS; slot++)
 	{//clear all slots
@@ -74,15 +94,16 @@ void MTask::Start(){
 void MTask::HwStart()
 {
 	m_timemillis=0;//reset time counter
-	TCCR1B |= (1<<CS11) | (1<<CS10);//prescaler at 64.<==TODO: rewrite to any frequency
+
 	TIMSK1 |= (1<<TOIE1);
 }
 
-void MTask::Add(uint8_t slot, void (*_f)(), uint32_t periodic)
+void MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
 {
+	uint8_t slot = getFreeSlot();
 	if (PSLOTS > slot){
-		App[slot].poll = _f;
-		App[slot].hw = 0;
+		App[slot].poll = _poll;
+		App[slot].hw = _hw;
 		App[slot].time = periodic;
 		App[slot].tick = periodic;
 	}
@@ -124,6 +145,6 @@ void MTask::Search(){
 
 ISR(TIMER1_OVF_vect) {
 	TCNT1 = tickPeriod;//update tick
-	MTaskSingleton::Instance().Search();
+	MTask::Instance().Search();
  }  
 

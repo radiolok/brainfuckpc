@@ -19,14 +19,19 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "SegmentDisplay.h"
 
+void SegmentDisplayPoll()
+{
+	SegmentDisplay::Instance().Poll();
+}
+
 // default constructor
-SegmentDisplay::SegmentDisplay(uint8_t segmentCount, uint8_t base) : 
-				m_segmentsCount(segmentCount), 
-				m_segments(0),
-				m_currentSegment(0),
-				m_base(base)
+void SegmentDisplay::Init(uint8_t segmentCount, uint8_t base) 
 				
 {
+	m_segmentsCount = segmentCount;
+	m_segments = 0;
+	m_currentSegment = 0;
+	m_base = base;
 	m_segments = static_cast<uint8_t*>(malloc(sizeof(uint8_t)*m_segmentsCount));
 	if (m_segments != 0)
 	{
@@ -42,13 +47,17 @@ SegmentDisplay::SegmentDisplay(uint8_t segmentCount, uint8_t base) :
 	DDRD |= (1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5) | (1<< PD6);
 	
 	Reset();
-	
+	MTask::Instance().Add(SegmentDisplayPoll, 0, 10);
 } //LedOut
 
+
+SegmentDisplay::SegmentDisplay()
+{
+}
 // default destructor
 SegmentDisplay::~SegmentDisplay()
 {
-} //~LedOut
+}
 
 
 

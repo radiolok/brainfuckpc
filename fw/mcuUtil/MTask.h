@@ -34,11 +34,18 @@ struct MAppStruct{
 };
 
 
-#define PSLOTS 8 //App slots number
+#define PSLOTS 2 //App slots number
 
 class MTask{
 	
 public:
+
+	static MTask& Instance()
+	{
+		static MTask    instance;
+		return instance;
+	}
+
 
 friend void TIMER1_OVF_vect();
 
@@ -50,12 +57,12 @@ friend void TIMER1_OVF_vect();
  *  
  *  \details Details
  */
-MTask(void);
+
 
 
 ~MTask();
 
-void Setup(uint32_t, uint32_t);
+void Init(uint32_t, uint32_t);
 
 /**
  *  \brief Start soft work Task Manager
@@ -88,14 +95,15 @@ void HwStop(void);
 /**
  *  \brief Add function to slot
  *  
- *  \param [in] slot number of slot
- *  \param [in] _f function pointer
+ *  \param [in] _poll function pointer
+  *  \param [in] _hw function pointer
  *  \param [in] periodic call period in ms
  *  \return none
  *  
  *  \details Details
  */
-void Add(uint8_t slot, void (*_f)(), uint32_t periodic);
+void Add(void (*_poll)(), void (*_hw)(), uint32_t periodic);
+
 
 /**
  *  \brief Release active slot
@@ -129,28 +137,34 @@ uint32_t Millis();
 uint8_t ActiveApp;
 
 private:
+	MTask();
+	
+	uint8_t getFreeSlot()
+	{
+		uint8_t slot = PSLOTS;
+		for (uint8_t i = 0; i < PSLOTS; ++i)
+		{
+			if (App[i].hw == 0 && App[i].poll== 0 )
+			{
+				slot = i;
+				break;
+			}
+		}
+		return slot;
+	}
+
 
 	MAppStruct App[PSLOTS];
 	
 	uint32_t m_timemillis;
 	
 	uint32_t m_frequency;
+	
+	uint32_t m_millisPerTick;
 };
 
 //extern MTask Task;
 
 
-class MTaskSingleton
-{
-	public:
-	static MTask& Instance()
-	{
-		static MTask    instance;
-		return instance;
-	}
-	~MTaskSingleton( );
-	private:
-	MTaskSingleton( );
-};
 
 #endif /* TASKMANAGER_H_ */

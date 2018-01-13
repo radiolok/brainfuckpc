@@ -28,6 +28,8 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include <util/delay.h>
 #include <avr/pgmspace.h>
 
+#include "MTask.h"
+
 const uint8_t ascii_table[] __attribute__((progmem)) =  
 {
 /*0x00-0x0F*/0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 
@@ -45,25 +47,22 @@ class SegmentDisplay
 {
 //variables
 public:
-protected:
-private:
+static SegmentDisplay& Instance()
+{
+	static SegmentDisplay instance;
+	return instance;
+}
 
-//functions
-public:
-	SegmentDisplay(uint8_t segmentCount, uint8_t base);
 	~SegmentDisplay();
-	 void Init(uint8_t _Base);
+	 void Init(uint8_t segmentCount, uint8_t _Base);
 	 void Disp(void);//polled function
 	 void operator() (const uint16_t data, const char* prefix, const uint8_t prefix_length);
 	 void Poll();
-protected:
 private:
+
+
 	enum class IC{digLow = 0, digHigh, segLow, segHigh};
 		
-	SegmentDisplay( const SegmentDisplay &c );
-	SegmentDisplay& operator=( const SegmentDisplay &c );
-
-
 	void Reset()
 	{
 		PORTD &= ~(1<< PD6);
@@ -124,8 +123,13 @@ private:
 	//uint16_t DataLog;
 	//uint8_t DataDigit;
 	
+	//functions
+	SegmentDisplay();
 	
 
 }; //SegmentDisplay
+
+
+void SegmentDisplayPoll();
 
 #endif //__LEDOUT_H__
