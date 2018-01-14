@@ -47,7 +47,7 @@ void SegmentDisplay::Init(uint8_t segmentCount, uint8_t base)
 	DDRD |= (1<< PD2) | (1<< PD3) | (1 << PD4) | (1<< PD5) | (1<< PD6);
 	
 	Reset();
-	MTask::Instance().Add(SegmentDisplayPoll, 0, 10);
+	MTask::Instance().Add(SegmentDisplayPoll, 0, 2);
 } //LedOut
 
 
@@ -67,7 +67,7 @@ void SegmentDisplay::operator () (const uint16_t data, const char* prefix, const
 	uint16_t result = data;
 	if (m_segments)
 	{
-		for (uint8_t segment = 0; segment < m_segmentsCount; ++segment)
+		for (uint8_t segment = 3; segment  <= 3; --segment)
 		{
 			if (result > 0){
 
@@ -78,6 +78,11 @@ void SegmentDisplay::operator () (const uint16_t data, const char* prefix, const
 			{
 				m_segments[segment] = 0;
 			}
+		}
+		if (prefix_length > 1 )
+		{
+			m_segments[5] = prefix[0];
+			m_segments[4] = prefix[1];
 		}
 	}
 }

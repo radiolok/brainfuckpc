@@ -134,7 +134,7 @@ void MTask::Search(){
 	m_timemillis++;
 	for (uint8_t slot = 0; slot < PSLOTS; slot++)
 	{//count times
-		if (App[slot].hw != 0){//If App is defined
+		if (App[slot].poll!= 0){//If App is defined
 			if(App[slot].tick != 0){//And time is not yet
 				App[slot].tick--;//Count to zero
 			}
@@ -142,8 +142,21 @@ void MTask::Search(){
 	} 
 }
 
+uint8_t state = 0;
+
+
 
 ISR(TIMER1_OVF_vect) {
+		DDRC |= (1 << PC5);
+		if (state)
+		{
+			state = 0;
+			PORTC &= ~(1<<PC5);
+		}
+		else {
+			state = 1;
+			PORTC |= (1 << PC5);
+		}
 	TCNT1 = tickPeriod;//update tick
 	MTask::Instance().Search();
  }  

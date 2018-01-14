@@ -38,7 +38,8 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../library.cpp \
-../MTask.cpp
+../MTask.cpp \
+../uart.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -49,19 +50,23 @@ ASM_SRCS +=
 
 OBJS +=  \
 library.o \
-MTask.o
+MTask.o \
+uart.o
 
 OBJS_AS_ARGS +=  \
 library.o \
-MTask.o
+MTask.o \
+uart.o
 
 C_DEPS +=  \
 library.d \
-MTask.d
+MTask.d \
+uart.d
 
 C_DEPS_AS_ARGS +=  \
 library.d \
-MTask.d
+MTask.d \
+uart.d
 
 OUTPUT_FILE_PATH +=libmcuUtil.a
 
@@ -77,6 +82,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
