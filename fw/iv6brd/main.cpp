@@ -12,6 +12,7 @@
 #include "MTask.h"
 #include "log.h"
 #include "uart.h"
+#include "spi.h"
 #include "SegmentDisplay.h"
 
 static uint32_t SCHEDULER_PERIOD = 1;//ms
@@ -36,16 +37,28 @@ void Incrementer()
 	data++;
 }
 
+void portReader()
+{
+	DDRB |= (1<<PB2);
+	//read current value
+	PORTB &= ~(1<<PB2);
+	_delay_us(1);
+	PORTB |= (1<<PB2);
+	
+	SegmentDisplay::Instance()(spi_sendWord(0), 0, 0);
+}
+
 int main(void)
 {
 	sei();
+	spi_init();
 	uart_init(UART_BAUD_SELECT(BAUD_RATE, F_CPU));
 	log_trace("uart started");
 	MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
 	log_trace("MTask Inited");
 	SegmentDisplay::Instance().Init(6, 0x10);
 	log_trace("Segment display init");
-	MTask::Instance().Add(Incrementer, 0, 10);
+	MTask::Instance().Add(portReader, 0, 10);
 	log_trace("Data changer inited");
     /* Replace with your application code */
 	MTask::Instance().Start();
