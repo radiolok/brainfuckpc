@@ -20,13 +20,13 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define __SPI_H__
 
 #include "avr/io.h"
-
+#include "log.h"
 
 void spi_init();
 
-uint8_t spi_sendByte(uint8_t byte);
+void spi_close();
 
-uint16_t spi_sendWord(uint16_t word);
+uint8_t spi_sendByte(uint8_t byte);
 
 
 #endif //__SPI_H__

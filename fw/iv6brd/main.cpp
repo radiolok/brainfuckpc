@@ -8,7 +8,7 @@
 #include <avr/io.h>
 
 #define F_CPU 8000000
-#define BAUD_RATE 19200
+#define BAUD_RATE 38400
 #include "MTask.h"
 #include "log.h"
 #include "uart.h"
@@ -45,15 +45,22 @@ void portReader()
 	_delay_us(1);
 	PORTB |= (1<<PB2);
 	
-	SegmentDisplay::Instance()(spi_sendWord(0), 0, 0);
+	union data_t{
+		uint8_t bytes[2];
+		uint16_t word;		
+	} data;
+		data.bytes[0] = spi_sendByte(0);
+		data.bytes[1] = spi_sendByte(0);
+	SegmentDisplay::Instance()(data.word, 0, 0);
 }
+
 
 int main(void)
 {
 	sei();
-	spi_init();
 	uart_init(UART_BAUD_SELECT(BAUD_RATE, F_CPU));
 	log_trace("uart started");
+	spi_init();
 	MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
 	log_trace("MTask Inited");
 	SegmentDisplay::Instance().Init(6, 0x10);

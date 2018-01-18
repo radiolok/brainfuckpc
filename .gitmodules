@@ -4,3 +4,6 @@
 [submodule "fw/bfutils"]
 	path = fw/bfutils
 	url = https://github.com/radiolok/bfutils
+[submodule "fw/UARTBootloader"]
+	path = fw/UARTBootloader
+	url = https://github.com/AterLux/UARTBootloader.git

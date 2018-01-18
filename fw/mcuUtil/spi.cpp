@@ -24,20 +24,18 @@ void spi_init()
 	SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
 } 
 
-
+void spi_close()
+{
+	SPCR = 0x00;
+}
 uint8_t spi_sendByte(uint8_t byte)
 {
+	spi_init();
+	uint8_t result = 0;
 	//wait transmission done
+	 SPDR = byte;
 	 while(!(SPSR & (1 << SPIF)));
-	 return SPDR;
-}
-uint16_t spi_sendWord(uint16_t word)
-{
-	uint16_t result = 0;
-	if (SPCR & (1 << SPE)){
-		uint16_t result = 0;
-		result = spi_sendByte((uint8_t)(word&0xFF));
-		result |= spi_sendByte((uint8_t)(word >>8)) << 8;
-	}
-	return result;
+	 result = SPDR;
+	 spi_close();
+	 return result;
 }
