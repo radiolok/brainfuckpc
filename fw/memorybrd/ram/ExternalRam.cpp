@@ -48,14 +48,14 @@ void ramWriteWord(uint16_t addr, uint16_t data)
 
 uint16_t ramReadFromBus(uint16_t addr)
 {
-	uint16_t result;
+	uint16_t result = 0;
 	
 	return result;
 }
 
 uint16_t ramWriteToBus(uint16_t addr)
 {
-	uint16_t result;
+	uint16_t result = 0;
 
 	return result;
 }
@@ -72,5 +72,6 @@ void ramUnlock(void)
 
 uint8_t ramCheckLock(void)
 {
+	dbg_trace_val("RamLock=",ramLockAccess);
 	return ramLockAccess;
 }

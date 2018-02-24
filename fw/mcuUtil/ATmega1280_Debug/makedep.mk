@@ -6,5 +6,7 @@ library.cpp
 
 MTask.cpp
 
+spi.cpp
+
 uart.cpp
 

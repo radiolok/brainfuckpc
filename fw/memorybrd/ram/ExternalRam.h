@@ -9,33 +9,43 @@
 #ifndef __EXTERNALRAM_H__
 #define __EXTERNALRAM_H__
 
-#include "util/macros.h"
+#include "../macros.h"
 
 void inline ramSetAddress(uint16_t addr)
 {
 	DDRA = 0xFF;
 	DDRC = 0xFF;
 	PORTA = low(addr);
+	dbg_trace_val("ramSetAddress = low:", PORTA);
 	PORTC = high(addr);
+	dbg_trace_val("ramSetAddress = high:", PORTC);
 }
 
 void inline ramSetOE()
 {
+	dbg_trace("ramSetOE");
 	PORTE |= (1 << PE2);
 }
 
 void inline ramReleaseOE()
 {
+	dbg_trace("ramReleaseOE");
 	PORTE &= ~(1 << PE2);
 }
 
 void inline ramSetRead()
 {
+	dbg_trace("ramSetRead");
+	DDRF = 0x00;
+	DDRK = 0x00;
 	PORTE |= (1 << PE3);
 }
 
 void inline ramSetWrite()
 {
+	dbg_trace("ramSetWrite");
+	DDRF = 0xFF;
+	DDRK = 0xFF;
 	PORTE &= ~(1 << PE3);
 }
 
@@ -56,16 +66,16 @@ void inline ramReleaseLine(void)
 
 void inline ramSetData(uint16_t data)
 {
-		DDRF = 0xFF;
-		DDRK = 0xFF;
 		PORTF = low(data);
+		dbg_trace_val("ramSetData = low:", PORTF);
 		PORTK = high(data);
+		dbg_trace_val("ramSetData = high:", PORTK);
 }
 
 uint16_t inline ramGetData(void)
 {
-	DDRF = 0x00;
-	DDRK = 0x00;
+	dbg_trace_val("ramGetData = low:", PORTF);
+	dbg_trace_val("ramGetData = high:", PORTK);
 	return (PORTK << 8) + PORTF;
 }
 
