@@ -13,7 +13,8 @@ uint8_t ramLockAccess = 0;
 uint8_t ramInit(void)
 {
 	DDRE |= (1 << PE2) | (1 << PE3);
-	PORTE &= ~((1 << PE2) | (1 << PE3));
+	PORTE |= ((1 << PE2) | (1 << PE3));
+	DDRG |= (1 << PG1);
 	return 0;
 }
 
@@ -24,9 +25,11 @@ uint16_t ramReadWord(uint16_t addr)
 	{
 		ramSetAddress(addr);
 		ramSetOE();
-		_delay_us(2);
+		_delay_us(20);
+		PORTG |= (1 << PG1);
 		result = ramGetData();
-		_delay_us(2);
+		PORTG &= ~(1 << PG1);
+		_delay_us(20);
 		ramReleaseOE();
 	}
 	ramReleaseLine();		
@@ -38,10 +41,13 @@ void ramWriteWord(uint16_t addr, uint16_t data)
 	if (!ramCheckLock())
 	{
 		ramSetAddress(addr);
+		
 		ramSetData(data);
+		PORTG |= (1 << PG1);
 		ramSetWrite();
 		_delay_us(2);
 		ramSetRead();
+		PORTG &= ~(1 << PG1);
 	}
 	ramReleaseLine();
 }

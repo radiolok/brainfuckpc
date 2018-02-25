@@ -29,12 +29,14 @@ uint16_t addr = 0;
 void ramChecker()
 {
 	ramWriteWord(addr, addr);
-	uint16_t result = ramReadWord(addr);
-	uart_puts("(0x");
-	uart_print((int16_t)addr,16);
-	uart_puts(")=0x");
-	uart_print((int16_t)result,16);
-	uart_putc('\n');
+	if (addr){
+		uint16_t result = ramReadWord(addr -1);
+		uart_puts("(0x");
+		uart_print((int16_t)addr-1,16);
+		uart_puts(")=0x");
+		uart_print((int16_t)result,16);
+		uart_putc('\n');
+	}
 	addr++;
 }
 
@@ -45,8 +47,8 @@ int main(void)
 	log_trace("uart started");
 	MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
 	log_trace("MTask Inited");
-	//ramInit();
-	//MTask::Instance().Add(ramChecker, NULL, 10);
+	ramInit();
+	MTask::Instance().Add(ramChecker, NULL, 10);
 	MTask::Instance().Start();
 	log_trace("Dead")
     while (1) 

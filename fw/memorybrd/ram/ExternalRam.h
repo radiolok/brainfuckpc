@@ -16,9 +16,9 @@ void inline ramSetAddress(uint16_t addr)
 	DDRA = 0xFF;
 	DDRC = 0xFF;
 	PORTA = low(addr);
-	dbg_trace_val("ramSetAddress = low:", PORTA);
+	dbg_trace_val("ramSetAddress = low:", PINA);
 	PORTC = high(addr);
-	dbg_trace_val("ramSetAddress = high:", PORTC);
+	dbg_trace_val("ramSetAddress = high:", PINC);
 }
 
 void inline ramSetOE()
@@ -36,17 +36,19 @@ void inline ramReleaseOE()
 void inline ramSetRead()
 {
 	dbg_trace("ramSetRead");
+	PORTE &= ~(1 << PE3);
 	DDRF = 0x00;
 	DDRK = 0x00;
-	PORTE |= (1 << PE3);
+	PORTK = 0xFF;
+	PORTF = 0xFF;
 }
 
 void inline ramSetWrite()
 {
 	dbg_trace("ramSetWrite");
+	PORTE |= (1 << PE3);
 	DDRF = 0xFF;
 	DDRK = 0xFF;
-	PORTE &= ~(1 << PE3);
 }
 
 void inline ramReleaseLine(void)
@@ -67,16 +69,16 @@ void inline ramReleaseLine(void)
 void inline ramSetData(uint16_t data)
 {
 		PORTF = low(data);
-		dbg_trace_val("ramSetData = low:", PORTF);
+		dbg_trace_val("ramSetData = low:", PINF);
 		PORTK = high(data);
-		dbg_trace_val("ramSetData = high:", PORTK);
+		dbg_trace_val("ramSetData = high:", PINK);
 }
 
 uint16_t inline ramGetData(void)
 {
-	dbg_trace_val("ramGetData = low:", PORTF);
-	dbg_trace_val("ramGetData = high:", PORTK);
-	return (PORTK << 8) + PORTF;
+	dbg_trace_val("ramGetData = low:", PINF);
+	dbg_trace_val("ramGetData = high:", PINK);
+	return (PINK << 8) + PINF;
 }
 
 uint8_t ramInit();

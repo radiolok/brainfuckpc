@@ -49,7 +49,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #if defined(DEBUG)
 
-#define dbg_trace_val(msg, val) uart_puts(msg);uart_print((int16_t)val,10);uart_putc('\n');
+#define dbg_trace_val(msg, val) uart_puts(msg);uart_print((int16_t)val,16);uart_puts("h\n");
 #define dbg_trace_txt(msg, val) uart_puts(msg);uart_puts(val);uart_putc('\n');
 #define dbg_trace(msg) uart_puts(msg);uart_putc('\n');
 #else
