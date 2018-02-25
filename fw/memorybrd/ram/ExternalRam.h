@@ -37,6 +37,7 @@ void inline ramSetRead()
 {
 	dbg_trace("ramSetRead");
 	PORTE &= ~(1 << PE3);
+	//TODO: Add CS line - we have Two ports in Output mode here.
 	DDRF = 0x00;
 	DDRK = 0x00;
 	PORTK = 0xFF;

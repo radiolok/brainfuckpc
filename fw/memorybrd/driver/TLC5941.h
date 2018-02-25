@@ -20,7 +20,8 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #ifndef __TLC5941_H__
 #define __TLC5941_H__
 
-#include <avr/io.h>
+#include "../macros.h"
+#include "spi.h"
 
 uint8_t TLC5941Init(void);
 
@@ -34,5 +35,16 @@ uint8_t TLC5941Show(void);
 
 uint8_t TLC5941SetOutput(uint8_t out);
 
+void TLC5941Poll(void);
+
+inline void TLC5941SetBlank(void)
+{
+	PORTK |= (1 << PB4);
+}
+
+inline void TLC5941ReleaseBlank(void)
+{
+	PORTK &= ~(1 << PB4);
+}
 
 #endif //__TLC5941_H__
