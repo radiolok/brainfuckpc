@@ -19,9 +19,6 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "TLC5941.h"
 
-uint8_t currentLed = 0;
-
-
 uint8_t currentDC = 32;//6-bit, 0 to 63.
 uint8_t shift[4] = {0, 6, 4, 2};
 	
@@ -41,26 +38,31 @@ uint8_t tlcDataRegister[4][3] =
 	}
 };
 
-void TLC5941Poll(void)
+void TLC5941SetColumn(uint8_t column)
 {
 	//recalculate array:
-	uint8_t zeroes_prefix = (currentLed >> 4) * 3;
-	uint8_t bytes_sended = 0;
-	for (uint8_t i = 0; i < zeroes_prefix; ++i)
-	{
-		spi_sendByte(0);
-		++bytes_sended;
+	uint8_t zeroes_prefix = (column >> 4) * 3;
+	uint8_t delim = column % 4;
+	for (uint8_t drivers = 0; drivers < 2; ++drivers)
+	{//we have two IC's
+		uint8_t bytes_sended = 0;
+		for (uint8_t i = 0; i < zeroes_prefix; ++i)
+		{
+			spi_sendByte(0);
+			++bytes_sended;
+		}
+
+		for (uint8_t i = 0; i < 3; ++i)
+		{
+			spi_sendByte(tlcDataRegister[delim][i]);
+			++bytes_sended;
+		}
+		for (;bytes_sended < 12; ++bytes_sended)
+		{
+			spi_sendByte(0);
+		}
 	}
-	uint8_t delim = currentLed % 4;
-	for (uint8_t i = 0; i < 3; ++i)
-	{
-		spi_sendByte(tlcDataRegister[delim][i]);
-		++bytes_sended;
-	}
-	for (bytes_sended < 12; ++bytes_sended)
-	{
-		spi_sendByte(0);
-	}
+	TLC5941Update();
 }
 
 void TLC5941updateArray(uint8_t data)
@@ -78,48 +80,26 @@ void TLC5941updateArray(uint8_t data)
 
 }
 
-uint8_t TLC5941Init(void)
+void TLC5941Init(void)
 {
-	uint8_t status = 0;
+	DDRB |= (1<< PB4);
+	DDRJ |= (1 << PJ3);
 	spi_init();
 	TLC5941SetBlank();
 
 	TLC5941updateArray(currentDC);
-
-	for (uint8_t i = 0; i < 12; ++i)
+	TLC5941ReleaseBlank();
+	for (uint8_t i = 0; i < 24; ++i)
 	{
 		spi_sendByte(0);
 	}
-	TLC5941ReleaseBlank();
-return status;
+	TLC5941Update();
 }
 
-uint8_t TLC5941Blank(void)
+void TLC5941SetCurrent(uint8_t current)
 {
-	uint8_t status = 0;
-
-	return status;
-}
-
-uint8_t TLC5941Show(void)
-{
-	uint8_t status = 0;
-
-	return status;
-}
-
-uint8_t TLC5941Clear(void)
-{
-uint8_t status = 0;
-
-return status;
-}
-
-uint8_t TLC5941SetOutput(uint8_t out)
-{
-	uint8_t status = 0;
-
-	return status;	
+	currentDC = current & 0x3F;
+	TLC5941updateArray(currentDC);
 }
 
 

@@ -19,12 +19,30 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "led.h"
 
-// default constructor
-led::led()
-{
-} //led
+uint8_t currentLed = 0;
 
-// default destructor
-led::~led()
+uint8_t startAddr = 0;
+
+void ledInit()
 {
-} //~led
+	DDRB |= (1 << PB5) | (1 << PB6) | (1 << PB7);
+}
+
+
+void ledPoll(void)
+{
+	TLC5941SetBlank();
+	ledClr();
+	ramWriteToBus(startAddr + currentLed);
+	ledLatch(LED_LATCH_1);
+	ramWriteToBus(startAddr + 16 + currentLed);
+	ledLatch(LED_LATCH_2);
+	ramReleaseLine();
+	TLC5941SetColumn(currentLed);
+	TLC5941ReleaseBlank();
+	currentLed++;
+	if (currentLed > 15)
+	{
+		currentLed = 0;
+	}
+}

@@ -19,23 +19,29 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #ifndef __LED_H__
 #define __LED_H__
 
+#include "../macros.h"
+#include "../ram/ExternalRam.h"
+#include "TLC5941.h"
 
-class led
+#define LED_LATCH_1 0
+#define LED_LATCH_2 1
+
+void ledPoll(void);
+
+void ledInit();
+
+inline void ledLatch(uint8_t block)
 {
-//variables
-public:
-protected:
-private:
+	PORTB |= block? (1<<PB6) : (1 << PB7);
+	_delay_us(2);
+	PORTB &= ~((1<<PB6) | (1<<PB7));
+}
 
-//functions
-public:
-	led();
-	~led();
-protected:
-private:
-	led( const led &c );
-	led& operator=( const led &c );
-
-}; //led
+inline void ledClr()
+{
+	PORTB &= ~(1 << PB5);
+	_delay_us(2);
+	PORTB |= (1 << PB5);
+}
 
 #endif //__LED_H__

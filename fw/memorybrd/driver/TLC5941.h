@@ -21,30 +21,30 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define __TLC5941_H__
 
 #include "../macros.h"
+#include <string.h>
 #include "spi.h"
 
-uint8_t TLC5941Init(void);
+void TLC5941Init(void);
 
-uint8_t TLC5941Clear(void);
+void TLC5941SetCurrent(uint8_t current);
 
-/*Switch off all leds*/
-uint8_t TLC5941Blank(void);
-
-/*Switch off all leds*/
-uint8_t TLC5941Show(void);
-
-uint8_t TLC5941SetOutput(uint8_t out);
-
-void TLC5941Poll(void);
+void TLC5941SetColumn(uint8_t column);
 
 inline void TLC5941SetBlank(void)
 {
-	PORTK |= (1 << PB4);
+	PORTB |= (1 << PB4);
 }
 
 inline void TLC5941ReleaseBlank(void)
 {
-	PORTK &= ~(1 << PB4);
+	PORTB &= ~(1 << PB4);
+}
+
+inline void TLC5941Update(void)
+{
+	PORTJ |= (1 << PJ3);
+	_delay_us(2);
+	PORTJ &= ~(1 << PJ3);
 }
 
 #endif //__TLC5941_H__

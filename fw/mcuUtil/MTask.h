@@ -34,7 +34,7 @@ struct MAppStruct{
 };
 
 
-#define PSLOTS 2 //App slots number
+#define PSLOTS 4 //App slots number
 
 class MTask{
 	

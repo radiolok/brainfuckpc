@@ -19,9 +19,15 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 void spi_init()
 {
-	DDRB &= ~(1<< PB4);//MISO
-	DDRB |= (1<< PB5);//SCK
-	SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
+	
+	#if defined(__AVR_ATmega1280__)
+		DDRB |= (1<< PB2) | (1<< PB3);//SCK MOSI
+		SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
+	#else
+		DDRB &= ~(1<< PB4);//MISO
+		DDRB |= (1<< PB5);//SCK
+		SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
+	#endif
 } 
 
 
@@ -38,8 +44,8 @@ void spi_close()
 
 uint8_t spi_sendByte(uint8_t data)
 {
-	spiTxBuffer[spiTxGet] = data;
-	spiTxGet = (spiTxGet + 1) & SPI_TX_BUFFER_MASK;
+	//spiTxBuffer[spiTxGet] = data;
+	//spiTxGet = (spiTxGet + 1) & SPI_TX_BUFFER_MASK;
 	
 	spi_init();
 	uint8_t result = 0;

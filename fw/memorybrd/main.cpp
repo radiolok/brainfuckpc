@@ -22,22 +22,24 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "log.h"
 #include "uart.h"
 #include "ram/ExternalRam.h"
+#include "driver/led.h"
 static uint32_t SCHEDULER_PERIOD = 1;//ms
 
 uint16_t addr = 0;
 
 void ramChecker()
 {
-	ramWriteWord(addr, addr);
+	ramWriteWord(addr & 0x1F, addr);
 	if (addr){
-		uint16_t result = ramReadWord(addr -1);
+		uint16_t result = ramReadWord(addr & 0x1F);
 		uart_puts("(0x");
-		uart_print((int16_t)addr-1,16);
+		uart_print((int16_t)(addr & 0x1F),16);
 		uart_puts(")=0x");
 		uart_print((int16_t)result,16);
 		uart_putc('\n');
 	}
 	addr++;
+
 }
 
 int main(void)
@@ -49,6 +51,7 @@ int main(void)
 	log_trace("MTask Inited");
 	ramInit();
 	MTask::Instance().Add(ramChecker, NULL, 10);
+	MTask::Instance().Add(ledPoll, NULL, 1);
 	MTask::Instance().Start();
 	log_trace("Dead")
     while (1) 
