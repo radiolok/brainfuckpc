@@ -20,60 +20,62 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "TLC5941.h"
 
 uint8_t currentLed = 0;
-uint8_t ledArray[12];
+
 
 uint8_t currentDC = 32;//6-bit, 0 to 63.
 uint8_t shift[4] = {0, 6, 4, 2};
+	
+uint8_t tlcDataRegister[4][3] = 
+{
+	{
+		0x00, 0x00, 0x00
+	},
+	{
+		0x00, 0x00, 0x00
+	},
+	{
+		0x00, 0x00, 0x00
+	},
+	{
+		0x00, 0x00, 0x00
+	}
+};
 
 void TLC5941Poll(void)
 {
 	//recalculate array:
-	uint8_t base = currentLed >> 4;
-	uint8_t delim = currentLed % 4;
-	uint8_t currentByte = base * 3 + (delim == 0 ? (delim - 1) : 0);
-	uint8_t bitshift = shift[delim];
-	switch (bitshift){
-		case 0:
-			ledArray[currentByte] &= 0xC0;
-		break;	
-		case 2:
-			ledArray[currentByte] &= 0x03;
-		break;
-		case 4:
-			ledArray[currentByte] &= 0x0F;
-			ledArray[currentByte + 1] &= 0xFC;
-		break;		
-		case 6:
-			ledArray[currentByte] &= 0x3F;
-			ledArray[currentByte + 1] &= 0xF0;
-		break;
-	};	
-	currentLed++;
-	if (currentLed > 15)
+	uint8_t zeroes_prefix = (currentLed >> 4) * 3;
+	uint8_t bytes_sended = 0;
+	for (uint8_t i = 0; i < zeroes_prefix; ++i)
 	{
-		currentLed = 0;
+		spi_sendByte(0);
+		++bytes_sended;
 	}
-	base = currentLed >> 4;
-	delim = currentLed % 4;
-	currentByte = base * 3 + (delim == 0 ? (delim - 1) : 0);
-	bitshift = shift[delim];
-	switch (bitshift){
-		case 0:
-			ledArray[currentByte] |= currentDC;
-		break;
-		case 2:
-			ledArray[currentByte] |= (currentDC << 2) & 0xFC;
-		break;
-		case 4:
-			ledArray[currentByte] |= (currentDC << 4) & 0xF0;
-			ledArray[currentByte + 1] |= (currentDC >> 4) & 0x03;
-		break;
-		case 6:
-			ledArray[currentByte] |= (currentDC << 6) & 0xC0;
-			ledArray[currentByte + 1] |= (currentDC >> 2) & 0x0F;
-		break;
-	};
+	uint8_t delim = currentLed % 4;
+	for (uint8_t i = 0; i < 3; ++i)
+	{
+		spi_sendByte(tlcDataRegister[delim][i]);
+		++bytes_sended;
+	}
+	for (bytes_sended < 12; ++bytes_sended)
+	{
+		spi_sendByte(0);
+	}
+}
+
+void TLC5941updateArray(uint8_t data)
+{
+	memset(tlcDataRegister, 0, 12);//clear data
+	tlcDataRegister[0][0] = data & 0x3F;
 	
+	tlcDataRegister[1][0] = (data << 6) & 0xC0;
+	tlcDataRegister[1][1] = (data >> 2) & 0x0F;
+
+	tlcDataRegister[2][1] = (data << 4) & 0xF0;
+	tlcDataRegister[2][2] = (data >> 4) & 0x03;
+	
+	tlcDataRegister[3][2] = (data << 2) & 0xFC;
+
 }
 
 uint8_t TLC5941Init(void)
@@ -81,9 +83,12 @@ uint8_t TLC5941Init(void)
 	uint8_t status = 0;
 	spi_init();
 	TLC5941SetBlank();
+
+	TLC5941updateArray(currentDC);
+
 	for (uint8_t i = 0; i < 12; ++i)
 	{
-		ledArray[i] = 0;
+		spi_sendByte(0);
 	}
 	TLC5941ReleaseBlank();
 return status;

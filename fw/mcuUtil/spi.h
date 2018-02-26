@@ -22,6 +22,11 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "avr/io.h"
 #include "log.h"
 
+#define SPI_TX_BUFFER 16
+#define SPI_TX_BUFFER_MASK 0x0F
+#define SPI_RX_BUFFER 16
+#define SPI_RX_BUFFER_MASK 0x0F
+
 void spi_init();
 
 void spi_close();
