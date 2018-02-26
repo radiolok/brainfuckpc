@@ -17,15 +17,17 @@ Diode(8)
 5. 3D printer - In use
 
 # 2. Soldering
-| Module            | Components  | Soldered    | Checked  |    Status    |
-|-------------------|-------------|-------------|----------|--------------|
-|2AND/2OR           |  Check  |   0/?      |    0     |  Not started |
-|2AND/2XOR          |  Check  |   35/32+?      |    0     |  Done |
-|D-TRIGGER          |  Check |   29/64+?      |    0     |  Active |
-|2&          | Check  |   0/64      |    0     |  Not started |
-|Diode module         |  Check  |   6/?      |    0     |  Done |
-|Base board         |  Check |   1/6       |    0     |  Active |
-|Memory board       |  Check |   1/1       |    0     |  Done   |
+| Module            | Components  | Soldered     |    Status    |
+|-------------------|-------------|--------------|--------------|
+|2AND/2OR           |  Check  |   0/?      |  Not started |
+|2AND/2XOR          |  Check  |   35/32+?       |  Done |
+|D-TRIGGER          |  Check |   55/64+?        |  Active |
+|2&          | Check  |   0/64        |  Not started |
+|Diode module         |  Check  |   6/?        |  Done |
+|Base board         |  Check |   1/6       |  Active |
+|Memory board       |  Check |   1/1    |  Done   |
+|Indicator module   |  Check |   2/4         |  Active |
+|Latch module       |  Check |   2/4     |  Done   |
 
 ## Equipment
 1. Relay tester - N/A
@@ -34,10 +36,9 @@ Diode(8)
 # 3. Wire Wrapping
 |Block               |     Status    |     
 |--------------------|---------------|
-|ADD                 |  Active  |
-|LATCH BLOCK         |  Not started  |
-|IP/AP REG           |  Not started  |
-|TMP/CMD REG         |  Not started  |
+|ADD                 |  DONE  |
+|IP/AP REG           |  DONE  |
+|TMP/CMD REG         |  Active  |
 |LOGIC BLOCK         |  Not started  |
 |LOGIC/SWITCH BLOCK  |  Not started  |
 
@@ -46,7 +47,7 @@ Diode(8)
 |---------------------|---------------|
 | Schematic           |  Done         |
 | PCB Routing         |  Done         |
-| MCU firmware        |  Started  |
+| MCU firmware        |  Active  |
 
 
 # 5. Housing
@@ -56,6 +57,14 @@ Diode(8)
 | Main Frame          | Not started  |
 
 # 6. Progress updates:
+
+## Update 26/02/2018:
+* Adder Block done and tested;
+* IP/AP register block done and tested;
+* Continue soldering D-trigger modules;
+* Created indicator modules. Soldered two of them. Fw for one is done;
+* Created latch modules. Soldered two of them;
+* Start working with memory board firmware.
 
 ## Update 14/12/2017:
 * Soldering D-trigger modules. Need 64+, got half of them
