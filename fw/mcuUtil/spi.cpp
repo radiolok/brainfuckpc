@@ -17,13 +17,26 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
  OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 #include "spi.h"
 
+#if defined(__AVR_ATmega640__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+	#define MEMORYBRD
+#else
+	#define IV6_BRD
+#endif
+
+
+#if defined(IV6_BRD)
+	#error "Not a memory board!"
+#endif
+
 void spi_init()
 {
 	
-	#if defined(__AVR_ATmega1280__)
-		DDRB |= (1<< PB2) | (1<< PB3);//SCK MOSI
+	#if defined(MEMORYBRD)
+		//dbg_trace("spi_init_memorybrd");
+		DDRB |= (1<< PB0) |(1<< PB1) | (1<< PB2);//SCK MOSI SS!
 		SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
 	#else
+		//dbg_trace("spi_init_iv6_brd");
 		DDRB &= ~(1<< PB4);//MISO
 		DDRB |= (1<< PB5);//SCK
 		SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);
@@ -46,7 +59,7 @@ uint8_t spi_sendByte(uint8_t data)
 {
 	//spiTxBuffer[spiTxGet] = data;
 	//spiTxGet = (spiTxGet + 1) & SPI_TX_BUFFER_MASK;
-	
+	//dbg_trace_val("spiSendByte", data);
 	spi_init();
 	uint8_t result = 0;
 	//wait transmission done

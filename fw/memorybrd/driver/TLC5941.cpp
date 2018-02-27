@@ -19,7 +19,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "TLC5941.h"
 
-uint8_t currentDC = 32;//6-bit, 0 to 63.
+uint8_t currentDC = 63;//6-bit, 0 to 63.
 uint8_t shift[4] = {0, 6, 4, 2};
 	
 uint8_t tlcDataRegister[4][3] = 
@@ -40,6 +40,7 @@ uint8_t tlcDataRegister[4][3] =
 
 void TLC5941SetColumn(uint8_t column)
 {
+	dbg_trace_val("TLC5941SetColumn", column);
 	//recalculate array:
 	uint8_t zeroes_prefix = (column >> 4) * 3;
 	uint8_t delim = column % 4;
@@ -67,6 +68,7 @@ void TLC5941SetColumn(uint8_t column)
 
 void TLC5941updateArray(uint8_t data)
 {
+	dbg_trace("TLC5941updateArray");
 	memset(tlcDataRegister, 0, 12);//clear data
 	tlcDataRegister[0][0] = data & 0x3F;
 	
@@ -82,11 +84,12 @@ void TLC5941updateArray(uint8_t data)
 
 void TLC5941Init(void)
 {
+	dbg_trace("TLC5941Init start");
 	DDRB |= (1<< PB4);
 	DDRJ |= (1 << PJ3);
-	spi_init();
 	TLC5941SetBlank();
 
+	
 	TLC5941updateArray(currentDC);
 	TLC5941ReleaseBlank();
 	for (uint8_t i = 0; i < 24; ++i)
@@ -94,6 +97,7 @@ void TLC5941Init(void)
 		spi_sendByte(0);
 	}
 	TLC5941Update();
+	log_trace("TLC5941Init Done");
 }
 
 void TLC5941SetCurrent(uint8_t current)

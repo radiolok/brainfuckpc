@@ -25,7 +25,10 @@ uint8_t startAddr = 0;
 
 void ledInit()
 {
+	
 	DDRB |= (1 << PB5) | (1 << PB6) | (1 << PB7);
+	TLC5941Init();
+	log_trace("ledInit Done");
 }
 
 
@@ -33,10 +36,10 @@ void ledPoll(void)
 {
 	TLC5941SetBlank();
 	ledClr();
-	ramWriteToBus(startAddr + currentLed);
-	ledLatch(LED_LATCH_1);
-	ramWriteToBus(startAddr + 16 + currentLed);
-	ledLatch(LED_LATCH_2);
+	if (!ramDataToBus(startAddr + currentLed))
+		ledLatch(LED_LATCH_1);
+	if (!ramDataToBus(startAddr + 16 + currentLed))
+		ledLatch(LED_LATCH_2);
 	ramReleaseLine();
 	TLC5941SetColumn(currentLed);
 	TLC5941ReleaseBlank();

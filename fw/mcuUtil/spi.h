@@ -20,7 +20,11 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define __SPI_H__
 
 #include "avr/io.h"
+#include "avr/interrupt.h"
 #include "log.h"
+#include "util/delay.h"
+
+
 
 #define SPI_TX_BUFFER 16
 #define SPI_TX_BUFFER_MASK 0x0F

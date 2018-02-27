@@ -50,8 +50,9 @@ int main(void)
 	MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
 	log_trace("MTask Inited");
 	ramInit();
+	ledInit();
 	MTask::Instance().Add(ramChecker, NULL, 10);
-	MTask::Instance().Add(ledPoll, NULL, 1);
+	MTask::Instance().Add(ledPoll, NULL, 10);
 	MTask::Instance().Start();
 	log_trace("Dead")
     while (1) 

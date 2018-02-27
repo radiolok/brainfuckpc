@@ -12,63 +12,88 @@ uint8_t ramLockAccess = 0;
 
 uint8_t ramInit(void)
 {
+
 	DDRE |= (1 << PE2) | (1 << PE3);
 	PORTE |= ((1 << PE2) | (1 << PE3));
 	DDRG |= (1 << PG1);
+	
+	DDRJ |= (1<< PJ4);//CS
+	PORTJ &= ~(1 << PJ4);
+		log_trace("ramInit Done");
 	return 0;
 }
 
-uint16_t ramReadWord(uint16_t addr)
+int16_t ramReadWord(uint16_t addr)
 {
-	uint16_t result = 0;
+	int16_t result = -1;
 	if (!ramCheckLock())
 	{
+		ramSetMcuAddrPortWrite();
 		ramSetAddress(addr);
+		ramSetCs();
 		ramSetOE();
-		_delay_us(20);
-		PORTG |= (1 << PG1);
+		_delay_us(2);
 		result = ramGetData();
-		PORTG &= ~(1 << PG1);
-		_delay_us(20);
+		_delay_us(2);
+		ramClrCs();
 		ramReleaseOE();
 	}
 	ramReleaseLine();		
 	return result;
 }
 
-void ramWriteWord(uint16_t addr, uint16_t data)
+int16_t ramWriteWord(uint16_t addr, uint16_t data)
 {
+	int16_t result = -1;
 	if (!ramCheckLock())
 	{
+		ramSetMcuAddrPortWrite();
+		ramSetMcuDataPortWrite();
 		ramSetAddress(addr);
-		
 		ramSetData(data);
-		PORTG |= (1 << PG1);
 		ramSetWrite();
+		ramSetCs();
 		_delay_us(2);
+		ramClrCs();
 		ramSetRead();
-		PORTG &= ~(1 << PG1);
 	}
 	ramReleaseLine();
-}
-
-uint16_t ramReadFromBus(uint16_t addr)
-{
-	uint16_t result = 0;
-	
 	return result;
 }
 
-uint16_t ramWriteToBus(uint16_t addr)
+int16_t ramDataToBus(uint16_t addr)
 {
-	uint16_t result = 0;
+	int16_t result = -1;
+	if (!ramCheckLock())
+	{
+		ramSetMcuAddrPortWrite();
+		ramSetAddress(addr);
+		ramSetOE();
+		ramSetCs();
+		result = 0;
+	}
+	return result;
+}
 
+int16_t ramDataFromBus(uint16_t addr)
+{
+	int16_t result = -1;
+	if (!ramCheckLock())
+	{
+		ramSetMcuAddrPortWrite();
+		ramSetAddress(addr);
+		ramSetWrite();
+		ramSetCs();
+		_delay_us(2);
+		result = 0;
+	}
 	return result;
 }
 
 void ramLock(void)
 {
 	ramLockAccess = 1;
+	ramReleaseLine();
 }
 
 void ramUnlock(void)
@@ -78,6 +103,6 @@ void ramUnlock(void)
 
 uint8_t ramCheckLock(void)
 {
-	dbg_trace_val("RamLock=",ramLockAccess);
+	//dbg_trace_val("RamLock=",ramLockAccess);
 	return ramLockAccess;
 }
