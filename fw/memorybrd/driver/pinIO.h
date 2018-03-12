@@ -16,42 +16,52 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT 
  OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
-#include "dataIO.h"
+/************************************************************************/
+/* This module is used for set and get special In and out states        */
+/************************************************************************/
 
-uint16_t ioMcuReadDataFromBus(void)
-{
-	
-}
+#ifndef __PINIO_H__
+#define __PINIO_H__
 
-void ioMcuWriteDataToBus(uint16_t data)
-{
-	
-}
+#include "../macros.h"
 
-void ioMcuReleaseDataBus(void)
-{
-	
-}
-
-uint16_t ioMcuReadAddrFromBus(void)
-{
-	
-}
-
-void ioMcuWriteAddrToBus(uint16_t data)
-{
-	DDRA = 0xFF;
-	DDRC = 0xFF;
-	PORTA = low(addr);
-	//dbg_trace_val("ramSetAddress = low:", PINA);
-	PORTC = high(addr);
-	//dbg_trace_val("ramSetAddress = high:", PINC);
-}
-
-void ioMcuReleaseAddrBus(void)
-{
-	DDRA = 0x00;
-	DDRC = 0x00;
-}
+enum class PinExtIn{
+	WR,//0
+	Sync,//1
+	STDOUT_WR,//2
+	DO_NOT_CONNECT_1,//3
+	STDIN_MODE,//4
+	WORD_BIT_MODE,//5
+	STDIN_RD,	//6
+	I1, //7
+	I2,//8
+	I3,//9
+	I4,//10
+	I5,//11
+	I6,//12
+	I7,//13
+	I8,//14
+	I9//15	
+	};
 
 
+enum class PinExtOut{
+	IO0,
+	IO1,
+	IO2,
+	IO3,
+	IO4,
+	IO5,
+	IO6,
+	IO7,
+	IO8,
+	IO9,
+	IO10,
+	IO11,
+	IO12,
+	IO13,
+	IO14,
+	IO15
+};
+
+#endif //__PINIO_H__

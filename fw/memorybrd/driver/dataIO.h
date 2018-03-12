@@ -21,22 +21,5 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define __DATAIO_H__
 
 
-class dataIO
-{
-//variables
-public:
-protected:
-private:
-
-//functions
-public:
-	dataIO();
-	~dataIO();
-protected:
-private:
-	dataIO( const dataIO &c );
-	dataIO& operator=( const dataIO &c );
-
-}; //dataIO
 
 #endif //__DATAIO_H__

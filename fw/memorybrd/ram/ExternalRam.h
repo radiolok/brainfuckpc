@@ -10,6 +10,8 @@
 #define __EXTERNALRAM_H__
 
 #include "../macros.h"
+#include "../driver/dataIO.h"
+#include "../driver/addrIO.h"
 
 void inline ramSetAddress(uint16_t addr)
 {
