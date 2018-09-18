@@ -53,10 +53,16 @@ Diode(8)
 # 5. Housing
 |  Component          |   Status     |
 |---------------------|--------------|
-| Base Plate          | Drawing      |
-| Main Frame          | Not started  |
+| Base Plate          | Done      |
+| Main Frame          | Finalization |
 
 # 6. Progress updates:
+
+## Update 24/05/2018:
+* D-triggers for TMP/CMD register block done;
+* All block housings are printed;
+* Indicator boards assembly finished;
+* Soldered all latch modules;
 
 ## Update 26/02/2018:
 * Adder Block done and tested;
