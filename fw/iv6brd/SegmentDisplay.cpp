@@ -76,7 +76,7 @@ void SegmentDisplay::operator () (const uint16_t data, const char* prefix, const
 			}
 			else
 			{
-				m_segments[segment] = 0;
+				m_segments[segment] = 0x30;
 			}
 		}
 		if (prefix_length > 1 )
