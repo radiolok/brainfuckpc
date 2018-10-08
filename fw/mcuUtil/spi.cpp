@@ -25,7 +25,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 
 #if defined(IV6_BRD)
-	#error "Not a memory board!"
+	//#error "Not a memory board!"
 #endif
 
 void spi_init()

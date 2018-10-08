@@ -25,52 +25,52 @@ uint8_t getInputPin(uint8_t pinNumber)
 	uint8_t result = 0;
 	switch (pinNumber)
 	{
-		case (uint8_t)PinExtIn.I1:
+		case (uint8_t)PinExtIn::I1:
 			result = (PINH >> PH4) & 0x01;	
 		break;
-		case (uint8_t)PinExtIn.I2:
+		case (uint8_t)PinExtIn::I2:
 			result = (PINH >> PH3) & 0x01;	
 		break;
-		case (uint8_t)PinExtIn.I3:
+		case (uint8_t)PinExtIn::I3:
 			result = (PINH >> PH2) & 0x01;		
 		break;
-		case (uint8_t)PinExtIn.I4:
+		case (uint8_t)PinExtIn::I4:
 			result = (PINE >> PE7) & 0x01;				
 		break;
-		case (uint8_t)PinExtIn.I5:
+		case (uint8_t)PinExtIn::I5:
 			result = (PINE >> PE6) & 0x01;					
 		break;
-		case (uint8_t)PinExtIn.I6:
+		case (uint8_t)PinExtIn::I6:
 			result = (PINJ >> PJ6) & 0x01;							
 		break;
-		case (uint8_t)PinExtIn.I7:
+		case (uint8_t)PinExtIn::I7:
 			result = (PINJ >> PJ5) & 0x01;									
 		break;
-		case (uint8_t)PinExtIn.I8:
+		case (uint8_t)PinExtIn::I8:
 			result = (PINJ >> PJ4) & 0x01;											
 		break;
-		case (uint8_t)PinExtIn.I9:
+		case (uint8_t)PinExtIn::I9:
 			result = (PINJ >> PJ3) & 0x01;													
 		break;
-		case (uint8_t)PinExtIn.STDIN_MODE:
+		case (uint8_t)PinExtIn::STDIN_MODE:
 			result = (PINH >> PH6) & 0x01;															
 		break;
-		case (uint8_t)PinExtIn.STDIN_RD:
+		case (uint8_t)PinExtIn::STDIN_RD:
 			result = (PINH >> PH5) & 0x01;																		
 		break;
-		case (uint8_t)PinExtIn.STDOUT_WR:
+		case (uint8_t)PinExtIn::STDOUT_WR:
 			result = (PINH >> PH7) & 0x01;																				
 		break;
-		case (uint8_t)PinExtIn.Sync:
+		case (uint8_t)PinExtIn::Sync:
 			result = (PINE >> PE4) & 0x01;																					
 		break;
-		case (uint8_t)PinExtIn.WORD_BIT_MODE:
+		case (uint8_t)PinExtIn::WORD_BIT_MODE:
 		result = (PING >> PG5) & 0x01;
 		break;
-		case (uint8_t)PinExtIn.WR:
+		case (uint8_t)PinExtIn::WR:
 			result = (PINE >> PE5) & 0x01;																							
 		break;
-		case (uint8_t)PinExtIn.DO_NOT_CONNECT_1:
+		case (uint8_t)PinExtIn::DO_NOT_CONNECT_1:
 			result = (PINB >> PB0) & 0x01;																									
 		break;
 		default:
@@ -84,71 +84,73 @@ void SetOutputPin(uint8_t pinNumber, uint8_t state)
 {
 	switch (pinNumber)
 	{
-		case (uint8_t)PinExtOut.IO0:
+		case (uint8_t)PinExtOut::IO0:
 			DDRG  |= (1 << PG1);
 			if (state) {PORTG |= (1 << PG1);} else {PORTG &= ~(1<<PG1);}
 		break;
-		case (uint8_t)PinExtOut.IO1:
+		case (uint8_t)PinExtOut::IO1:
 			DDRG  |= (1 << PG0);
 			if (state) {PORTG |= (1 << PG0);} else {PORTG &= ~(1<<PG0);}
 		break;
-		case (uint8_t)PinExtOut.IO2:
+		case (uint8_t)PinExtOut::IO2:
 			DDRD  |= (1 << PD7);
-			if (state) {PORTG |= (1 << PD7);} else {PORTG &= ~(1<<PD7);}
+			if (state) {PORTD |= (1 << PD7);} else {PORTD &= ~(1<<PD7);}
 		break;
-		case (uint8_t)PinExtOut.IO3:
+		case (uint8_t)PinExtOut::IO3:
 			DDRD  |= (1 << PD6);
-			if (state) {PORTG |= (1 << PD6);} else {PORTG &= ~(1<<PD6);}
+			if (state) {PORTD |= (1 << PD6);} else {PORTD &= ~(1<<PD6);}
 		break;
-		case (uint8_t)PinExtOut.IO4:
+		case (uint8_t)PinExtOut::IO4:
 			DDRD  |= (1 << PD5);
-			if (state) {PORTG |= (1 << PD5);} else {PORTG &= ~(1<<PD5);}
+			if (state) {PORTD |= (1 << PD5);} else {PORTD &= ~(1<<PD5);}
 		break;
+		case (uint8_t)PinExtOut::IO5:
 			DDRD  |= (1 << PD4);
-			if (state) {PORTG |= (1 << PD4);} else {PORTG &= ~(1<<PD4);}
+			if (state) {PORTD |= (1 << PD4);} else {PORTD &= ~(1<<PD4);}
 		break;
-		case (uint8_t)PinExtOut.IO6:
+		case (uint8_t)PinExtOut::IO6:
 			DDRD  |= (1 << PD3);
-			if (state) {PORTG |= (1 << PD3);} else {PORTG &= ~(1<<PD3);}
+			if (state) {PORTD |= (1 << PD3);} else {PORTD &= ~(1<<PD3);}
 		break;
-		case (uint8_t)PinExtOut.IO7:
+		case (uint8_t)PinExtOut::IO7:
 			DDRD  |= (1 << PD2);
-			if (state) {PORTG |= (1 << PD2);} else {PORTG &= ~(1<<PD2);}
+			if (state) {PORTD |= (1 << PD2);} else {PORTD &= ~(1<<PD2);}
 		break;
-		case (uint8_t)PinExtOut.IO8:
+		case (uint8_t)PinExtOut::IO8:
 			DDRL  |= (1 << PL7);
-			if (state) {PORTG |= (1 << PL7);} else {PORTG &= ~(1<<PL7);}
+			if (state) {PORTL |= (1 << PL7);} else {PORTL &= ~(1<<PL7);}
 		break;
-		case (uint8_t)PinExtOut.IO9:
+		case (uint8_t)PinExtOut::IO9:
 			DDRL  |= (1 << PL6);
-			if (state) {PORTG |= (1 << PL6);} else {PORTG &= ~(1<<PL6);}
+			if (state) {PORTL |= (1 << PL6);} else {PORTL &= ~(1<<PL6);}
 		break;
-		case (uint8_t)PinExtOut.IO10:
+		case (uint8_t)PinExtOut::IO10:
 			DDRL  |= (1 << PL5);
-			if (state) {PORTG |= (1 << PL5);} else {PORTG &= ~(1<<PL5);}
+			if (state) {PORTL |= (1 << PL5);} else {PORTL &= ~(1<<PL5);}
 		break;
-		case (uint8_t)PinExtOut.IO11:
+		case (uint8_t)PinExtOut::IO11:
 			DDRL  |= (1 << PL4);
-			if (state) {PORTG |= (1 << PL4);} else {PORTG &= ~(1<<PL4);}
+			if (state) {PORTL |= (1 << PL4);} else {PORTL &= ~(1<<PL4);}
 		break;
-		case (uint8_t)PinExtOut.IO12:
+		case (uint8_t)PinExtOut::IO12:
 			DDRL  |= (1 << PL3);
-			if (state) {PORTG |= (1 << PL3);} else {PORTG &= ~(1<<PL3);}
+			if (state) {PORTL |= (1 << PL3);} else {PORTL &= ~(1<<PL3);}
 		break;
-		case (uint8_t)PinExtOut.IO13:
+		case (uint8_t)PinExtOut::IO13:
 			DDRL  |= (1 << PL2);
-			if (state) {PORTG |= (1 << PL2);} else {PORTG &= ~(1<<PL2);}
+			if (state) {PORTL |= (1 << PL2);} else {PORTL &= ~(1<<PL2);}
 		break;
-		case (uint8_t)PinExtOut.IO14:
+		case (uint8_t)PinExtOut::IO14:
 			DDRL  |= (1 << PL1);
-			if (state) {PORTG |= (1 << PL1);} else {PORTG &= ~(1<<PL1);}
+			if (state) {PORTL |= (1 << PL1);} else {PORTL &= ~(1<<PL1);}
 		break;
-		case (uint8_t)PinExtOut.IO15:
+		case (uint8_t)PinExtOut::IO15:
 			DDRL  |= (1 << PL0);
-			if (state) {PORTG |= (1 << PL0);} else {PORTG &= ~(1<<PL0);}
+			if (state) {PORTL |= (1 << PL0);} else {PORTL &= ~(1<<PL0);}
 		break;
 		default:
 
 		break;
 	}
+	
 }

@@ -20,25 +20,34 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 uint16_t ioMcuReadDataFromBus(void)
 {
-	
+	return 0;
 }
 
 void ioMcuWriteDataToBus(uint16_t data)
 {
-	
+	//TODO: add lock
+	DDRF = 0xFF;
+	DDRK = 0xFF;
+	PORTF = low(data);
+	//dbg_trace_val("ramSetAddress = low:", PINA);
+	PORTK = high(data);
+	//dbg_trace_val("ramSetAddress = high:", PINC);
 }
 
 void ioMcuReleaseDataBus(void)
 {
-	
+	DDRF = 0x00;
+	DDRK = 0x00;
+	PORTF = 0x00;
+	PORTK = 0x00;
 }
 
 uint16_t ioMcuReadAddrFromBus(void)
 {
-	
+	return 0;
 }
 
-void ioMcuWriteAddrToBus(uint16_t data)
+void ioMcuWriteAddrToBus(uint16_t addr)
 {
 	DDRA = 0xFF;
 	DDRC = 0xFF;

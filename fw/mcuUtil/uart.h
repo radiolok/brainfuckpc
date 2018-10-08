@@ -138,28 +138,30 @@ void uart_print(int16_t val, int8_t base);
 	 #define uart3_puts_P(__s)       uart3_puts_p(PSTR(__s))
 	 int uart3_available(void);
 	 void uart3_flush(void);
+	 
+	 /** @brief  Initialize USART1 (only available on selected ATmegas) @see uart_init */
+	 void uart1_init(unsigned int baudrate);
+	 /** @brief  Get received byte of USART1 from ringbuffer. (only available on selected ATmega) @see uart_getc */
+	 uint8_t uart1_getc(void);
+	 /** @brief  Put byte to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_putc */
+	 void uart1_putc(unsigned char data);
+	 /** @brief  Put string to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_puts */
+	 void uart1_puts(const char *s );
+	 /** @brief  Put string from program memory to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_puts_p */
+	 void uart1_puts_p(const char *s );
+	 /** @brief  Macro to automatically put a string constant into program memory */
+	 #define uart1_puts_P(__s)       uart1_puts_p(PSTR(__s))
+	 /** @brief   Return number of bytes waiting in the receive buffer */
+	 int uart1_available(void);
+	 /** @brief   Flush bytes waiting in receive buffer */
+	 void uart1_flush(void);
 
 #endif
 
 
 
 
-/** @brief  Initialize USART1 (only available on selected ATmegas) @see uart_init */
- void uart1_init(unsigned int baudrate);
-/** @brief  Get received byte of USART1 from ringbuffer. (only available on selected ATmega) @see uart_getc */
-uint8_t uart1_getc(void);
-/** @brief  Put byte to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_putc */
- void uart1_putc(unsigned char data);
-/** @brief  Put string to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_puts */
- void uart1_puts(const char *s );
-/** @brief  Put string from program memory to ringbuffer for transmitting via USART1 (only available on selected ATmega) @see uart_puts_p */
- void uart1_puts_p(const char *s );
-/** @brief  Macro to automatically put a string constant into program memory */
-#define uart1_puts_P(__s)       uart1_puts_p(PSTR(__s))
-/** @brief   Return number of bytes waiting in the receive buffer */
- int uart1_available(void);
-/** @brief   Flush bytes waiting in receive buffer */
- void uart1_flush(void);
+
 
 
 

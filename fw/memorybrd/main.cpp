@@ -23,6 +23,9 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "uart.h"
 #include "ram/ExternalRam.h"
 #include "driver/led.h"
+#include "driver/pinIO.h"
+#include "midi.h"
+
 static uint32_t SCHEDULER_PERIOD = 1;//ms
 
 uint16_t addr = 0;
@@ -45,19 +48,33 @@ void ramChecker()
 int main(void)
 {
 	sei();
-	uart_init(UART_BAUD_SELECT(BAUD_RATE, F_CPU));
-	log_trace("uart started");
-	MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
-	log_trace("MTask Inited");
-	ramInit();
-	ledInit();
-	MTask::Instance().Add(ramChecker, NULL, 10);
-	MTask::Instance().Add(ledPoll, NULL, 10);
-	MTask::Instance().Start();
-	log_trace("Dead")
+	startMidi();
+	//uart_init(UART_BAUD_SELECT(38400, F_CPU));
+	//log_trace("uart started");
+	//MTask::Instance().Init(SCHEDULER_PERIOD, F_CPU);
+	//log_trace("MTask Inited");
+	//ramInit();
+	//ledInit();
+	//MTask::Instance().Add(ramChecker, NULL, 10);
+	//MTask::Instance().Add(ledPoll, NULL, 10);
+	//MTask::Instance().Start();
+	//log_trace("Dead");
     while (1) 
     {
-		
+		if (getInputPin((uint8_t)PinExtIn::I2))
+		{
+			//TMP_WR
+			SetOutputPin((uint8_t)PinExtOut::IO11, HIGH);
+			_delay_us(900);
+			SetOutputPin((uint8_t)PinExtOut::IO11, LOW);
+			_delay_us(2500);
+			//IP_WR
+			SetOutputPin((uint8_t)PinExtOut::IO10, HIGH);
+			_delay_us(900);
+			SetOutputPin((uint8_t)PinExtOut::IO10, LOW);
+			_delay_us(1000);
+			//log_trace("tick");
+		}
     }
 }
 

@@ -25,6 +25,10 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "../macros.h"
 
+void SetOutputPin(uint8_t pinNumber, uint8_t state);
+uint8_t getInputPin(uint8_t pinNumber);
+
+
 enum class PinExtIn{
 	WR,//0
 	Sync,//1

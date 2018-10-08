@@ -20,6 +20,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #ifndef __DATAIO_H__
 #define __DATAIO_H__
 
+#include "../macros.h"
 
 
 #endif //__DATAIO_H__

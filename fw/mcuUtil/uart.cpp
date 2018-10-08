@@ -253,9 +253,9 @@ Date        Description
 /* ATmega with four USART */
   #define ATMEGA_USART0
   //reduce memory load
- // #define ATMEGA_USART1 
- // #define ATMEGA_USART2
- // #define ATMEGA_USART3
+  #define ATMEGA_USART1 
+  #define ATMEGA_USART2
+  //#define ATMEGA_USART3
   #define UART0_RECEIVE_INTERRUPT   USART0_RX_vect
   #define UART1_RECEIVE_INTERRUPT   USART1_RX_vect
   #define UART2_RECEIVE_INTERRUPT   USART2_RX_vect
@@ -348,6 +348,25 @@ static volatile unsigned char UART1_RxTail;
 static volatile unsigned char UART1_LastRxError;
 #endif
 
+#if defined( ATMEGA_USART2 )
+static volatile unsigned char UART2_TxBuf[UART_TX_BUFFER_SIZE];
+static volatile unsigned char UART2_RxBuf[UART_RX_BUFFER_SIZE];
+static volatile unsigned char UART2_TxHead;
+static volatile unsigned char UART2_TxTail;
+static volatile unsigned char UART2_RxHead;
+static volatile unsigned char UART2_RxTail;
+static volatile unsigned char UART2_LastRxError;
+#endif
+
+#if defined( ATMEGA_USART2 )
+static volatile unsigned char UART3_TxBuf[UART_TX_BUFFER_SIZE];
+static volatile unsigned char UART3_RxBuf[UART_RX_BUFFER_SIZE];
+static volatile unsigned char UART3_TxHead;
+static volatile unsigned char UART3_TxTail;
+static volatile unsigned char UART3_RxHead;
+static volatile unsigned char UART3_RxTail;
+static volatile unsigned char UART3_LastRxError;
+#endif
 
 
 ISR(UART0_RECEIVE_INTERRUPT)

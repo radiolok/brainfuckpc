@@ -23,6 +23,9 @@
 #define low(x)   ((x) & 0xFF)
 #define high(x)   (((x)>>8) & 0xFF)
 
+#define HIGH true
+#define LOW false
+
 
 
 #endif /* MACROS_H_ */
