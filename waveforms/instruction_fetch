@@ -1,0 +1,64 @@
+{signal: [
+  {name : 'Clock', wave: '1L..........H'},
+  {name : 'Sequencer', wave: '0===========0', data : ['0','1','2','3','4','5','6','7','8','9','10']},
+  [
+    'Source sel',
+    {name: 'PTR_SEL', wave: 'x1...........'},
+  	{name: 'DATA_SEL', wave: 'x0...........'}
+    ],
+  {},
+   ['ALU Registers',
+     [ 'TMP', 
+   {name: 'WR', wave: '01.0.........'},
+  {name: 'Data', wave: 'x.3..........', data : ["Old IP"]},
+     {name: 'RD', wave: '01........0..'},
+   
+  ], 
+  {},
+  ['BIAS',
+  {name: 'WR', wave: '0........1.0.', node: '.........f...'},
+  {name: 'Data', wave: 'x.........5..', data : ["New Bias"]},
+  {name: 'RD', wave: '0............'},
+   {name: 'Insn', wave: '3.........5..', data : ["Old Instruction", "New Instruction"]},
+  {name: 'Insn_RD', wave: '10..........1'},
+  ]
+   ],
+   {},
+   [ 'Adder',
+  {name: 'Sign',    wave: '0............'},
+  {name: 'CarryIn', wave: '01......0....'}
+     ],
+     {},
+  ['Context Registers',
+  ['IP',
+  {name: 'WR', wave: '0.....1.0....'},
+   {name: 'Data', wave: '3......4.....', data : ["Old IP", "New IP"]},
+   {name: 'RD', wave: '01........0..', node: '.a........c'},
+  ],
+   {},
+  ['AP',
+  {name: 'WR', wave: '0............'},
+   {name: 'Data', wave: '4............', data :["Old AP"]},
+   {name: 'RD', wave: '0............'},
+   ]
+   ],
+   {},
+  ['Memory',
+  {name: '!RD/WR',   wave: '1.......0..1.'},
+  {name: 'MemSync',  wave: '0.......10...', node: '.........e......'},
+   {name: 'DATA LINE',  wave: 'x........5.x.', data : ["New Insn"]},
+   {name: 'ADDRESS LINE',  wave: 'x=.....4..x..', data : ["old IP", "new IP"], node : '.b........d'}
+   ],
+],
+   edge:[
+   'a->b', 'c->d', 'e->f']
+   ,
+  head:{
+   text:'Impulse sequencer'
+ },
+ foot:{
+   text:'Instruction fetching waveform',
+   tock:-1
+ },
+  
+  }
