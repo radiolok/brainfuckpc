@@ -1,0 +1,35 @@
+{signal: [
+  {name : 'Clock', wave: '0H..........L'},
+  {name : 'Sequencer', wave: '0===========0', data : ['0','1','2','3','4','5','6','7','8','9','10']},
+
+  ['Context Registers',
+  ['IP',
+  {name: 'WR', wave: '0......'},
+    {name: 'Data', wave: '4......', data :["IP", "new IP"]},
+   {name: 'RD', wave: '0......'},
+   
+  ],
+  
+  ['AP',
+   {name: 'WR', wave: '0......'},
+   {name: 'Data', wave: '3......', data : ["AP", "New AP"]},
+	{name: 'RD', wave: '01.0...'}, ]
+  ],
+   {},
+  ['Memory',
+  {name: '!RD/WR',   wave: '1.0..1.'},
+  {name: 'MemSync',  wave: '0.10...', node: '................'},
+   {name: 'DATA LINE',  wave: 'x.=..x.', data : ["Data", "New data"]},
+     {name: 'ADDRESS LINE',  wave: 'x.4.x..', data : ["AP", "IP"]},
+   {name : 'COUT', wave: '0.10...'}
+   ],
+],
+  head:{
+   text:'Impulse sequencer'
+ },
+ foot:{
+   text:'COUT Instruction',
+   tock:-1
+ },
+  
+  }
