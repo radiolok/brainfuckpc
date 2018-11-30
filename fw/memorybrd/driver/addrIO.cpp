@@ -19,12 +19,40 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "addrIO.h"
 
-// default constructor
-addrIO::addrIO()
+void addrInit()
 {
-} //addrIO
+	//set up INT4 vector
+	EICRB =  (1 << ISC40);//both variants
+}
 
-// default destructor
-addrIO::~addrIO()
+
+void mcuEnableListenMode()
 {
-} //~addrIO
+
+}
+
+void mcuDisableListenMode()
+{
+
+}
+
+
+volatile uint8_t listenModeFlag = 0;
+uint8_t ListenMode()
+{
+	return listenModeFlag;
+}
+
+ISR(INT4_vect){
+	//we need to check state:
+	uint8_t state = PINE & (1 << PE4);
+	if (state)//HIGH state - Sync started
+	{
+		listenModeFlag = 1;//Set Flag
+	}
+	else//LOW state - sync ended. return to normal mode
+	{
+		listenModeFlag = 0;//Release Flag
+	}
+	
+}

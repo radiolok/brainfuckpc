@@ -19,23 +19,12 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #ifndef __ADDRIO_H__
 #define __ADDRIO_H__
 
+#include "../macros.h"
+#include <avr/interrupt.h>
 
-class addrIO
-{
-//variables
-public:
-protected:
-private:
+#define LISTEN_MODE_ON 1
+#define LISTEN_MODE_OFF 0
 
-//functions
-public:
-	addrIO();
-	~addrIO();
-protected:
-private:
-	addrIO( const addrIO &c );
-	addrIO& operator=( const addrIO &c );
-
-}; //addrIO
+uint8_t ListenMode();
 
 #endif //__ADDRIO_H__
