@@ -1,0 +1,184 @@
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.text
+   9               	.Ltext0:
+  10               		.cfi_sections	.debug_frame
+  11               	.global	main
+  13               	main:
+  14               	.LFB4:
+  15               		.file 1 "main.c"
+   1:main.c        **** /*
+   2:main.c        ****  * FreeRTOS Kernel V10.1.1
+   3:main.c        ****  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+   4:main.c        ****  *
+   5:main.c        ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
+   6:main.c        ****  * this software and associated documentation files (the "Software"), to deal in
+   7:main.c        ****  * the Software without restriction, including without limitation the rights to
+   8:main.c        ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+   9:main.c        ****  * the Software, and to permit persons to whom the Software is furnished to do so,
+  10:main.c        ****  * subject to the following conditions:
+  11:main.c        ****  *
+  12:main.c        ****  * The above copyright notice and this permission notice shall be included in all
+  13:main.c        ****  * copies or substantial portions of the Software.
+  14:main.c        ****  *
+  15:main.c        ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:main.c        ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  17:main.c        ****  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  18:main.c        ****  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  19:main.c        ****  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  20:main.c        ****  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  21:main.c        ****  *
+  22:main.c        ****  * http://www.FreeRTOS.org
+  23:main.c        ****  * http://aws.amazon.com/freertos
+  24:main.c        ****  *
+  25:main.c        ****  * 1 tab == 4 spaces!
+  26:main.c        ****  */
+  27:main.c        **** 
+  28:main.c        **** /*
+  29:main.c        ****  * Creates all the demo application tasks, then starts the scheduler.  The WEB
+  30:main.c        ****  * documentation provides more details of the demo application tasks.
+  31:main.c        ****  *
+  32:main.c        ****  * Main. c also creates a task called "Check".  This only executes every three
+  33:main.c        ****  * seconds but has the highest priority so is guaranteed to get processor time.
+  34:main.c        ****  * Its main function is to check that all the other tasks are still operational.
+  35:main.c        ****  * Each task that does not flash an LED maintains a unique count that is
+  36:main.c        ****  * incremented each time the task successfully completes its function.  Should
+  37:main.c        ****  * any error occur within such a task the count is permanently halted.  The
+  38:main.c        ****  * check task inspects the count of each task to ensure it has changed since
+  39:main.c        ****  * the last time the check task executed.  If all the count variables have
+  40:main.c        ****  * changed all the tasks are still executing error free, and the check task
+  41:main.c        ****  * toggles an LED.  Should any task contain an error at any time the LED toggle
+  42:main.c        ****  * will stop.
+  43:main.c        ****  *
+  44:main.c        ****  * The LED flash and communications test tasks do not maintain a count.
+  45:main.c        ****  */
+  46:main.c        **** 
+  47:main.c        **** /*
+  48:main.c        **** Changes from V1.2.0
+  49:main.c        **** 
+  50:main.c        **** 	+ Changed the baud rate for the serial test from 19200 to 57600.
+  51:main.c        **** 
+  52:main.c        **** Changes from V1.2.3
+  53:main.c        **** 
+  54:main.c        **** 	+ The integer and comtest tasks are now used when the cooperative scheduler
+  55:main.c        **** 	  is being used.  Previously they were only used with the preemptive
+  56:main.c        **** 	  scheduler.
+  57:main.c        **** 
+  58:main.c        **** Changes from V1.2.5
+  59:main.c        **** 
+  60:main.c        **** 	+ Set the baud rate to 38400.  This has a smaller error percentage with an
+  61:main.c        **** 	  8MHz clock (according to the manual).
+  62:main.c        **** 
+  63:main.c        **** Changes from V2.0.0
+  64:main.c        **** 
+  65:main.c        **** 	+ Delay periods are now specified using variables and constants of
+  66:main.c        **** 	  TickType_t rather than unsigned long.
+  67:main.c        **** 
+  68:main.c        **** Changes from V2.6.1
+  69:main.c        **** 
+  70:main.c        **** 	+ The IAR and WinAVR AVR ports are now maintained separately.
+  71:main.c        **** 
+  72:main.c        **** Changes from V4.0.5
+  73:main.c        **** 
+  74:main.c        **** 	+ Modified to demonstrate the use of co-routines.
+  75:main.c        **** 
+  76:main.c        **** */
+  77:main.c        **** 
+  78:main.c        **** #include <stdlib.h>
+  79:main.c        **** #include <string.h>
+  80:main.c        **** 
+  81:main.c        **** #ifdef GCC_MEGA_AVR
+  82:main.c        **** 	/* EEPROM routines used only with the WinAVR compiler. */
+  83:main.c        **** 	#include <avr/eeprom.h>
+  84:main.c        **** #endif
+  85:main.c        **** 
+  86:main.c        **** /* Scheduler include files. */
+  87:main.c        **** #include "FreeRTOS.h"
+  88:main.c        **** #include "task.h"
+  89:main.c        **** #include "croutine.h"
+  90:main.c        **** 
+  91:main.c        **** /* Demo file headers. */
+  92:main.c        **** #include "PollQ.h"
+  93:main.c        **** #include "integer.h"
+  94:main.c        **** #include "serial.h"
+  95:main.c        **** #include "comtest.h"
+  96:main.c        **** #include "crflash.h"
+  97:main.c        **** #include "print.h"
+  98:main.c        **** 
+  99:main.c        **** 
+ 100:main.c        **** /* Priority definitions for most of the tasks in the demo application.  Some
+ 101:main.c        **** tasks just use the idle priority. */
+ 102:main.c        **** #define mainLED_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+ 103:main.c        **** #define mainCOM_TEST_PRIORITY			( tskIDLE_PRIORITY + 2 )
+ 104:main.c        **** #define mainQUEUE_POLL_PRIORITY			( tskIDLE_PRIORITY + 2 )
+ 105:main.c        **** #define mainCHECK_TASK_PRIORITY			( tskIDLE_PRIORITY + 3 )
+ 106:main.c        **** 
+ 107:main.c        **** /* Baud rate used by the serial port tasks. */
+ 108:main.c        **** #define mainCOM_TEST_BAUD_RATE			( ( unsigned long ) 38400 )
+ 109:main.c        **** 
+ 110:main.c        **** /* LED used by the serial port tasks.  This is toggled on each character Tx,
+ 111:main.c        **** and mainCOM_TEST_LED + 1 is toggles on each character Rx. */
+ 112:main.c        **** #define mainCOM_TEST_LED				( 4 )
+ 113:main.c        **** 
+ 114:main.c        **** /* LED that is toggled by the check task.  The check task periodically checks
+ 115:main.c        **** that all the other tasks are operating without error.  If no errors are found
+ 116:main.c        **** the LED is toggled.  If an error is found at any time the LED is never toggles
+ 117:main.c        **** again. */
+ 118:main.c        **** #define mainCHECK_TASK_LED				( 7 )
+ 119:main.c        **** 
+ 120:main.c        **** /* The period between executions of the check task. */
+ 121:main.c        **** #define mainCHECK_PERIOD				( ( TickType_t ) 3000 / portTICK_PERIOD_MS  )
+ 122:main.c        **** 
+ 123:main.c        **** /* An address in the EEPROM used to count resets.  This is used to check that
+ 124:main.c        **** the demo application is not unexpectedly resetting. */
+ 125:main.c        **** #define mainRESET_COUNT_ADDRESS			( ( void * ) 0x50 )
+ 126:main.c        **** 
+ 127:main.c        **** 
+ 128:main.c        **** static void prvCheckOtherTasksAreStillRunning( void );
+ 129:main.c        **** 
+ 130:main.c        **** /*-----------------------------------------------------------*/
+ 131:main.c        **** 
+ 132:main.c        **** int main( void )
+ 133:main.c        **** {
+  16               		.loc 1 133 0
+  17               		.cfi_startproc
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+ 134:main.c        **** 
+ 135:main.c        **** 	/* In this port, to use preemptive scheduler define configUSE_PREEMPTION
+ 136:main.c        **** 	as 1 in portmacro.h.  To use the cooperative scheduler define
+ 137:main.c        **** 	configUSE_PREEMPTION as 0. */
+ 138:main.c        **** 	vTaskStartScheduler();
+  22               		.loc 1 138 0
+  23 0000 0E94 0000 		call vTaskStartScheduler
+  24               	.LVL0:
+ 139:main.c        **** 
+ 140:main.c        **** 	return 0;
+ 141:main.c        **** }
+  25               		.loc 1 141 0
+  26 0004 80E0      		ldi r24,0
+  27 0006 90E0      		ldi r25,0
+  28 0008 0895      		ret
+  29               		.cfi_endproc
+  30               	.LFE4:
+  32               	.Letext0:
+  33               		.file 2 "../FreeRTOS/include/task.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\cygwin64\tmp\ccJb598D.s:2      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp\ccJb598D.s:3      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp\ccJb598D.s:4      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp\ccJb598D.s:5      *ABS*:0000003b __RAMPZ__
+C:\cygwin64\tmp\ccJb598D.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp\ccJb598D.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp\ccJb598D.s:13     .text:00000000 main
+
+UNDEFINED SYMBOLS
+vTaskStartScheduler
