@@ -62,6 +62,10 @@ void TLC5941SetColumn(uint8_t column)
 		{
 			spi_sendByte(0);
 		}
+		for (uint8_t i = 0;i < 24; ++i)
+		{
+			spi_sendByte(0);
+		}
 	}
 	TLC5941Update();
 }
@@ -84,6 +88,7 @@ void TLC5941updateArray(uint8_t data)
 
 void TLC5941Init(void)
 {
+	spi_init();
 	dbg_trace("TLC5941Init start");
 	DDRB |= (1<< PB4);
 	DDRJ |= (1 << PJ3);

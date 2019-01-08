@@ -94,8 +94,11 @@ void MTask::Start(){
 void MTask::HwStart()
 {
 	m_timemillis=0;//reset time counter
-
+#if  defined(__AVR_ATmega8__)
+	TIMSK |= (1<<TOIE1);
+#else
 	TIMSK1 |= (1<<TOIE1);
+#endif
 }
 
 void MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
@@ -122,7 +125,12 @@ void MTask::Release(uint8_t slot)
 void MTask::HwStop()//Stop scheduler
 {
 	TCCR1B &= ~((1<<CS11) | (1<<CS10));
+	
+#if  defined(__AVR_ATmega8__)
+	TIMSK &= ~(1<<TOIE1);
+#else
 	TIMSK1 &= ~(1<<TOIE1);
+#endif
 }
 
 uint32_t MTask::Millis(){

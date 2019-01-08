@@ -17,3 +17,10 @@ fw/memorybrd/Debug/
 *.elf
 fw/iv6brd/ATmega168_Debug/
 fw/mcuUtil/ATmega168_Debug/
+*.gbr
+*.drl
+*.nc
+*.stl
+*.dwg
+*.dxf
+doc/Chassis/

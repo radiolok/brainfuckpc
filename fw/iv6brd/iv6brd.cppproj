@@ -5,7 +5,7 @@
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{ab6fc6ca-eb01-4f4e-ab89-b57396d62f65}</ProjectGuid>
-    <avrdevice>ATmega168A</avrdevice>
+    <avrdevice>ATmega8</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -46,7 +46,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'ATmega168_Release' ">
     <ToolchainSettings>
       <AvrGccCpp>
-  <avrgcc.common.Device>-mmcu=atmega168a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega168a"</avrgcc.common.Device>
+  <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega8"</avrgcc.common.Device>
   <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
@@ -103,7 +103,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'ATmega168_Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-  <avrgcc.common.Device>-mmcu=atmega168a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega168a"</avrgcc.common.Device>
+  <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.150\gcc\dev\atmega8"</avrgcc.common.Device>
   <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
   <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
   <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
