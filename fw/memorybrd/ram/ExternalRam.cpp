@@ -10,6 +10,31 @@
 
 uint8_t ramLockAccess = 0;
 
+
+int16_t ramWriteWordBuffer(uint16_t start_addr, const uint16_t *data, uint16_t length)
+{
+	int16_t result = 0;
+	uint16_t end_addr = start_addr + length;
+	uint16_t addr = start_addr;
+	while(addr != end_addr)
+	{
+		result += ramWriteWord(addr++, *(data++));
+	}
+	return result;
+}
+
+int16_t ramReadWordBuffer(uint16_t start_addr, uint16_t *data, uint16_t length)
+{
+	int16_t result = 0;
+	uint16_t end_addr = start_addr + length;
+	uint16_t addr = start_addr;
+	while(addr != end_addr)
+	{
+		result += ramReadWord(addr++, data++);
+	}
+	return result;
+}
+
 uint8_t ramInit(void)
 {
 
@@ -23,7 +48,7 @@ uint8_t ramInit(void)
 	return 0;
 }
 
-int16_t ramReadWord(uint16_t addr)
+int16_t ramReadWord(uint16_t addr, uint16_t *data)
 {
 	int16_t result = -1;
 	if (!ramCheckLock())
@@ -33,10 +58,11 @@ int16_t ramReadWord(uint16_t addr)
 		ramSetCs();
 		ramSetOE();
 		_delay_us(2);
-		result = ramGetData();
+		*data = ramGetData();
 		_delay_us(2);
 		ramClrCs();
 		ramReleaseOE();
+		result = 0;
 	}
 	ramReleaseLine();		
 	return result;
@@ -56,6 +82,7 @@ int16_t ramWriteWord(uint16_t addr, uint16_t data)
 		_delay_us(2);
 		ramClrCs();
 		ramSetRead();
+		result = 0;
 	}
 	ramReleaseLine();
 	return result;

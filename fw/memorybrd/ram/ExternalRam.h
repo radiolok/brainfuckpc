@@ -13,6 +13,10 @@
 #include "../driver/dataIO.h"
 #include "../driver/addrIO.h"
 
+int16_t ramWriteWordBuffer(uint16_t start_addr, const uint16_t *data, uint16_t length);
+
+int16_t ramReadWordBuffer(uint16_t start_addr, uint16_t *data, uint16_t length);
+
 void inline ramSetAddress(uint16_t addr)
 {
 	DDRA = 0xFF;
@@ -120,7 +124,7 @@ uint16_t inline ramGetData(void)
 
 uint8_t ramInit();
 
-int16_t ramReadWord(uint16_t addr);
+int16_t ramReadWord(uint16_t addr, uint16_t *data);
 
 int16_t ramWriteWord(uint16_t addr, uint16_t data);
 
