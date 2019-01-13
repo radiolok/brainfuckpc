@@ -155,15 +155,12 @@ uint8_t state = 0;
 
 
 ISR(TIMER1_OVF_vect) {
-		DDRC |= (1 << PC5);
 		if (state)
 		{
 			state = 0;
-			PORTC &= ~(1<<PC5);
 		}
 		else {
 			state = 1;
-			PORTC |= (1 << PC5);
 		}
 	TCNT1 = tickPeriod;//update tick
 	MTask::Instance().Search();

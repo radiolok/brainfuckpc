@@ -24,6 +24,9 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include <string.h>
 #include "spi.h"
 
+#define TLC5941_MODE_GRAYSCALE 0
+#define TLC5941_MODE_DOTCORRECTION 1
+
 void TLC5941Init(void);
 
 void TLC5941SetCurrent(uint8_t current);
@@ -56,6 +59,23 @@ inline void TLC5941Pulse(void)
 	PORTB &= ~(1 << PB1);
 }
 
+inline void TLC5941SetMode(uint8_t mode)
+{
+	if (mode)
+	{
+		PORTE |= (1 << PE6);
+	}
+	else
+	{
+		PORTE &= ~(1 << PE6);
+	}
+}
+
+inline uint8_t TLC5941GetMode(void)
+{
+	return (PINE & (1 << PE6)) ? true : false;
+}
+
 inline void TLC5941Data(uint8_t state)
 {
 	if (state)
@@ -72,7 +92,7 @@ class TLC5941 {
 	public:
 	
 	/* Channel sizes and counts: */
-	#define TLC5941_COUNT 1
+	#define TLC5941_COUNT 2
 	#define GS_CHANNEL_LEN 12 /* Each GS channel is 12 bits */
 	#define DC_CHANNEL_LEN 6 /* Each DC channel is 6 bits */
 	#define GS_SIZE 192 /* Total size in bits of Grayscale PWM control */
@@ -86,26 +106,7 @@ class TLC5941 {
 	
 	
 		
-	void SET_MODE(uint8_t md)
-	{
-		/*if (MD == MD_DC)
-		{
-			PORTB |= (1 << PB4);
-		}
-		else{
-			PORTB &= ~(1 << PB4);
-		}*/
-	}
-	void SET_BLANK(uint8_t blank)
-	{
-		if (blank)
-		{
-			PORTB |= (1 << PB4);
-		}
-		else{
-			PORTB &= ~(1 << PB4);
-		}
-	}
+	
 
 	/* Pin definitions: */
 	enum TLCPINS {
@@ -130,10 +131,11 @@ class TLC5941 {
 		//spi_init();
 		DDRB |= (1<< PB4) | (1 << PB2) | (1 << PB1);
 		DDRJ |= (1 << PJ3);
+		DDRE |= (1 << PE6);
 		
-		SET_MODE(MD_DC);
-		SET_BLANK(HIGH);
-
+		TLC5941SetMode(TLC5941_MODE_DOTCORRECTION);
+		TLC5941SetBlank();
+		
 		/* Send default dot correction data: */
 		sendDot();
 	}
@@ -207,7 +209,7 @@ class TLC5941 {
 
 	/* Send dot correction data: */
 	inline void sendDot(void) {
-		SET_MODE(MD_DC);
+		TLC5941SetMode(TLC5941_MODE_DOTCORRECTION);
 		
 		for(uint8_t ctr = 0;;) {
 			if(ctr > TLC5941_COUNT * DC_SIZE - 1) {
@@ -223,15 +225,14 @@ class TLC5941 {
 
 	/* Send grayscale data: */
 	inline void sendGS(void) {
-		//uint8_t first_cycle_fl = 0;
+		uint8_t first_cycle_fl = 0;
 		uint8_t data_ctr = 0;
-/*
-		if(outputState(PORTD, MODE)) {
-			SET_MODE(MD_GS);
+
+		if(TLC5941GetMode()) {
+			TLC5941SetMode(TLC5941_MODE_GRAYSCALE);
 			first_cycle_fl = 1;
-		}*/
-		
-		SET_BLANK(LOW);
+		}
+		TLC5941ReleaseBlank();
 		for(uint16_t gsclk_ctr = 0; gsclk_ctr <= 4095; gsclk_ctr++)
 		if(!(data_ctr > TLC5941_COUNT * GS_SIZE - 1)) {
 			TLC5941Data(gsData[data_ctr++]);
@@ -240,10 +241,10 @@ class TLC5941 {
 		}
 
 		/* End of GS cycle */
-		SET_BLANK(HIGH);
+		TLC5941SetBlank();
 		TLC5941Update();
-		//if(first_cycle_fl)
-		//PULSE(SCLK);
+		if(first_cycle_fl)
+		TLC5941Pulse();
 	}
 	
 	inline uint8_t * byte_to_binary(int x, int bitcount) {

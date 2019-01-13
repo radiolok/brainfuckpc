@@ -1,0 +1,30 @@
+{signal: [
+  {name : 'W/~R', wave: 'x0....x'},
+  {name : 'Sync', wave: '0.1..0.'},
+
+  ['Memory Signals',
+  {name: 'CS2', wave: '0.1..0.'},
+   {name: '~OE', wave: 'x.0..x.'}, 
+  {name: '~WR/RD', wave: 'x.1..x.'},
+  ],
+   {},
+  ['',
+  {name: 'DATA_OUT_EN',   wave: 'x1....x'},
+  {name: 'DATA_IN_EN',  wave: '0......', node: '................'},
+   {name: '~ADDR_IN_EN',  wave: '1.0..1.', data : ["Data", "New data"]},
+     {name: 'DATA_OUT_SET',  wave: '0..10..', data : ["AP", "IP"]}
+   ],
+   
+],
+   
+  head:{
+   text:'Memory access diagramm'
+ },
+ foot:{
+   text:'Read cycle',
+   tock:-1
+ },
+  
+  }
+
+

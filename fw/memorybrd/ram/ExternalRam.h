@@ -27,6 +27,11 @@ void inline ramSetAddress(uint16_t addr)
 	//dbg_trace_val("ramSetAddress = high:", PINC);
 }
 
+uint16_t inline ramGetAddress()
+{
+	return (PINC << 8) + PINA;
+}
+
 void inline ramSetOE()
 {
 	//dbg_trace("ramSetOE");

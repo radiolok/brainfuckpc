@@ -36,7 +36,7 @@ void ledInit()
 
 void ledPoll(void)
 {
-	 tlc.update();
+	 
 	//TLC5941SetBlank();
 	//_delay_us(100);
 	//TLC5941ReleaseBlank();
@@ -47,10 +47,13 @@ void ledPoll(void)
 		ledLatch(LED_LATCH_2);
 	ramReleaseLine();
 	//TLC5941SetColumn(currentLed);
-	
+	tlc.setChannel(currentLed, 0x00);
 	currentLed++;
 	if (currentLed > 15)
 	{
 		currentLed = 0;
 	}
+	tlc.setChannel(currentLed, 0xFF);
+	tlc.update();
+
 }
