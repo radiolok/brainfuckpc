@@ -9,7 +9,7 @@
 #ifndef BFHEADER_H_
 #define BFHEADER_H_
 
-
+#include "stdint.h"
 
 #define BF_MAGIC 0x4246
 #define BF_INDENT 0x10
