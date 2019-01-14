@@ -19,18 +19,18 @@ Diode(8)
 # 2. Soldering
 | Module            | Components  | Soldered     |    Status    |
 |-------------------|-------------|--------------|--------------|
-|2AND/2OR           |  Check  |   0/?      |  Not started |
-|2AND/2XOR          |  Check  |   35/32+?       |  Done |
-|D-TRIGGER          |  Check |   55/64+?        |  Active |
-|2&          | Check  |   0/64        |  Not started |
-|Diode module         |  Check  |   6/?        |  Done |
-|Base board         |  Check |   1/6       |  Active |
+|2AND/2OR           |  Check  |    22    |  Done |
+|2AND/2XOR          |  Check  |   32       |  Done |
+|D-TRIGGER          |  Check |   67        |  Done |
+|2&          | Check  |    20        |  Done |
+|Diode module         |  Check  |   20        |  Done |
+|Base board         |  Check |   5/6       |  Done |
 |Memory board       |  Check |   1/1    |  Done   |
-|Indicator module   |  Check |   2/4         |  Active |
-|Latch module       |  Check |   2/4     |  Done   |
+|Indicator module   |  Check |   4/4         |  Done |
+|Latch module       |  Check |   8/8     |  Done   |
 
 ## Equipment
-1. Relay tester - N/A
+1. Relay tester - Done
 2. Modules tester - Done
 
 # 3. Wire Wrapping
@@ -38,9 +38,9 @@ Diode(8)
 |--------------------|---------------|
 |ADD                 |  DONE  |
 |IP/AP REG           |  DONE  |
-|TMP/CMD REG         |  Active  |
-|LOGIC BLOCK         |  Not started  |
-|LOGIC/SWITCH BLOCK  |  Not started  |
+|TMP/CMD REG         |  DONE  |
+|LOGIC BLOCK         |  Active |
+|LOGIC/SWITCH BLOCK  |  Active  |
 
 # 4. Memory Board 
 | Operation           |  Status       |
@@ -54,9 +54,14 @@ Diode(8)
 |  Component          |   Status     |
 |---------------------|--------------|
 | Base Plate          | Done      |
-| Main Frame          | Finalization |
+| Main Frame          | Done |
 
 # 6. Progress updates:
+
+## Update 12/1/2019:
+* BFPC Frame is done, and all computer parts are placed on chassis;
+* Memory board is working enough for BFPC start;
+* Logic blocks are 30% done
 
 ## Update 24/05/2018:
 * D-triggers for TMP/CMD register block done;
