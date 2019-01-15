@@ -25,6 +25,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include "driver/led.h"
 #include "driver/pinIO.h"
 #include "midi.h"
+#include "string.h"
 
 static uint32_t SCHEDULER_PERIOD = 1;//ms
 
@@ -170,7 +171,7 @@ void loadHelloWorld()
 	
 	ramReadWordBuffer(0, check, sizeof(check)/sizeof(uint16_t));
 	
-	size_t result = memcmp(helloworldApp, check, 88);
+	uint32_t result = memcmp(helloworldApp, check, 88);
 	
 	if (!result)
 	{
@@ -254,8 +255,8 @@ int main(void)
 	log_trace("MTask Inited");
 	ramInit();
 	ledInit();
-	//loadHelloWorld();
-	loadTestFw();
+	loadHelloWorld();
+	//loadTestFw();
 
 	MTask::Instance().Add(GPinOutChecker, NULL, 100);
 	//MTask::Instance().Add(ramChecker, NULL, 10);

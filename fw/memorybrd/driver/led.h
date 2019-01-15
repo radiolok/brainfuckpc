@@ -21,7 +21,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "../macros.h"
 #include "../ram/ExternalRam.h"
-#include "TLC5941.h"
+#include "STP16CP05.h"
 
 #define LED_LATCH_1 0
 #define LED_LATCH_2 1

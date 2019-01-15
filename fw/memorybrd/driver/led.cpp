@@ -22,12 +22,10 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 uint8_t currentLed = 0;
 
 uint8_t startAddr = 0;
-TLC5941 tlc;
+
 void ledInit()
 {
-	 tlc.init();
-	 tlc.setChannel(0, 0xFF);
-	 tlc.setChannel(2, 0xFF);
+	 STP16CP05_Init();
 	DDRB |= (1 << PB5) | (1 << PB6) | (1 << PB7);
 	//TLC5941Init();
 	log_trace("ledInit Done");
@@ -46,14 +44,10 @@ void ledPoll(void)
 	if (!ramDataToBus(startAddr + 16 + currentLed))
 		ledLatch(LED_LATCH_2);
 	ramReleaseLine();
-	//TLC5941SetColumn(currentLed);
-	tlc.setChannel(currentLed, 0x00);
+	STP16CP05_SetColumn(currentLed);
 	currentLed++;
 	if (currentLed > 15)
 	{
 		currentLed = 0;
 	}
-	tlc.setChannel(currentLed, 0xFF);
-	tlc.update();
-
 }
