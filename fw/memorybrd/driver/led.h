@@ -27,21 +27,17 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #define LED_LATCH_2 1
 
 void ledPoll(void);
+void ledSetStartAddress(uint16_t addr);
 
+
+//internal
 void ledInit();
+void ledClr();
+void ledLatch();
+void ledEnable(uint8_t mode);
+void ledSendDataToColumn(uint16_t data, uint16_t column);
 
-inline void ledLatch(uint8_t block)
-{
-	PORTB |= block? (1<<PB6) : (1 << PB7);
-	_delay_us(2);
-	PORTB &= ~((1<<PB6) | (1<<PB7));
-}
 
-inline void ledClr()
-{
-	PORTB &= ~(1 << PB5);
-	_delay_us(2);
-	PORTB |= (1 << PB5);
-}
+
 
 #endif //__LED_H__

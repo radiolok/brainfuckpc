@@ -37,64 +37,6 @@ uint16_t helloworldApp[44] = {
 
 uint16_t check[44] = {0x00};
 
-
-
-uint8_t getWriteMode()
-{
-	static uint8_t Write_mode = 0;
-	static uint8_t Write_mode_old = 0;
-	Write_mode = getInputPin((uint8_t)PinExtIn::WR);
-	if (Write_mode != Write_mode_old)
-	{
-		if (Write_mode == true)
-		{
-			log_trace("Write data to RAM!");
-		}
-		else
-		{
-			log_trace("Read data from RAM!");
-		}
-	}
-	Write_mode_old = Write_mode;
-	return Write_mode;
-}
-
-uint8_t getSyncMode()
-{
-	static uint8_t Sync_mode = 0;
-	static uint8_t Sync_mode_old = 0;
-	Sync_mode = getInputPin((uint8_t)PinExtIn::Sync);
-	if (Sync_mode != Sync_mode_old)
-	{
-		if (Sync_mode == true)
-		{
-			if (getWriteMode() == true)
-			{
-				uart_puts("begin->RAM->Sync->Write: ");
-				uart_print((int16_t)(ramGetAddress() ),16);
-				uart_puts(" - ");
-				uart_print((int16_t)(ramGetData() ),16);
-				uart_putc('\n');
-
-			}
-			else
-			{
-				uart_puts("begin->RAM->Sync->Read: ");
-				uart_print((int16_t)(ramGetAddress() ),16);
-				uart_puts(" - ");
-				uart_print((int16_t)(ramGetData() ),16);
-				uart_putc('\n');
-			}			
-		}
-		else
-		{
-			log_trace("end->RAM->Sync: ");
-		}
-	}
-	Sync_mode_old = Sync_mode;
-	return Sync_mode;
-}
-
 uint8_t getStdInMode()
 {
 	static uint8_t Stdin_mode = 0;
@@ -155,13 +97,90 @@ uint8_t getStdWr()
 	return Stdin_mode;
 }
 
+uint8_t getWriteMode()
+{
+	static uint8_t Write_mode = 0;
+	static uint8_t Write_mode_old = 0;
+	Write_mode = getInputPin((uint8_t)PinExtIn::WR);
+	if (Write_mode != Write_mode_old)
+	{
+		if (Write_mode == true)
+		{
+			log_trace("Write data to RAM!");
+		}
+		else
+		{
+			log_trace("Read data from RAM!");
+		}
+	}
+	Write_mode_old = Write_mode;
+	return Write_mode;
+}
+
+uint8_t getSyncMode()
+{
+	static uint8_t Sync_mode = 0;
+	static uint8_t Sync_mode_old = 0;
+	Sync_mode = getInputPin((uint8_t)PinExtIn::Sync);
+	if (Sync_mode != Sync_mode_old)
+	{
+		if (Sync_mode == true)
+		{
+			if (getWriteMode() == true)
+			{
+				uart_puts("begin->RAM->Sync->Write: 0x");
+				uart_print((int16_t)(ramLastAddress() ),16);
+				uart_puts(" - 0x");
+				uart_print((int16_t)(ramLastData() ),16);
+				uart_putc('\n');
+
+			}
+			else
+			{
+				if (getStdWr() == true)
+				{
+					uart_puts("begin->RAM->Sync->print: \"");
+					uart_putc((uint8_t)ramLastData());
+					uart_puts("\" 0x");
+					uart_print((int16_t)(ramLastAddress() ),16);
+					uart_puts(" - 0x");
+					uart_print((int16_t)(ramLastData() ),16);
+					uart_putc('\n');
+				}
+				else
+				{
+					uart_puts("begin->RAM->Sync->Read: 0x");
+					uart_print((int16_t)(ramLastAddress() ),16);
+					uart_puts(" - 0x");
+					uart_print((int16_t)(ramLastData() ),16);
+					uart_putc('\n');
+				}
+
+			}			
+		}
+		else
+		{
+			log_trace("end->RAM->Sync: ");
+		}
+	}
+	Sync_mode_old = Sync_mode;
+	return Sync_mode;
+}
+
+
+
 void loadTestFw()
 {
-	for (uint16_t addr = 0; addr < 0x1000; ++addr)
+	uint16_t addr = 0;
+	ramWriteWord(addr++, 0);
+	ramWriteWord(addr++, 0x5F00);
+	for (uint16_t j = 0; j < 0x1000; j++)
 	{
-		ramWriteWord(addr, (addr % 2)? 0xAAAA : 0x5555);
-	
+		ramWriteWord(addr++, (j % 0x10)? 0x2001 : 0x3FF1);
 	}
+
+		
+	
 }
 
 
@@ -235,11 +254,22 @@ void GPinOutChecker()
 
 void inputChecker()
 {
-	getWriteMode();
 	getSyncMode();
-	getStdInMode();
-	getStdWr();
-	getStdRd();	
+}
+
+
+
+void testLed()
+{
+	for (uint16_t addr = 0x00; addr < 0x10; ++addr)
+	{
+		uint16_t data = 0;
+		if (ramReadWord(addr, &data) == 0)
+		{
+			data += 0x0101;
+			ramWriteWord(addr, data);
+		}		
+	}
 }
 
 
@@ -255,14 +285,21 @@ int main(void)
 	log_trace("MTask Inited");
 	ramInit();
 	ledInit();
-	loadHelloWorld();
-	//loadTestFw();
+	ledSetStartAddress(0xFF00);
+	//loadHelloWorld();
+	for (uint16_t addr = 0xff00; addr < 0xFF10; ++addr)
+	{
+		ramWriteWord(addr, 0);
+		//ramWriteWord(addr, 0xffff);
+	}
+	loadTestFw();
 
 	MTask::Instance().Add(GPinOutChecker, NULL, 100);
 	//MTask::Instance().Add(ramChecker, NULL, 10);
 	MTask::Instance().Add(inputChecker, NULL, 1);
 	//Currently unavailable
 	MTask::Instance().Add(ledPoll, NULL, 1);
+	//MTask::Instance().Add(testLed, NULL, 100);
 	MTask::Instance().Start();
 	log_trace("Dead");
 

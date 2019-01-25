@@ -10,8 +10,25 @@
 #define __EXTERNALRAM_H__
 
 #include "../macros.h"
-#include "../driver/dataIO.h"
-#include "../driver/addrIO.h"
+//#include "../driver/dataIO.h"
+#include <avr/interrupt.h>
+
+enum type
+{
+	RAM_READ,
+	RAM_WRITE,
+	RAM_COUT,
+	RAM_CIN
+};
+
+typedef struct _last_tsx_t
+{
+	uint16_t lastData = 0;
+	uint16_t lastAddr = 0;
+	uint8_t type = RAM_READ;
+	
+}last_tsx_t;
+
 
 int16_t ramWriteWordBuffer(uint16_t start_addr, const uint16_t *data, uint16_t length);
 
@@ -122,8 +139,6 @@ void inline ramSetData(uint16_t data)
 
 uint16_t inline ramGetData(void)
 {
-	//dbg_trace_val("ramGetData = low:", PINF);
-	//dbg_trace_val("ramGetData = high:", PINK);
 	return (PINK << 8) + PINF;
 }
 
@@ -142,5 +157,9 @@ void ramLock();
 void ramUnlock();
 
 uint8_t ramCheckLock();
+
+uint16_t ramLastData();
+uint16_t ramLastAddress();
+uint8_t ramLastTsx();
 
 #endif //__EXTERNALRAM_H__

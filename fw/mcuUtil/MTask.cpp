@@ -101,7 +101,7 @@ void MTask::HwStart()
 #endif
 }
 
-void MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
+int8_t  MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
 {
 	uint8_t slot = getFreeSlot();
 	if (PSLOTS > slot){
@@ -110,6 +110,11 @@ void MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
 		App[slot].time = periodic;
 		App[slot].tick = periodic;
 	}
+	else
+	{
+		return -1;
+	}
+	return 0;
 }
 
 void MTask::Release(uint8_t slot)

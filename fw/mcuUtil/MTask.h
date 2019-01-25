@@ -34,7 +34,7 @@ struct MAppStruct{
 };
 
 
-#define PSLOTS 4 //App slots number
+#define PSLOTS 8 //App slots number
 
 class MTask{
 	
@@ -98,11 +98,11 @@ void HwStop(void);
  *  \param [in] _poll function pointer
   *  \param [in] _hw function pointer
  *  \param [in] periodic call period in ms
- *  \return none
+ *  \return 0 if Ok, -1 if error
  *  
  *  \details Details
  */
-void Add(void (*_poll)(), void (*_hw)(), uint32_t periodic);
+int8_t Add(void (*_poll)(), void (*_hw)(), uint32_t periodic);
 
 
 /**

@@ -21,33 +21,92 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 uint8_t currentLed = 0;
 
-uint8_t startAddr = 0;
+uint16_t startAddr = 0;
+
+/*
+MOSI - PB2
+CLK - PB1
+BLANK - PB4
+XLAT - PJ3
+OE - PE6
+
+*/
 
 void ledInit()
 {
-	 STP16CP05_Init();
-	DDRB |= (1 << PB5) | (1 << PB6) | (1 << PB7);
+	DDRB |= (1 << PB4);
+	DDRJ |= (1 << PJ3);
+	DDRE |= (1 << PE6);
+	spi_init();
+	ledClr();
 	//TLC5941Init();
 	log_trace("ledInit Done");
 }
 
+void ledClr()
+{
+	PORTB &= ~(1 << PB4);
+	_delay_us(2);
+	PORTB |= (1 << PB4);
+}
+
+
+void ledLatch()
+{
+	PORTJ |= (1 << PJ3);
+	_delay_us(2);
+	PORTJ &= ~(1 << PJ3);
+}
+
+void ledEnable(uint8_t mode)
+{
+	if (mode == false)
+	{
+		PORTE |= (1 << PE6);
+	}
+	else
+	{
+		PORTE &= ~ (1 << PE6);
+	}
+}
+
+void ledSetStartAddress(uint16_t addr)
+{
+	startAddr = addr;
+	ledEnable(true);
+}
+
+void ledSendDataToColumn(uint16_t data, uint8_t column)
+{
+	if (column < 8)
+	{
+		spi_sendByte(0);
+		spi_sendByte(1 << column);
+
+	}
+	else
+	{
+		spi_sendByte(1 << (column - 8));
+		spi_sendByte(0);
+				
+	}
+	spi_sendByte(high(data));
+	spi_sendByte(low(data));
+}
 
 void ledPoll(void)
 {
-	 
-	//TLC5941SetBlank();
-	//_delay_us(100);
-	//TLC5941ReleaseBlank();
 	ledClr();
-	if (!ramDataToBus(startAddr + currentLed))
-		ledLatch(LED_LATCH_1);
-	if (!ramDataToBus(startAddr + 16 + currentLed))
-		ledLatch(LED_LATCH_2);
-	ramReleaseLine();
-	STP16CP05_SetColumn(currentLed);
-	currentLed++;
-	if (currentLed > 15)
+	uint16_t data = 0;
+	if (ramReadWord(startAddr + currentLed, &data) == 0)
 	{
-		currentLed = 0;
+		ledSendDataToColumn(data, currentLed);
+		currentLed++;
+		if (currentLed > 15)
+		{
+			currentLed = 0;
+		}
 	}
+	ledLatch();
+
 }
