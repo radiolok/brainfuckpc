@@ -204,6 +204,12 @@
     <Compile Include="driver\TLC5941.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ImageLoader.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ImageLoader.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="macros.h">
       <SubType>compile</SubType>
     </Compile>

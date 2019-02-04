@@ -29,13 +29,13 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 static uint32_t SCHEDULER_PERIOD = 1;//ms
 
-uint16_t helloworldApp[44] = {
-	0x4fff, 0x200a ,0x600b ,0x4001 ,0x2007 ,0x4001 ,0x200a ,0x4001 ,0x2003 ,0x4001 ,0x2001 ,
+uint16_t helloworldApp[45] = {
+	0x0000, 0x5F00, 0x200a ,0x600b ,0x4001 ,0x2007 ,0x4001 ,0x200a ,0x4001 ,0x2003 ,0x4001 ,0x2001 ,
 	0x5ffc ,0x3fff ,0x9ff5 ,0x4001 ,0x2002 ,0x1002 ,0x4001 ,0x2001 ,0x1002 ,0x2007 ,0x1002 ,
 	0x1002 ,0x2003 ,0x1002 ,0x4001 ,0x2002 ,0x1002 ,0x5ffe ,0x200f ,0x1002 ,0x4001 ,0x1002 ,
 	0x2003 ,0x1002 ,0x3ffa ,0x1002 ,0x3ff8 ,0x1002 ,0x4001 ,0x2001 ,0x1002 ,0x4001 ,0x1002 };
 
-uint16_t check[44] = {0x00};
+uint16_t check[45] = {0x00};
 
 uint8_t getStdInMode()
 {
@@ -60,60 +60,23 @@ uint8_t getStdInMode()
 uint8_t getStdRd()
 {
 	static uint8_t Stdin_mode = 0;
-	static uint8_t Stdin_mode_old = 0;
 	Stdin_mode = getInputPin((uint8_t)PinExtIn::STDIN_RD);
-	if (Stdin_mode != Stdin_mode_old)
-	{
-		if (Stdin_mode == true)
-		{
-			log_trace("begin>getc()!");
-		}
-		else
-		{
-			log_trace("end>getc()!");
-		}
-	}
-	Stdin_mode_old = Stdin_mode;
+
 	return Stdin_mode;
 }
 
 uint8_t getStdWr()
 {
 	static uint8_t Stdin_mode = 0;
-	static uint8_t Stdin_mode_old = 0;
 	Stdin_mode = getInputPin((uint8_t)PinExtIn::STDOUT_WR);
-	if (Stdin_mode != Stdin_mode_old)
-	{
-		if (Stdin_mode == true)
-		{
-			log_trace("begin>putc()!");
-		}
-		else
-		{
-			log_trace("end>putc()!");
-		}
-	}
-	Stdin_mode_old = Stdin_mode;
 	return Stdin_mode;
 }
 
 uint8_t getWriteMode()
 {
 	static uint8_t Write_mode = 0;
-	static uint8_t Write_mode_old = 0;
 	Write_mode = getInputPin((uint8_t)PinExtIn::WR);
-	if (Write_mode != Write_mode_old)
-	{
-		if (Write_mode == true)
-		{
-			log_trace("Write data to RAM!");
-		}
-		else
-		{
-			log_trace("Read data from RAM!");
-		}
-	}
-	Write_mode_old = Write_mode;
+
 	return Write_mode;
 }
 
@@ -122,13 +85,13 @@ uint8_t getSyncMode()
 	static uint8_t Sync_mode = 0;
 	static uint8_t Sync_mode_old = 0;
 	Sync_mode = getInputPin((uint8_t)PinExtIn::Sync);
-	if (Sync_mode != Sync_mode_old)
+	/*if (Sync_mode != Sync_mode_old)
 	{
 		if (Sync_mode == true)
 		{
 			if (getWriteMode() == true)
 			{
-				uart_puts("begin->RAM->Sync->Write: 0x");
+				uart_puts("RAM->Sync->Write: 0x");
 				uart_print((int16_t)(ramLastAddress() ),16);
 				uart_puts(" - 0x");
 				uart_print((int16_t)(ramLastData() ),16);
@@ -139,7 +102,7 @@ uint8_t getSyncMode()
 			{
 				if (getStdWr() == true)
 				{
-					uart_puts("begin->RAM->Sync->print: \"");
+					uart_puts("RAM->Sync->print: \"");
 					uart_putc((uint8_t)ramLastData());
 					uart_puts("\" 0x");
 					uart_print((int16_t)(ramLastAddress() ),16);
@@ -149,7 +112,7 @@ uint8_t getSyncMode()
 				}
 				else
 				{
-					uart_puts("begin->RAM->Sync->Read: 0x");
+					uart_puts("RAM->Sync->Read: 0x");
 					uart_print((int16_t)(ramLastAddress() ),16);
 					uart_puts(" - 0x");
 					uart_print((int16_t)(ramLastData() ),16);
@@ -158,11 +121,7 @@ uint8_t getSyncMode()
 
 			}			
 		}
-		else
-		{
-			log_trace("end->RAM->Sync: ");
-		}
-	}
+	}*/
 	Sync_mode_old = Sync_mode;
 	return Sync_mode;
 }
@@ -174,13 +133,27 @@ void loadTestFw()
 	uint16_t addr = 0;
 	ramWriteWord(addr++, 0);
 	ramWriteWord(addr++, 0x5F00);
-	for (uint16_t j = 0; j < 0x1000; j++)
+	/*for (uint16_t j = 1; j < 0x1000; j++)
 	{
 		ramWriteWord(addr++, (j % 0x10)? 0x2001 : 0x3FF1);
 	}
-
-		
+	*/
+	ramWriteWord(addr++, 0x2030);//
+	ramWriteWord(addr++, 0x6002);
+	ramWriteWord(addr++, 0x2001);
+	ramWriteWord(addr++, 0x1002);
+	ramWriteWord(addr++, 0x9FFC);
 	
+	
+	for (uint16_t j = 0; j < 0x10; j++)
+	{
+		ramWriteWord(addr++, 0x2001);//ADD+1
+		if (j != 0xF)
+			ramWriteWord(addr++, 0x4001);//ADA+1
+	}
+	ramWriteWord(addr++, 0x5FF1);
+	ramWriteWord(addr++, 0x9FDF);
+
 }
 
 
@@ -244,17 +217,90 @@ void ramChecker()
 
 void GPinOutChecker()
 {
-	static bool state = 0;
-	//log_trace("GPinOutChecker");
-	for (uint8_t pin = 0; pin < 16; ++pin)
-		SetOutputPin(pin, state);
-	state ^= 1;
+	static uint8_t state = 0;
+	static bool state1 = 0;
+	static bool state2 = 0;
+	static bool state4 = 0;
+	static bool state8 = 0;
+	static bool state16 = 0;
+	static bool state32 = 0;
+	
+	SetOutputPin(15, state1);
+	state1 ^= 1;
+	
+	if (!(state % 2))
+	{
+		SetOutputPin(14, state2);
+		state2 ^= 1;
+	}
+	if (!(state % 4))
+	{
+		SetOutputPin(13, state4);
+		state4 ^= 1;
+	}
+	if (!(state % 8))
+	{
+		SetOutputPin(12, state8);
+		state8 ^= 1;
+	}
+	if (!(state % 16))
+	{
+		SetOutputPin(11, state16);
+		state32 ^= 1;
+	}
+	if (!(state % 32))
+	{
+		SetOutputPin(10, state32);
+		state32 ^= 1;
+	}
+	state++;
+	if (state > 31)
+		state = 0;
 }
 
 
 void inputChecker()
 {
-	getSyncMode();
+	last_tsx_t event;
+	uint8_t status = 0;
+	do 
+	{
+		status = ramEventGet(&event);
+		if (!status)
+		{
+			switch (event.type)
+			{
+				case RAM_WRITE:
+					/*uart_puts("RAM->Write: ");
+					uart_puts("(0x");
+					uart_print((uint16_t)(event.addr),16);
+					uart_puts(")\t");
+					uart_print((uint16_t)(event.data), 16);
+					uart_putc('\n');*/
+				break;
+				case RAM_READ:
+					/*uart_puts("RAM->Read: ");
+					uart_puts("(0x");
+					uart_print((uint16_t)(event.addr),16);
+					uart_puts(")\t");
+					uart_print((uint16_t)(event.data), 16);
+					uart_putc('\n');*/
+				break;
+				case RAM_COUT:
+					uart_puts("RAM->Puts: ");
+					uart_putc((uint8_t)event.data);
+					uart_putc('\n');
+				break;
+				default:
+					uart_puts("RAM->unknown: ");
+				break;
+			}
+		
+		}
+	} while (status == 0);
+		
+	
+	//getSyncMode();
 }
 
 
@@ -285,16 +331,16 @@ int main(void)
 	log_trace("MTask Inited");
 	ramInit();
 	ledInit();
-	ledSetStartAddress(0xFF00);
-	//loadHelloWorld();
-	for (uint16_t addr = 0xff00; addr < 0xFF10; ++addr)
-	{
-		ramWriteWord(addr, 0);
+	ledSetStartAddress(0xff00);
+	loadHelloWorld();
+	//for (uint16_t addr = 0xff00; addr < 0xFF10; ++addr)
+	//{
+	//	ramWriteWord(addr, 0);
 		//ramWriteWord(addr, 0xffff);
-	}
-	loadTestFw();
+	//}
+	//loadTestFw();
 
-	MTask::Instance().Add(GPinOutChecker, NULL, 100);
+	MTask::Instance().Add(GPinOutChecker, NULL, 10);
 	//MTask::Instance().Add(ramChecker, NULL, 10);
 	MTask::Instance().Add(inputChecker, NULL, 1);
 	//Currently unavailable

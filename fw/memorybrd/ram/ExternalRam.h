@@ -23,11 +23,13 @@ enum type
 
 typedef struct _last_tsx_t
 {
-	uint16_t lastData = 0;
-	uint16_t lastAddr = 0;
+	uint16_t data = 0;
+	uint16_t addr = 0;
 	uint8_t type = RAM_READ;
 	
 }last_tsx_t;
+
+int8_t ramEventGet(last_tsx_t *event);
 
 
 int16_t ramWriteWordBuffer(uint16_t start_addr, const uint16_t *data, uint16_t length);

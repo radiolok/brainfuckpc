@@ -10,22 +10,34 @@
 
 uint8_t ramLockAccess = 0;
 
+////ram Events Ring Buffer
 
-last_tsx_t lastTsx;
+#define RAM_EVENTS_RING_BUFFER (8)
+#define RAM_EVENTS_RING_BUFFER_MASK (RAM_EVENTS_RING_BUFFER - 1)
+uint8_t ramEventsIn  = 0;
+uint8_t ramEventsOut = 0;
 
-uint16_t ramLastData()
+last_tsx_t ramEvents[RAM_EVENTS_RING_BUFFER];
+
+void ramEventAdd(uint16_t addr, uint16_t data, uint8_t type)
 {
-	return lastTsx.lastData;
+	ramEvents[ramEventsIn].addr = addr;
+	ramEvents[ramEventsIn].data = data;
+	ramEvents[ramEventsIn].type	 = type;
+	ramEventsIn = (ramEventsIn + 1) & RAM_EVENTS_RING_BUFFER_MASK;
 }
 
-uint16_t ramLastAddress()
+int8_t ramEventGet(last_tsx_t *event)
 {
-	return lastTsx.lastAddr;
-}
-
-uint8_t ramLastTsx()
-{
-	return lastTsx.type;
+	if (ramEventsIn == ramEventsOut)
+	{
+		return -1;//no events;
+	}
+	event->addr = ramEvents[ramEventsOut].addr;
+	event->data = ramEvents[ramEventsOut].data;
+	event->type = ramEvents[ramEventsOut].type;
+	ramEventsOut = (ramEventsOut + 1) & RAM_EVENTS_RING_BUFFER_MASK;
+	return 0;
 }
 
 uint8_t ramInit(void)
@@ -37,13 +49,15 @@ uint8_t ramInit(void)
 	
 	DDRJ |= (1<< PJ4);//CS
 	PORTJ &= ~(1 << PJ4);
-	lastTsx.lastAddr = 0x00;
-	lastTsx.lastData = 0x00;
-	lastTsx.type = RAM_READ;
 	//INT init:
 	
 	EICRB |= (1 << ISC40);
 	EIMSK |= (1 << INT4);
+	for (uint16_t i = 0; i < 0xFFFF; i++)
+	{
+		ramWriteWord(i, 0);
+	}
+	ramWriteWord(0xFFFF,0);
 	log_trace("ramInit Done");
 	return 0;
 }
@@ -161,11 +175,6 @@ uint8_t ramCheckLock(void)
 }
 
 
-
-
-
-
-
 ISR(INT4_vect)
 {
 	//have sync!
@@ -173,16 +182,16 @@ ISR(INT4_vect)
 	{
 		//Sync started!
 		ramLock();
-		lastTsx.lastAddr = ramGetAddress();
-		lastTsx.lastData = ramGetData();
-		if ((PINE >> PE5) & 0x01)
+		uint8_t	event_type = 0;
+		if ((PINH >> PH7) & 0x01)
 		{
-			lastTsx.type = RAM_WRITE;
+			event_type = RAM_COUT;
 		}
 		else
 		{
-			lastTsx.type = RAM_READ;
+			event_type = ((PINE >> PE5) & 0x01) ? RAM_WRITE : RAM_READ;
 		}
+		ramEventAdd(ramGetAddress(), ramGetData(), event_type);
 	}
 	else
 	{
