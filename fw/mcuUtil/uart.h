@@ -109,6 +109,10 @@ Date        Description
 #define UART_NO_DATA          0x00              /* no receive data available   */
 
 
+#define UART_PARITY_NONE 0x00
+#define UART_PARITY_ODD 0x01
+#define UART_PARITY_EVEN 0x02
+
 
  void uart_init(unsigned int baudrate);
  void uart_putc(unsigned char data);
@@ -119,6 +123,8 @@ void uart_puts_p(const char *s );
  uint8_t uart_available(void); 
 void uart_flush(void); 
 void uart_print(int16_t val, int8_t base);
+
+void uart_set_parity(uint8_t);
  
   #if  defined(__AVR_ATmega2560__) || defined(__AVR_ATmega1280__)
 	 void uart2_init(unsigned int baudrate);

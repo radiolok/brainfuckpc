@@ -29,7 +29,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "uart.h"
 
 //enable this definition to turn on logger notes to port
-#define LOGTRACE
+//#define LOGTRACE
 
 #if defined(LOGTRACE)
 

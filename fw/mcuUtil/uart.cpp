@@ -515,6 +515,25 @@ void uart_init(unsigned int baudrate)
 }/* uart_init */
 
 
+#if defined(UCSR0C)
+void uart_set_parity(uint8_t parity)
+{
+	switch (parity)
+	{
+		case UART_PARITY_ODD:
+			UCSR0C |= (1 << UPM01) | (1<< UPM00);
+		break;
+		case UART_PARITY_EVEN:
+			UCSR0C |= (1 << UPM01) ;
+			UCSR0C &= ~(2<< UPM00);
+		break;
+		default:
+			UCSR0C &= ~(1 << UPM01) ;
+			UCSR0C &= ~(2<< UPM00);
+		break;
+	}
+}
+#endif
 /*************************************************************************
 Function: uart_getc()
 Purpose:  return byte from ringbuffer  

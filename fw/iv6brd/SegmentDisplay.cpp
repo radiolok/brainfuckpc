@@ -81,8 +81,29 @@ void SegmentDisplay::operator () (const uint16_t data, const char* prefix, const
 		}
 		if (prefix_length > 1 )
 		{
-			m_segments[5] = prefix[0];
-			m_segments[4] = prefix[1];
+			m_segments[5] = prefix[1];
+			m_segments[4] = prefix[0];
+		}
+	}
+}
+
+
+void SegmentDisplay::operator () (const uint32_t data)
+{
+	uint32_t result = data;
+	if (m_segments)
+	{
+		for (uint8_t segment = 5; segment  <= 5; --segment)
+		{
+			if (result > 0){
+
+				m_segments[segment] = (result % m_base) + ((result % m_base) > 0x09 ? 0x37 : 0x30);
+				result /= m_base;
+			}
+			else
+			{
+				m_segments[segment] =   (segment == 5)? 0x30 : 0x20;
+			}
 		}
 	}
 }
