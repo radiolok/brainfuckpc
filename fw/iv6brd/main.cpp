@@ -9,8 +9,8 @@
 
 
 
-#define COUNTER 1
-//#define TERMINAL
+//#define COUNTER 1
+#define TERMINAL
 //#define SHOWER
 
 
@@ -149,27 +149,44 @@ void terminal()
 	uart_init(UART_BAUD_SELECT(BAUD_RATE, F_CPU));
 	uart_set_parity(UART_PARITY_ODD);
 	uint8_t old_state = 0;
+	
+	uint8_t symbols = 0;
 	while(1)
 	{
 		uint8_t state = PINC & (1<<PC1);
-		if ((state) && (state != old_state))
+		if ( state != old_state)
 		{
-			uint8_t pinB = PINB;
-			uint8_t pinD = PIND;
-			
-			uint8_t result = 0;
-			
-			result |= ((pinB >>PB2) & 0x01);
-			result |= (((pinB >>PB1) & 0x01) << 1);
-			result |= (((pinB >>PB0) & 0x01) << 2);
-			result |= (((pinD >>PD7) & 0x01) << 3);
-			result |= (((pinD >>PD6) & 0x01) << 4);
-			result |= (((pinD >>PD5) & 0x01) << 5);
-			result |= (((pinB >>PB7) & 0x01) << 6);
-			result |= (((pinB >>PB6) & 0x01) << 7);
-			
-			uart_putc(result);
-			_delay_us(600);
+			if (state)
+			{
+				uint8_t pinB = PINB;
+				uint8_t pinD = PIND;
+				
+				uint8_t result = 0;
+				
+				result |= ((pinB >>PB2) & 0x01);
+				result |= (((pinB >>PB1) & 0x01) << 1);
+				result |= (((pinB >>PB0) & 0x01) << 2);
+				result |= (((pinD >>PD7) & 0x01) << 3);
+				result |= (((pinD >>PD6) & 0x01) << 4);
+				result |= (((pinD >>PD5) & 0x01) << 5);
+				result |= (((pinB >>PB7) & 0x01) << 6);
+				result |= (((pinB >>PB6) & 0x01) << 7);
+				
+				symbols++;					
+				if (result == 0x0A)
+				{
+					uart_putc(0x0D);
+					symbols = 0;
+				}				
+				uart_putc(result);			
+
+
+				if (symbols > 19)
+				{
+					uart_puts("\r\n");
+				}
+			}
+			_delay_ms(1);
 		}		
 		old_state = state;
 
