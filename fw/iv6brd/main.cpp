@@ -13,9 +13,6 @@
 #define TERMINAL
 //#define SHOWER
 
-
-#define F_CPU 8000000
-
 #if defined(TERMINAL)
 #define BAUD_RATE 9600
 #else
@@ -151,6 +148,8 @@ void terminal()
 	uint8_t old_state = 0;
 	
 	uint8_t symbols = 0;
+	
+	uart_puts("hello world!");
 	while(1)
 	{
 		uint8_t state = PINC & (1<<PC1);

@@ -13,7 +13,7 @@ cmake_minimum_required(VERSION 3.1)
 
 cmake_policy(SET CMP0015 NEW)
 
-project(memorybrd)
+project(iv6brd)
 
 ### TOOLCHAIN SETUP AREA #################################################
 # Set any variables used in the toolchain prior project() call. In that
@@ -30,7 +30,7 @@ set(AVR_UPLOADTOOL_PORT usb)
 ##########################################################################
 # AVR and fuses needs to be set
 ##########################################################################
-#set(AVR_MCU atmega2560)
+#set(AVR_MCU atmega168)
 set(AVR_H_FUSE 0xd9)
 set(AVR_L_FUSE 0xc3)
 
@@ -64,7 +64,7 @@ endif(NOT CMAKE_BUILD_TYPE)
 ##########################################################################
 # needs to be defined for AVR toolchain
 ##########################################################################
-set(MCU_SPEED "16000000UL")
+set(MCU_SPEED "8000000UL")
 
 ##########################################################################
 # some cmake cross-compile necessities
@@ -139,12 +139,6 @@ set (CMAKE_BUILD_DIRECTORY ${CMAKE_BINARY_DIR})
 
 
 include_directories(
-    ${PROJECT_SOURCE_DIR}/util
-    ${PROJECT_SOURCE_DIR}/ramOld
-    ${PROJECT_SOURCE_DIR}/ram
-    ${PROJECT_SOURCE_DIR}/driver
-    ${PROJECT_SOURCE_DIR}/binary
-    ${PROJECT_SOURCE_DIR}/bfpc
     ${PROJECT_SOURCE_DIR}/../mcuUtil
 )
 
@@ -160,31 +154,11 @@ set (McuUtil
 set (SOURCES 
         main.cpp 
         ${McuUtil}
-        ${PROJECT_SOURCE_DIR}/bfpc/core.cpp
-        ${PROJECT_SOURCE_DIR}/bfpc/core.h
-        ${PROJECT_SOURCE_DIR}/bfpc/io.cpp
-        ${PROJECT_SOURCE_DIR}/bfpc/io.h
-        ${PROJECT_SOURCE_DIR}/binary/Bfheader.h
-        ${PROJECT_SOURCE_DIR}/binary/BinaryDecoder.cpp
-        ${PROJECT_SOURCE_DIR}/binary/BinaryDecoder.h
-
-        ${PROJECT_SOURCE_DIR}/driver/ControlIO.cpp
-        ${PROJECT_SOURCE_DIR}/driver/ControlIO.h
-        ${PROJECT_SOURCE_DIR}/driver/dataIO.cpp
-        ${PROJECT_SOURCE_DIR}/driver/dataIO.h
-        ${PROJECT_SOURCE_DIR}/driver/led.cpp
-        ${PROJECT_SOURCE_DIR}/driver/led.h
-        ${PROJECT_SOURCE_DIR}/driver/pinIO.cpp
-        ${PROJECT_SOURCE_DIR}/driver/pinIO.h
-        ${PROJECT_SOURCE_DIR}/driver/TLC5941.cpp
-        ${PROJECT_SOURCE_DIR}/driver/TLC5941.h
-
-        ${PROJECT_SOURCE_DIR}/ram/ExternalRam.cpp
-        ${PROJECT_SOURCE_DIR}/ram/ExternalRam.h
-
+        ${PROJECT_SOURCE_DIR}/SegmentDisplay.cpp
+        ${PROJECT_SOURCE_DIR}/SegmentDisplay.h
         )
 
-add_avr_executable(bfrun 
+add_avr_executable(${BINARY_NAME} 
     ${SOURCES}
 )
 

@@ -31,6 +31,7 @@ void ledSetStartAddress(uint16_t addr);
 
 
 //internal
+void ledCheck(uint16_t addr, uint16_t data);
 void ledInit();
 void ledClr();
 void ledLatch();

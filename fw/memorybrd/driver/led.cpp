@@ -22,6 +22,9 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 uint8_t currentLed = 0;
 
 uint16_t startAddr = 0;
+uint16_t endAddr = 0x20;
+
+uint16_t ledData[32] = {0x00};
 
 /*
 MOSI - PB2
@@ -31,6 +34,14 @@ XLAT - PJ3
 OE - PE6
 
 */
+
+void ledCheck(uint16_t addr, uint16_t data)
+{
+	if ((addr & 0xfff0) == startAddr)
+	{
+		ledData[addr & 0x000f] = data;
+	}
+}
 
 void ledInit()
 {
@@ -97,15 +108,11 @@ void ledSendDataToColumn(uint16_t data, uint8_t column)
 void ledPoll(void)
 {
 	ledClr();
-	uint16_t data = 0;
-	if (ramReadWord(startAddr + currentLed, &data) == 0)
+	ledSendDataToColumn(ledData[currentLed], currentLed);
+	currentLed++;
+	if (currentLed > 15)
 	{
-		ledSendDataToColumn(data, currentLed);
-		currentLed++;
-		if (currentLed > 15)
-		{
-			currentLed = 0;
-		}
+		currentLed = 0;
 	}
 	ledLatch();
 

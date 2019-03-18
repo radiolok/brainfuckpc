@@ -24,7 +24,6 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 #include <stdlib.h>
 #include <stdio.h>
 
-#define F_CPU 8000000
 #include <util/delay.h>
 #include <avr/pgmspace.h>
 
