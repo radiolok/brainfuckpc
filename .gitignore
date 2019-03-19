@@ -24,3 +24,10 @@ fw/mcuUtil/ATmega168_Debug/
 *.dwg
 *.dxf
 doc/Chassis/
+fw/build/CMakeFiles/upload_bfrun_eeprom.dir/progress.make
+fw/build/
+bf/calcPi/calcPi/calcPi/Debug/
+bf/calcPi/calcPi/calcPi/x64/
+fw/memorybrd/build/
+fw/iv6brd/build/
+fw/bin/

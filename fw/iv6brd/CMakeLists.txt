@@ -31,8 +31,8 @@ set(AVR_UPLOADTOOL_PORT usb)
 # AVR and fuses needs to be set
 ##########################################################################
 #set(AVR_MCU atmega168)
-set(AVR_H_FUSE 0xd9)
-set(AVR_L_FUSE 0xc3)
+set(AVR_H_FUSE 0xdf)
+set(AVR_L_FUSE 0xe2)
 
 ### END TOOLCHAIN SETUP AREA #############################################
 
@@ -137,6 +137,30 @@ add_definitions("-fno-threadsafe-statics")
 set (CMAKE_BUILD_FILES_DIRECTORY ${CMAKE_BINARY_DIR})
 set (CMAKE_BUILD_DIRECTORY ${CMAKE_BINARY_DIR})
 
+
+if (TERMINAL)
+    add_definitions("-DTERMINAL")
+endif(TERMINAL)
+
+if (SHOWER)
+    add_definitions("-DSHOWER")
+endif(SHOWER)
+
+if (SHOWER MATCHES IP_SHOW)
+add_definitions("-DIP_SHOW")
+endif (SHOWER MATCHES IP_SHOW)
+
+if (SHOWER MATCHES AP_SHOW)
+add_definitions("-DAP_SHOW")
+endif (SHOWER MATCHES AP_SHOW)
+
+if (SHOWER MATCHES CMD_SHOW)
+add_definitions("-DCMD_SHOW")
+endif (SHOWER MATCHES CMD_SHOW)
+
+if (COUNTER)
+    add_definitions("-DCOUNTER")
+endif(COUNTER)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/../mcuUtil

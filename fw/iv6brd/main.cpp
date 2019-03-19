@@ -10,7 +10,7 @@
 
 
 //#define COUNTER 1
-#define TERMINAL
+
 //#define SHOWER
 
 #if defined(TERMINAL)
@@ -27,7 +27,7 @@
 
 //#define IP_SHOW
 //#define AP_SHOW
-#define CMD_SHOW
+//#define CMD_SHOW
 
 #if defined(IP_SHOW)
 char prefix[] = "I ";
@@ -234,6 +234,8 @@ int main(void)
 	shower();
 #elif defined(COUNTER)
 	counter();
+#else
+	#error "No type defined!"
 #endif
 	
 }

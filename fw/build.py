@@ -40,6 +40,7 @@ def compile(param):
         if file.endswith('.elf') or file.endswith('.hex') or file.endswith('.hex') or file.endswith('.lst'):
             shutil.move(os.path.join(build_path,file), os.path.join(bin_path,file))
 
+    os.chdir(script_path)
     return 0
 
     #exit_code = call(["mingw32-make", "install"])
@@ -63,12 +64,19 @@ os.environ['PATH']=path
 
 os.environ['AVR_FIND_ROOT_PATH']=avr_root_path
 
-#set PATH=%PATH%;C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin
 
-#set AVR_FIND_ROOT_PATH=C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr
+bin_path = "%s\\%s"  % (script_path, "bin")
+if os.path.exists(bin_path):
+    shutil.rmtree(bin_path)
 
+os.makedirs(bin_path)
 
 CMAKE_TOOLCHAIN_FILE="CMAKE_TOOLCHAIN_FILE=%s\\generic-gcc-avr.cmake" % (script_path)
 
+
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DTERMINAL=ON","-DBINARY_NAME=terminal","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DSHOWER=IP_SHOW","-DBINARY_NAME=iv6brd_ip_show","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DSHOWER=AP_SHOW","-DBINARY_NAME=iv6brd_ap_show","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DSHOWER=CMD_SHOW","-DBINARY_NAME=iv6brd_cmd_show","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DCOUNTER=ON","-DBINARY_NAME=iv6brd_counter","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
 compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DAVR_MCU=atmega2560", "%s\\%s" % (script_path, "memorybrd")])
-compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DTERMINAL=ON","-DBINARY_NAME=iv6brd_terminal","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
