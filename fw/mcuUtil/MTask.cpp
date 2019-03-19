@@ -20,7 +20,7 @@ OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABIL
 
 #include "MTask.h"
 
-#define TEN_MS_TICK (6) //0.01мс
+#define TEN_MS_TICK (6) //0.01пїЅпїЅ
 
 uint32_t tickPeriod = TEN_MS_TICK;
 #define PRESC_COUNT (5)
@@ -62,7 +62,7 @@ void MTask::Init(uint32_t period, uint32_t cpu_frequency){
 	
 	TCCR1B |= prescaler & 0x07;
 	tickPeriod = 255 - result;
-	TCNT1 = tickPeriod;//1мс
+	TCNT1 = tickPeriod;//1пїЅпїЅ
 	for (uint8_t slot = 0; slot < PSLOTS; slot++)
 	{//clear all slots
 		Release(slot);
@@ -101,7 +101,7 @@ void MTask::HwStart()
 #endif
 }
 
-int8_t  MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
+uint8_t  MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
 {
 	uint8_t slot = getFreeSlot();
 	if (PSLOTS > slot){
@@ -109,12 +109,9 @@ int8_t  MTask::Add(void (*_poll)(), void (*_hw)(), uint32_t periodic)
 		App[slot].hw = _hw;
 		App[slot].time = periodic;
 		App[slot].tick = periodic;
+		return slot;
 	}
-	else
-	{
-		return -1;
-	}
-	return 0;
+	return -1;
 }
 
 void MTask::Release(uint8_t slot)

@@ -74,6 +74,8 @@ os.makedirs(bin_path)
 CMAKE_TOOLCHAIN_FILE="CMAKE_TOOLCHAIN_FILE=%s\\generic-gcc-avr.cmake" % (script_path)
 
 
+compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DAVR_MCU=atmega2560", "%s\\%s" % (script_path, "menuosv1")])
+exit()
 compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DTERMINAL=ON","-DBINARY_NAME=terminal","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
 compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DSHOWER=IP_SHOW","-DBINARY_NAME=iv6brd_ip_show","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])
 compile(["cmake", "-G", "MinGW Makefiles", "-D", CMAKE_TOOLCHAIN_FILE,  "-DSHOWER=AP_SHOW","-DBINARY_NAME=iv6brd_ap_show","-DAVR_MCU=atmega168", "%s\\%s" % (script_path, "iv6brd")])

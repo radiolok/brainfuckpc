@@ -98,11 +98,11 @@ void HwStop(void);
  *  \param [in] _poll function pointer
   *  \param [in] _hw function pointer
  *  \param [in] periodic call period in ms
- *  \return 0 if Ok, -1 if error
+ *  \return number of slot if ok and -1 otherwise
  *  
  *  \details Details
  */
-int8_t Add(void (*_poll)(), void (*_hw)(), uint32_t periodic);
+uint8_t Add(void (*_poll)(), void (*_hw)(), uint32_t periodic);
 
 
 /**
