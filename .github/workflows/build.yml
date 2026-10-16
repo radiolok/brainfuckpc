@@ -1,0 +1,104 @@
+name: build
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  firmware:
+    name: AVR firmware
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install AVR toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gcc-avr avr-libc binutils-avr cmake
+          avr-gcc --version | head -1
+
+      - name: Build all firmware variants
+        run: ./fw/build.sh
+
+      - name: Firmware size report
+        run: |
+          {
+            echo '### Firmware size'
+            echo
+            echo '| Image | text | data | bss |'
+            echo '|---|---:|---:|---:|'
+            for f in fw/bin/*.elf; do
+              avr-size -B "$f" | awk -v n="$(basename "$f")" 'NR==2 {printf "| %s | %s | %s | %s |\n", n, $1, $2, $3}'
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: brainfuckpc-firmware
+          path: |
+            fw/bin/*.hex
+            fw/bin/*.elf
+          if-no-files-found: error
+
+  toolchain:
+    name: bfutils compiler & emulator
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch bfutils submodule
+        run: git submodule update --init --depth 1 fw/bfutils
+
+      - name: Build bfpp / bfrun
+        run: |
+          cmake -S fw/bfutils -B fw/bfutils/build -DCMAKE_BUILD_TYPE=Release
+          cmake --build fw/bfutils/build -j"$(nproc)"
+
+      - name: Smoke test — Hello World
+        run: |
+          BIN=fw/bfutils/bin
+          $BIN/bfpp -i bf/examples/hello.b -o hello.bin
+          $BIN/bfpp -i bf/examples/hello.b -o hello.asm -s
+          out="$($BIN/bfrun -f hello.bin < /dev/null)"
+          echo "$out"
+          grep -q "Hello World!" <<< "$out"
+          {
+            echo '### Hello World on the emulator'
+            echo '```'
+            echo "$out"
+            echo '```'
+            echo '<details><summary>Machine code</summary>'
+            echo
+            echo '```'
+            cat hello.asm
+            echo '```'
+            echo '</details>'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bfutils-linux-x64
+          path: fw/bfutils/bin/
+
+  release:
+    name: Attach firmware to release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [firmware, toolchain]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: brainfuckpc-firmware
+          path: firmware
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: firmware/*.hex
+          generate_release_notes: true
