@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="BrainfuckPC — 16-bit relay computer">
+
+<style>
+  .bg{fill:#fbf8f1}.panel{fill:#f1ebdd;stroke:#d8ccb0}
+  .t{fill:#1f2328}.m{fill:#6e6656}.a{fill:#9a6b00}.code{fill:#b08a3a}
+  .led{fill:#e5484d}.ledoff{fill:#e9dcc6}.wire{stroke:#c9b98f}
+  .relay{fill:#d9b45a;stroke:#a8842c}.pcb{fill:#2f5aa8}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#0f1318}.panel{fill:#171c23;stroke:#2a313b}
+    .t{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#e3b341}.code{fill:#6b5a2e}
+    .led{fill:#ff5f56}.ledoff{fill:#2a1d1d}.wire{stroke:#3a3322}
+    .relay{fill:#b8913c;stroke:#7d6324}.pcb{fill:#1d3b73}
+  }
+  text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+</style>
+<rect class="bg" width="1200" height="300" rx="14"/>
+<text class="code" x="40" y="276" font-size="15" letter-spacing="1">++++++++++[&gt;+++++++&gt;++++++++++&gt;+++&gt;+&lt;&lt;&lt;&lt;-]&gt;++.&gt;+.+++++++..+++.&gt;++.&lt;&lt;+++++++++++++++.&gt;.+++.------.--------.&gt;+.&gt;.</text>
+<text class="t" x="40" y="104" font-size="64" font-weight="700" letter-spacing="-1">Brainfuck<tspan class="a">PC</tspan></text>
+<text class="m sans" x="42" y="146" font-size="22">16-bit von Neumann computer built from 578 reed relays</text>
+<text class="m" x="42" y="192" font-size="13" letter-spacing="2">ISA</text>
+<text class="t" x="42" y="216" font-size="20" font-weight="600">Brainfuck++</text>
+<text class="m" x="207" y="192" font-size="13" letter-spacing="2">CLOCK</text>
+<text class="t" x="207" y="216" font-size="20" font-weight="600">25–40 Hz</text>
+<text class="m" x="372" y="192" font-size="13" letter-spacing="2">RAM</text>
+<text class="t" x="372" y="216" font-size="20" font-weight="600">64K × 16</text>
+<text class="m" x="537" y="192" font-size="13" letter-spacing="2">POWER</text>
+<text class="t" x="537" y="216" font-size="20" font-weight="600">70 W</text>
+<rect class="panel" x="700" y="34" width="460" height="196" rx="10" stroke-width="1.5"/>
+<rect class="pcb" x="722" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="728" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="728" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="728" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="774" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="780" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="780" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="780" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="826" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="832" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="832" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="832" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="878" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="884" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="884" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="884" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="930" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="936" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="936" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="936" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="982" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="988" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="988" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="988" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="1034" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="1040" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="1040" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="1040" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="pcb" x="1086" y="52" width="44" height="74" rx="3"/>
+<rect class="relay" x="1092" y="60" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="1092" y="80" width="32" height="14" rx="6" stroke-width="1"/>
+<rect class="relay" x="1092" y="100" width="32" height="14" rx="6" stroke-width="1"/>
+<text class="m" x="724" y="164" font-size="13" letter-spacing="2">IP</text>
+<text class="m" x="724" y="206" font-size="13" letter-spacing="2">AP</text>
+<circle class="ledoff" cx="1115" cy="159" r="7"/>
+<circle class="led" cx="1115" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1092" cy="159" r="7"/>
+<circle class="led" cx="1092" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="1s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1069" cy="159" r="7"/>
+<circle class="led" cx="1069" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="2s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1046" cy="159" r="7"/>
+<circle class="led" cx="1046" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="4s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1023" cy="159" r="7"/>
+<circle class="led" cx="1023" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="8s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1000" cy="159" r="7"/>
+<circle class="led" cx="1000" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="16s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="977" cy="159" r="7"/>
+<circle class="led" cx="977" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="32s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="954" cy="159" r="7"/>
+<circle class="led" cx="954" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="64s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="931" cy="159" r="7"/>
+<circle class="led" cx="931" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="128s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="908" cy="159" r="7"/>
+<circle class="led" cx="908" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="256s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="885" cy="159" r="7"/>
+<circle class="led" cx="885" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="512s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="862" cy="159" r="7"/>
+<circle class="led" cx="862" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="1024s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="839" cy="159" r="7"/>
+<circle class="led" cx="839" cy="159" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="2048s" begin="0s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="816" cy="159" r="7"/>
+<circle class="ledoff" cx="793" cy="159" r="7"/>
+<circle class="ledoff" cx="770" cy="159" r="7"/>
+<circle class="ledoff" cx="1115" cy="201" r="7"/>
+<circle class="led" cx="1115" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="4s" begin="-6s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1092" cy="201" r="7"/>
+<circle class="led" cx="1092" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="8s" begin="-12s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1069" cy="201" r="7"/>
+<circle class="led" cx="1069" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="16s" begin="-24s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1046" cy="201" r="7"/>
+<circle class="led" cx="1046" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="32s" begin="-48s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1023" cy="201" r="7"/>
+<circle class="led" cx="1023" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="64s" begin="-96s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="1000" cy="201" r="7"/>
+<circle class="led" cx="1000" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="128s" begin="-192s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="977" cy="201" r="7"/>
+<circle class="led" cx="977" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="256s" begin="-384s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="954" cy="201" r="7"/>
+<circle class="led" cx="954" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="512s" begin="-768s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="931" cy="201" r="7"/>
+<circle class="led" cx="931" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="1024s" begin="-1536s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="908" cy="201" r="7"/>
+<circle class="led" cx="908" cy="201" r="7" opacity="0"><animate attributeName="opacity" values="0;1" dur="2048s" begin="-3072s" calcMode="discrete" repeatCount="indefinite"/></circle>
+<circle class="ledoff" cx="885" cy="201" r="7"/>
+<circle class="ledoff" cx="862" cy="201" r="7"/>
+<circle class="ledoff" cx="839" cy="201" r="7"/>
+<circle class="ledoff" cx="816" cy="201" r="7"/>
+<circle class="ledoff" cx="793" cy="201" r="7"/>
+<circle class="ledoff" cx="770" cy="201" r="7"/>
+</svg>
