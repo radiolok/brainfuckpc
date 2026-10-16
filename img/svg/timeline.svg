@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="230" viewBox="0 0 1000 230" role="img" aria-label="BrainfuckPC project timeline">
+<style>
+  .bg{fill:#fbf8f1}
+  .t{fill:#1f2328}.m{fill:#6e6656}.a{fill:#9a6b00}.r{fill:#c93c37}.b{fill:#2f62a8}
+  .relay{fill:#fbecc6;stroke:#b8860b}
+  .si{fill:#e3ecf8;stroke:#4a77b4}
+  .logic{fill:#fde2e1;stroke:#d1453b}
+  .neutral{fill:#f1ebdd;stroke:#c9b98f}
+  .bus{stroke:#57606a;fill:none}
+  .busfill{fill:#57606a}
+  .ln{stroke:#57606a;fill:none}
+  .lnA{stroke:#b8860b;fill:none}
+  .lnR{stroke:#d1453b;fill:none}
+  .arr{fill:#57606a}.arrA{fill:#b8860b}.arrR{fill:#d1453b}
+  .grid{stroke:#e2d8c3}
+  .wave{stroke:#9a6b00;fill:none}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#0f1318}
+    .t{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#e3b341}.r{fill:#ff7b72}.b{fill:#79b0ff}
+    .relay{fill:#2b2414;stroke:#c9a14a}
+    .si{fill:#142033;stroke:#5a8fd0}
+    .logic{fill:#2d1517;stroke:#e5534b}
+    .neutral{fill:#1a1f27;stroke:#39404b}
+    .bus{stroke:#8b949e}.busfill{fill:#8b949e}
+    .ln{stroke:#8b949e}.arr{fill:#8b949e}
+    .lnA{stroke:#c9a14a}.arrA{fill:#c9a14a}
+    .lnR{stroke:#e5534b}.arrR{fill:#e5534b}
+    .grid{stroke:#262c35}
+    .wave{stroke:#e3b341}
+  }
+  text{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+</style>
+<rect class="bg" width="1000" height="230" rx="12"/>
+<text class="t" x="30" y="40" font-size="22" text-anchor="start" font-weight="700" >Ten years of dreaming, two years of building</text>
+<path class="bus" d="M40,85 L960,85" stroke-width="4" stroke-linejoin="round"/>
+<circle class="relay" cx="106" cy="85" r="10" stroke-width="2.5"/>
+<text class="m mono" x="105.71428571428571" y="123" font-size="13" text-anchor="middle" font-weight="700" >2002</text>
+<text class="t" x="105.71428571428571" y="145" font-size="15" text-anchor="middle" font-weight="700" >The book</text>
+<text class="m" x="105.71428571428571" y="167" font-size="12" text-anchor="middle" >Voitsekhovsky,</text>
+<text class="m" x="105.71428571428571" y="183" font-size="12" text-anchor="middle" >“Radio-electronic toys”</text>
+<circle class="relay" cx="237" cy="85" r="10" stroke-width="2.5"/>
+<text class="a mono" x="237.1428571428571" y="123" font-size="13" text-anchor="middle" font-weight="700" >2008</text>
+<text class="t" x="237.1428571428571" y="145" font-size="15" text-anchor="middle" font-weight="700" >RCVM-1</text>
+<text class="m" x="237.1428571428571" y="167" font-size="12" text-anchor="middle" >4-bit relay ALU;</text>
+<text class="m" x="237.1428571428571" y="183" font-size="12" text-anchor="middle" >RES55 runs at 50 Hz</text>
+<circle class="relay" cx="369" cy="85" r="10" stroke-width="2.5"/>
+<text class="a mono" x="368.57142857142856" y="123" font-size="13" text-anchor="middle" font-weight="700" >Nov 2016</text>
+<text class="t" x="368.57142857142856" y="145" font-size="15" text-anchor="middle" font-weight="700" >Architecture</text>
+<text class="m" x="368.57142857142856" y="167" font-size="12" text-anchor="middle" >Brainfuck++ ISA,</text>
+<text class="m" x="368.57142857142856" y="183" font-size="12" text-anchor="middle" >parallel-carry adder</text>
+<circle class="relay" cx="500" cy="85" r="10" stroke-width="2.5"/>
+<text class="a mono" x="499.99999999999994" y="123" font-size="13" text-anchor="middle" font-weight="700" >2017</text>
+<text class="t" x="499.99999999999994" y="145" font-size="15" text-anchor="middle" font-weight="700" >Boards</text>
+<text class="m" x="499.99999999999994" y="167" font-size="12" text-anchor="middle" >home-etched PCBs,</text>
+<text class="m" x="499.99999999999994" y="183" font-size="12" text-anchor="middle" >then a factory order</text>
+<circle class="relay" cx="631" cy="85" r="10" stroke-width="2.5"/>
+<text class="a mono" x="631.4285714285713" y="123" font-size="13" text-anchor="middle" font-weight="700" >2018</text>
+<text class="t" x="631.4285714285713" y="145" font-size="15" text-anchor="middle" font-weight="700" >Blocks alive</text>
+<text class="m" x="631.4285714285713" y="167" font-size="12" text-anchor="middle" >adder + registers,</text>
+<text class="m" x="631.4285714285713" y="183" font-size="12" text-anchor="middle" >500 Hz adder test</text>
+<circle class="relay" cx="763" cy="85" r="10" stroke-width="2.5"/>
+<text class="a mono" x="762.8571428571428" y="123" font-size="13" text-anchor="middle" font-weight="700" >Jan 2019</text>
+<text class="t" x="762.8571428571428" y="145" font-size="15" text-anchor="middle" font-weight="700" >On the frame</text>
+<text class="m" x="762.8571428571428" y="167" font-size="12" text-anchor="middle" >all blocks mounted,</text>
+<text class="m" x="762.8571428571428" y="183" font-size="12" text-anchor="middle" >memory board works</text>
+<circle class="logic" cx="894" cy="85" r="10" stroke-width="2.5"/>
+<text class="r mono" x="894.2857142857142" y="123" font-size="13" text-anchor="middle" font-weight="700" >Apr 2019</text>
+<text class="t" x="894.2857142857142" y="145" font-size="15" text-anchor="middle" font-weight="700" >Runs programs</text>
+<text class="m" x="894.2857142857142" y="167" font-size="12" text-anchor="middle" >Hello World,</text>
+<text class="m" x="894.2857142857142" y="183" font-size="12" text-anchor="middle" >π ≈ 355/113 @ 25 Hz</text>
+</svg>
