@@ -15,7 +15,7 @@ jobs:
     name: AVR firmware
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install AVR toolchain
         run: |
@@ -38,7 +38,7 @@ jobs:
             done
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: brainfuckpc-firmware
           path: |
@@ -50,7 +50,7 @@ jobs:
     name: bfutils compiler & emulator
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fetch bfutils submodule
         run: git submodule update --init --depth 1 fw/bfutils
@@ -81,7 +81,7 @@ jobs:
             echo '</details>'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: bfutils-linux-x64
           path: fw/bfutils/bin/
@@ -94,7 +94,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: brainfuckpc-firmware
           path: firmware
