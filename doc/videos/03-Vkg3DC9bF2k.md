@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/Vkg3DC9bF2k](https://youtu.be/Vkg3DC9bF2k) · 11:05
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:00`](https://youtu.be/Vkg3DC9bF2k?t=0) Всем привет Я Артём кашканов и в этом видео расскажу вам об архитектуре своей релейной машины собрать я её задумал 10 лет назад совершенно не представляя как это можно делать тогда я собрал четырёхразрядного реле s22 и начал копить релюшки для нового проекта я намеренно начал собирать герконовый реле и первая закупка в 800 реле случилась в 2010 году как я уже отмечал в прошлом видео скорость срабатывания реле достаточно невысокая это десятки сотни миллисекунд но не герконовые реле по паспорту герконовые реле срабатывают за время чуть меньше 1но миллисекунды то есть в 10 раз быстрее обычного реле Я надеюсь достичь скорости исполнения инструкций до 100 инструкций в секунду что совершенно недостижима для классических релейных машин посмотрим удастся ли нам её достичь изначально я хотел создать компьютер с архитектурой напоминающей PDP 11 я поклонник микроконтроллеров msp430 у них похожий набор команд И мне
 

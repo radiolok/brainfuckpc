@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/urRz3QqpLkc](https://youtu.be/urRz3QqpLkc) · 4:15
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:08`](https://youtu.be/urRz3QqpLkc?t=8) Всем привет. Я Артём Кашканов и сегодня я расскажу вам о плате памяти своего релейного компьютера. Плата памяти самый неканоничный, но не менее важный элемент моего компьютера. В первую очередь на ней располагаются сами микросхемы памяти. Это как у процессора Pentium 1. Каждая микросхема это 64 КБ, 8 бит. Суммарно они дают 64 килослова по 16 бит каждое слово. У микросхемы имеется обвязка шин адреса и шин данных, через которую происходит связь с релейной логикой компьютера. Для работы компьютера кроме ОЗУ на этой плате больше ничего не требуется. Однако для загрузки программы необходим микроконтроллер Atmega 1280. Он имеет доступ к шине адреса и шине данных и позволяет общаться с ОЗУ. Из обвязки на плате имеется USB преобразователь последовательного порта и место под распайку модуля ESP8266. Оно здесь располагается внизу платы. Через терминал будет осуществляться управление
 

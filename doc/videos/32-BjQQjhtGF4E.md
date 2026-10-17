@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/BjQQjhtGF4E](https://youtu.be/BjQQjhtGF4E) · 8:22
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:00`](https://youtu.be/BjQQjhtGF4E?t=0) Всем привет, я Артём Кашканов и сегодня я расскажу вам о том, как у компьютера появилась эта деревянная тумба. Вообще, давненько я не обновлял статус проекта и последний крупный видос был, когда я там видео то вообще делал, 30 января и с тех пор он в таком несколько законсервированном состоянии. Видео по расчёту числа Пи не счёт. За те 2 года, что я занимаюсь этим проектом, накопилась куча мелких вещей и хочется заняться чем-то ещё. И как только компьютер обрёл жизнь и получил возможность исполнять программы, я занялся реализацией чего-то ещё. Сделал пол в гараже. Опа, лага. Какая лага? Где лага? Отгнила нахрен лага. Яма, как видите, засыпана, потому что вода, потому что метро построили, стало заливать, затапливать по колено. О, нормальный пол. Фанера немного покрашена, лежит ровненько, ходить по ней одно удовольствие, швы
 

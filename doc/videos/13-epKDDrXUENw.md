@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/epKDDrXUENw](https://youtu.be/epKDDrXUENw) · 4:57
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`1:27`](https://youtu.be/epKDDrXUENw?t=87) Всем привет, я - Артём Кашканов и, как вы поняли, сегодня видео у нас про индикаторные платы. Я уже спаял две штуки. Для тестов сумматора надо 3, то есть надо спать еще одну и можно наконец-то будет зажечь на нем все светодиодики и проверить его работоспособность. Думаю, вы очень ждете этого момента. Итак, сам модуль. В основу легли небольшие вакуумные индикаторы ИВ-6, которых у меня полторы коробки и соответственно их надо использовать. На плату 100 на 100 миллиметров уместилось только шесть штук: 4 младших под двухбайтовое слово и два старших под символы. Можно будет подсветить наименование регистра IP, AP, например, или вывести какую-то другую служебную информацию. В любом случае всегда можно сделать из этой платы часы. Защелки собраны на базе триггеров ТМ8: у меня их две сотни, тоже куда-то девать надо. Каждый корпус на 4 триггера
 

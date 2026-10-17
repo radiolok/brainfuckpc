@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/8PEWXZFjvvA](https://youtu.be/8PEWXZFjvvA) · 4:50
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`1:22`](https://youtu.be/8PEWXZFjvvA?t=82) Hi everyone, I'm Artem Kashkanov and let me introduce the brand new musical insctrument a reed relay computer! so this is 16-bit, Von-Neuman computer with esoteric programming language brainfuck instruction set. a BrainfuckPC when regular relay computers from other DIY makers can operate on the frequencies about from one to ten Hz. or something like that As I uses the Reed relays, which are really faster than usual relays, I can operate on a much more high frequency - about 100 Hertz. something like that and I notice that it's about four lowest piano octaves and if we use some external MIDI device to modulate clock frequency we can play music using just a computer! Using just relays clocking and this computer has a lot of relays. about 700 relays.
 

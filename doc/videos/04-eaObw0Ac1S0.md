@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/eaObw0Ac1S0](https://youtu.be/eaObw0Ac1S0) · 12:20
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:00`](https://youtu.be/eaObw0Ac1S0?t=0) Всем привет Я Артём кашканов и в этом видео я расскажу о том как будет проходить постройка моего релейного компьютера что мне для этого нужно будет сделать Что мне нужно будет сделать чтобы сделать это ну и так далее для начала глобально релейный компьютер в первую очередь состоит из множества печатных плат их около 200 печатные платы все различных видов видов этих примерно два десятка большую часть нужно из них будет развести это различные модули это плата памяти это дополнительные платки платки индикации и так далее другую часть Надо будет прошить а возможно процесс прошивки будет идти намного дольше чем все остальные этапы все эти платы будут крепиться на одну общую станину из скорее всего оргстекла или быть может какого-то более прочного материала пока не знаю всё это будет помещено в красивую рамку со стеклом в виде картины далее У нас есть одна платка с микроконтроллером которы будет отвечать
 

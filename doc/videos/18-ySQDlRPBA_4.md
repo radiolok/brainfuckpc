@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/ySQDlRPBA_4](https://youtu.be/ySQDlRPBA_4) · 10:15
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:00`](https://youtu.be/ySQDlRPBA_4?t=0) Hey everyone, I'm Artem Kashkanov and this is a future of relay computing. This is my three completed blocks of ongoing project relay computer with code name Brainfuck PC. Brainfuck is a code name of the most popular esoteric programming language. And of course, if we want to build PC for Brainfuck, it should name it Brainfuck PC. Sorry for that. For those who doesn't know what is it, Brainfuck is a esoteric programming language, let me describe a little bit. In this programming language, you have an array of eight-bit cells. So, each cell can store value from 0 to 255. And you can change this value by one. So, you can do increment or decrement. These are two commands of Brainfuck programming language. You have an address pointer which corresponds to current selected memory cell. You can
 

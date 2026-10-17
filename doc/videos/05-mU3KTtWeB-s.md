@@ -4,7 +4,7 @@
 
 ▶ [youtu.be/mU3KTtWeB-s](https://youtu.be/mU3KTtWeB-s) · 12:18
 
-> Automatic transcript generated from YouTube's auto-captions. Expect misheard words, missing punctuation and wrong technical terms.
+> Automatic transcript generated from YouTube's auto-captions. The author's name and a few recurring terms are corrected ([`fixes.tsv`](../../tools/youtube/fixes.tsv)); everything else is as recognised — expect misheard words, missing punctuation and wrong technical terms.
 
 [`0:00`](https://youtu.be/mU3KTtWeB-s?t=0) Всем привет Я Артём кашканов и в этом видео я расскажу о наборе инструкций моего релейного компьютера погоди У тебя же Брейн фак там во инструкций что ты рассказывать-то собрался так-то оно конечно так просто на тех блоках которые требуются для реализации этих самых восьми инструкции можно реализовать куда большее число команд существенно упростив работу программиста то есть меня повторим ещё раз эти самые восем команд нфа Первое - это команды плюс-минус которые изменяют содержимое выбранной ячейки в плюс оди или в минус о другие две команды - это сдвиг номера текущее ячейки влево и вправо то есть мы можем выбрать любую ячейку из имеющихся у нас в памяти чтобы мы имели возможность что-то записывать в память или выводить из неё есть команды ввод из консоли в память и вывод из неё Ну и циклы начало и конец которого обрамляют прямоугольными скобочка цикл будет повторяться до тех пор пока значение
 
