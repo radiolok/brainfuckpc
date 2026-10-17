@@ -12,7 +12,7 @@ Start here:
 | <a href="https://youtu.be/5hhbGBlP3_4"><img src="https://img.youtube.com/vi/5hhbGBlP3_4/mqdefault.jpg" alt="Perhaps the fastest relay computer in the world"></a> | <a href="https://youtu.be/CjOYOlJl9wg"><img src="https://img.youtube.com/vi/CjOYOlJl9wg/mqdefault.jpg" alt="Triple Brainfuck, or what madness is — meetup talk, 17.11.2018"></a> | <a href="https://youtu.be/UwRxRw0NNDI"><img src="https://img.youtube.com/vi/UwRxRw0NNDI/mqdefault.jpg" alt="Pi = 4! and other relay computing bugs"></a> |
 | Perhaps the fastest relay computer in the world · 15:57 | Triple Brainfuck, or what madness is — meetup talk, 17.11.2018 · 24:53 | Pi = 4! and other relay computing bugs · 15:03 |
 
-Videos are listed in the order they were published.
+Videos are listed oldest first, as in the playlist.
 
 ## Part 1 · Design (2017)
 
@@ -20,9 +20,9 @@ Videos are listed in the order they were published.
 
 | # | Video (original title) | English | Length |
 |---:|---|---|---:|
-| 1 | [BrainfuckPC#3 Архитектура релейной машины](https://youtu.be/Vkg3DC9bF2k) | BrainfuckPC#3 Relay Computer Architecture | 11:05 |
+| 1 | [BrainfuckPC#1 Обзор релейных компьютеров](https://youtu.be/whk8NKAdsB8) | BrainfuckPC#1 Overview of Relay Computers | 7:37 |
 | 2 | [BrainfuckPC#2 Основы релейной логики](https://youtu.be/CcuIM6Z8ibQ) | BrainfuckPC#2 Basics of Relay Logic | 5:58 |
-| 3 | [BrainfuckPC#1 Обзор релейных компьютеров](https://youtu.be/whk8NKAdsB8) | BrainfuckPC#1 Overview of Relay Computers | 7:37 |
+| 3 | [BrainfuckPC#3 Архитектура релейной машины](https://youtu.be/Vkg3DC9bF2k) | BrainfuckPC#3 Relay Computer Architecture | 11:05 |
 | 4 | [BrainfuckPC#4 План работ](https://youtu.be/eaObw0Ac1S0) | BrainfuckPC#4 Work Plan | 12:20 |
 | 5 | [BrainfuckPC#5 Набор инструкций](https://youtu.be/mU3KTtWeB-s) | BrainfuckPC#5 Instruction Set | 12:18 |
 | 6 | [BrainfuckPC#6 Параллельный сумматор](https://youtu.be/MGDlfUbEfZg) | BrainfuckPC#6 Parallel Adder | 9:30 |
