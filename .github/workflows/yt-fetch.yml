@@ -1,0 +1,25 @@
+name: yt-fetch
+on: push
+jobs:
+  fetch:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: pip install -q yt-dlp && yt-dlp --version
+      - name: Playlist metadata
+        run: |
+          mkdir -p out
+          yt-dlp --flat-playlist -J "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" > out/playlist.json
+          python3 -c "import json;d=json.load(open('out/playlist.json'));[print(e['id'],e.get('duration'),e['title']) for e in d['entries']]"
+      - name: Per-video info and subtitles
+        continue-on-error: true
+        run: |
+          cd out
+          yt-dlp --skip-download --write-info-json --write-subs --write-auto-subs \
+                 --sub-langs "ru.*,ru,en,en.*" --sub-format vtt --no-overwrites --ignore-errors \
+                 --sleep-requests 1 -o "%(playlist_index)03d_%(id)s.%(ext)s" \
+                 "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" 2>&1 | tail -80
+          ls | head -200
+      - uses: actions/upload-artifact@v7
+        with:
+          name: yt
+          path: out/
