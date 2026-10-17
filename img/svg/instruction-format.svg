@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" role="img" aria-label="BrainfuckPC instruction format and opcode map">
+<style>
+  .bg{fill:#fbf8f1}
+  .t{fill:#1f2328}.m{fill:#6e6656}.a{fill:#9a6b00}.r{fill:#c93c37}.b{fill:#2f62a8}
+  .relay{fill:#fbecc6;stroke:#b8860b}
+  .si{fill:#e3ecf8;stroke:#4a77b4}
+  .logic{fill:#fde2e1;stroke:#d1453b}
+  .neutral{fill:#f1ebdd;stroke:#c9b98f}
+  .bus{stroke:#57606a;fill:none}
+  .busfill{fill:#57606a}
+  .ln{stroke:#57606a;fill:none}
+  .lnA{stroke:#b8860b;fill:none}
+  .lnR{stroke:#d1453b;fill:none}
+  .arr{fill:#57606a}.arrA{fill:#b8860b}.arrR{fill:#d1453b}
+  .grid{stroke:#e2d8c3}
+  .wave{stroke:#9a6b00;fill:none}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#0f1318}
+    .t{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#e3b341}.r{fill:#ff7b72}.b{fill:#79b0ff}
+    .relay{fill:#2b2414;stroke:#c9a14a}
+    .si{fill:#142033;stroke:#5a8fd0}
+    .logic{fill:#2d1517;stroke:#e5534b}
+    .neutral{fill:#1a1f27;stroke:#39404b}
+    .bus{stroke:#8b949e}.busfill{fill:#8b949e}
+    .ln{stroke:#8b949e}.arr{fill:#8b949e}
+    .lnA{stroke:#c9a14a}.arrA{fill:#c9a14a}
+    .lnR{stroke:#e5534b}.arrR{fill:#e5534b}
+    .grid{stroke:#262c35}
+    .wave{stroke:#e3b341}
+  }
+  text{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+</style>
+<rect class="bg" width="1000" height="660" rx="12"/>
+<text class="t" x="30" y="40" font-size="22" text-anchor="start" font-weight="700" >Brainfuck++ instruction word</text>
+<text class="m" x="30" y="62" font-size="14" text-anchor="start" >16-bit, one instruction per clock tick. Runs of + − &lt; &gt; collapse into a single instruction.</text>
+<rect class="relay" x="60" y="110" width="165" height="46" stroke-width="1.6"/>
+<path class="ln" d="M115,110 v7 M115,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M170,110 v7 M170,156 v-7" stroke-width="1" opacity="0.6"/>
+<rect class="logic" x="225" y="110" width="55" height="46" stroke-width="1.6"/>
+<rect class="neutral" x="280" y="110" width="660" height="46" stroke-width="1.6"/>
+<path class="ln" d="M335,110 v7 M335,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M390,110 v7 M390,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M445,110 v7 M445,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M500,110 v7 M500,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M555,110 v7 M555,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M610,110 v7 M610,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M665,110 v7 M665,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M720,110 v7 M720,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M775,110 v7 M775,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M830,110 v7 M830,156 v-7" stroke-width="1" opacity="0.6"/>
+<path class="ln" d="M885,110 v7 M885,156 v-7" stroke-width="1" opacity="0.6"/>
+<text class="m mono" x="87.5" y="102" font-size="12" text-anchor="middle" >15</text>
+<text class="m mono" x="142.5" y="102" font-size="12" text-anchor="middle" >14</text>
+<text class="m mono" x="197.5" y="102" font-size="12" text-anchor="middle" >13</text>
+<text class="m mono" x="252.5" y="102" font-size="12" text-anchor="middle" >12</text>
+<text class="m mono" x="307.5" y="102" font-size="12" text-anchor="middle" >11</text>
+<text class="m mono" x="362.5" y="102" font-size="12" text-anchor="middle" >10</text>
+<text class="m mono" x="417.5" y="102" font-size="12" text-anchor="middle" >9</text>
+<text class="m mono" x="472.5" y="102" font-size="12" text-anchor="middle" >8</text>
+<text class="m mono" x="527.5" y="102" font-size="12" text-anchor="middle" >7</text>
+<text class="m mono" x="582.5" y="102" font-size="12" text-anchor="middle" >6</text>
+<text class="m mono" x="637.5" y="102" font-size="12" text-anchor="middle" >5</text>
+<text class="m mono" x="692.5" y="102" font-size="12" text-anchor="middle" >4</text>
+<text class="m mono" x="747.5" y="102" font-size="12" text-anchor="middle" >3</text>
+<text class="m mono" x="802.5" y="102" font-size="12" text-anchor="middle" >2</text>
+<text class="m mono" x="857.5" y="102" font-size="12" text-anchor="middle" >1</text>
+<text class="m mono" x="912.5" y="102" font-size="12" text-anchor="middle" >0</text>
+<text class="t" x="142.5" y="139" font-size="15" text-anchor="middle" font-weight="700" >CLASS</text>
+<text class="r" x="252.5" y="139" font-size="15" text-anchor="middle" font-weight="700" >S</text>
+<text class="t" x="610" y="139" font-size="15" text-anchor="middle" font-weight="700" >IMM12 — constant / jump offset / CTRLIO mask</text>
+<text class="m" x="142.5" y="178" font-size="12" text-anchor="middle" >bits 15–13</text>
+<text class="m" x="252.5" y="178" font-size="12" text-anchor="middle" >sign</text>
+<text class="a mono" x="610" y="178" font-size="13" text-anchor="middle" font-weight="600" >operand = sign_extend(insn[12:0])  →  −4096 … +4095</text>
+<text class="m" x="60" y="215" font-size="12" text-anchor="start" font-weight="700" letter-spacing="1.5">OPCODE</text>
+<text class="m" x="190" y="215" font-size="12" text-anchor="start" font-weight="700" letter-spacing="1.5">MNEMONIC</text>
+<text class="m" x="300" y="215" font-size="12" text-anchor="start" font-weight="700" letter-spacing="1.5">OPERATION</text>
+<text class="m" x="600" y="215" font-size="12" text-anchor="start" font-weight="700" letter-spacing="1.5">PURPOSE</text>
+<text class="m" x="870" y="215" font-size="12" text-anchor="start" font-weight="700" letter-spacing="1.5">BF</text>
+<rect class="neutral" x="48" y="229" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="250" font-size="14" text-anchor="start" >0x0···</text>
+<text class="t mono" x="190" y="250" font-size="14" text-anchor="start" font-weight="700" >NOP</text>
+<text class="t mono" x="300" y="250" font-size="14" text-anchor="start" >—</text>
+<text class="m" x="600" y="250" font-size="13" text-anchor="start" >no operation</text>
+<text class="a mono" x="900" y="251" font-size="18" text-anchor="middle" font-weight="700" ></text>
+<rect class="logic" x="48" y="267" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="288" font-size="14" text-anchor="start" >0x1···</text>
+<text class="t mono" x="190" y="288" font-size="14" text-anchor="start" font-weight="700" >CTRLIO</text>
+<text class="t mono" x="300" y="288" font-size="14" text-anchor="start" >IMM12 is a bit mask (below)</text>
+<text class="m" x="600" y="288" font-size="13" text-anchor="start" >console I/O, 8/16-bit mode, halt</text>
+<text class="a mono" x="900" y="289" font-size="18" text-anchor="middle" font-weight="700" >. ,</text>
+<rect class="relay" x="48" y="305" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="326" font-size="14" text-anchor="start" >0x2 / 0x3</text>
+<text class="t mono" x="190" y="326" font-size="14" text-anchor="start" font-weight="700" >ADD</text>
+<text class="t mono" x="300" y="326" font-size="14" text-anchor="start" >*AP ← *AP + imm</text>
+<text class="m" x="600" y="326" font-size="13" text-anchor="start" >change current cell</text>
+<text class="a mono" x="900" y="327" font-size="18" text-anchor="middle" font-weight="700" >+ −</text>
+<rect class="relay" x="48" y="343" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="364" font-size="14" text-anchor="start" >0x4 / 0x5</text>
+<text class="t mono" x="190" y="364" font-size="14" text-anchor="start" font-weight="700" >ADA</text>
+<text class="t mono" x="300" y="364" font-size="14" text-anchor="start" >AP ← AP + imm</text>
+<text class="m" x="600" y="364" font-size="13" text-anchor="start" >move along the tape</text>
+<text class="a mono" x="900" y="365" font-size="18" text-anchor="middle" font-weight="700" >&gt; &lt;</text>
+<rect class="relay" x="48" y="381" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="402" font-size="14" text-anchor="start" >0x6 / 0x7</text>
+<text class="t mono" x="190" y="402" font-size="14" text-anchor="start" font-weight="700" >JZ</text>
+<text class="t mono" x="300" y="402" font-size="14" text-anchor="start" >if *AP = 0 :  IP ← IP + imm</text>
+<text class="m" x="600" y="402" font-size="13" text-anchor="start" >loop entry, skip body</text>
+<text class="a mono" x="900" y="403" font-size="18" text-anchor="middle" font-weight="700" >[</text>
+<rect class="relay" x="48" y="419" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="440" font-size="14" text-anchor="start" >0x8 / 0x9</text>
+<text class="t mono" x="190" y="440" font-size="14" text-anchor="start" font-weight="700" >JNZ</text>
+<text class="t mono" x="300" y="440" font-size="14" text-anchor="start" >if *AP ≠ 0 :  IP ← IP + imm</text>
+<text class="m" x="600" y="440" font-size="13" text-anchor="start" >loop back-edge</text>
+<text class="a mono" x="900" y="441" font-size="18" text-anchor="middle" font-weight="700" >]</text>
+<rect class="neutral" x="48" y="457" width="904" height="32" rx="5" stroke-width="1" opacity="0.9"/>
+<text class="t mono" x="60" y="478" font-size="14" text-anchor="start" >0xA – 0xF</text>
+<text class="t mono" x="190" y="478" font-size="14" text-anchor="start" font-weight="700" >—</text>
+<text class="t mono" x="300" y="478" font-size="14" text-anchor="start" >reserved (XOR planned)</text>
+<text class="m" x="600" y="478" font-size="13" text-anchor="start" ></text>
+<text class="a mono" x="900" y="479" font-size="18" text-anchor="middle" font-weight="700" ></text>
+<text class="t" x="60" y="520" font-size="15" text-anchor="start" font-weight="700" >CTRLIO mask</text>
+<text class="m" x="175" y="520" font-size="12" text-anchor="start" >(bits are independent — several may be set at once)</text>
+<rect class="logic" x="60" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="97.0" y="551" font-size="11" text-anchor="middle" >11</text>
+<text class="t mono" x="97.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >HALT</text>
+<rect class="logic" x="134" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="171.0" y="551" font-size="11" text-anchor="middle" >10</text>
+<text class="t mono" x="171.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >MODE16</text>
+<rect class="logic" x="208" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="245.0" y="551" font-size="11" text-anchor="middle" >9</text>
+<text class="t mono" x="245.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >MODE8</text>
+<rect class="neutral" x="282" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="319.0" y="551" font-size="11" text-anchor="middle" >8</text>
+<text class="m mono" x="319.0" y="570" font-size="12" text-anchor="middle" >PAUSE</text>
+<rect class="neutral" x="356" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="393.0" y="551" font-size="11" text-anchor="middle" >7</text>
+<rect class="neutral" x="430" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="467.0" y="551" font-size="11" text-anchor="middle" >6</text>
+<rect class="neutral" x="504" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="541.0" y="551" font-size="11" text-anchor="middle" >5</text>
+<text class="m mono" x="541.0" y="570" font-size="12" text-anchor="middle" >CLR.AP</text>
+<rect class="neutral" x="578" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="615.0" y="551" font-size="11" text-anchor="middle" >4</text>
+<text class="m mono" x="615.0" y="570" font-size="12" text-anchor="middle" >CLR.DATA</text>
+<rect class="neutral" x="652" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="689.0" y="551" font-size="11" text-anchor="middle" >3</text>
+<rect class="logic" x="726" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="763.0" y="551" font-size="11" text-anchor="middle" >2</text>
+<text class="t mono" x="763.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >SYNC</text>
+<rect class="logic" x="800" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="837.0" y="551" font-size="11" text-anchor="middle" >1</text>
+<text class="t mono" x="837.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >COUT</text>
+<rect class="logic" x="874" y="534" width="74" height="44" stroke-width="1.2"/>
+<text class="m mono" x="911.0" y="551" font-size="11" text-anchor="middle" >0</text>
+<text class="t mono" x="911.0" y="570" font-size="12" text-anchor="middle" font-weight="700" >CIN</text>
+<text class="a mono" x="60" y="602" font-size="13" text-anchor="start" xml:space="preserve">Examples:  0x1002 = &#x27;.&#x27; (COUT)    0x1800 = HALT    0x200A = +10    0x5FFC = &lt;&lt;&lt;&lt;    0x600B = &#x27;[&#x27; jump +11</text>
+<text class="m" x="60" y="622" font-size="12" text-anchor="start" >Highlighted bits are used by the hardware; the rest are defined by the bfutils toolchain.</text>
+</svg>

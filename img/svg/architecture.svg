@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="610" viewBox="0 0 1000 610" role="img" aria-label="BrainfuckPC architecture block diagram">
+<style>
+  .bg{fill:#fbf8f1}
+  .t{fill:#1f2328}.m{fill:#6e6656}.a{fill:#9a6b00}.r{fill:#c93c37}.b{fill:#2f62a8}
+  .relay{fill:#fbecc6;stroke:#b8860b}
+  .si{fill:#e3ecf8;stroke:#4a77b4}
+  .logic{fill:#fde2e1;stroke:#d1453b}
+  .neutral{fill:#f1ebdd;stroke:#c9b98f}
+  .bus{stroke:#57606a;fill:none}
+  .busfill{fill:#57606a}
+  .ln{stroke:#57606a;fill:none}
+  .lnA{stroke:#b8860b;fill:none}
+  .lnR{stroke:#d1453b;fill:none}
+  .arr{fill:#57606a}.arrA{fill:#b8860b}.arrR{fill:#d1453b}
+  .grid{stroke:#e2d8c3}
+  .wave{stroke:#9a6b00;fill:none}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#0f1318}
+    .t{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#e3b341}.r{fill:#ff7b72}.b{fill:#79b0ff}
+    .relay{fill:#2b2414;stroke:#c9a14a}
+    .si{fill:#142033;stroke:#5a8fd0}
+    .logic{fill:#2d1517;stroke:#e5534b}
+    .neutral{fill:#1a1f27;stroke:#39404b}
+    .bus{stroke:#8b949e}.busfill{fill:#8b949e}
+    .ln{stroke:#8b949e}.arr{fill:#8b949e}
+    .lnA{stroke:#c9a14a}.arrA{fill:#c9a14a}
+    .lnR{stroke:#e5534b}.arrR{fill:#e5534b}
+    .grid{stroke:#262c35}
+    .wave{stroke:#e3b341}
+  }
+  text{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+</style>
+<rect class="bg" width="1000" height="610" rx="12"/>
+<text class="t" x="30" y="40" font-size="22" text-anchor="start" font-weight="700" >BrainfuckPC — architecture</text>
+<text class="m" x="30" y="62" font-size="14" text-anchor="start" >One 16-bit adder does everything: IP++, AP±n, *AP±n and relative jumps</text>
+<path class="bus" d="M40,100 L960,100" stroke-width="7" stroke-linejoin="round"/>
+<text class="m" x="960" y="88" font-size="12" text-anchor="end" font-weight="600" >ADDRESS BUS · 16 bit</text>
+<path class="bus" d="M40,520 L960,520" stroke-width="7" stroke-linejoin="round"/>
+<text class="m" x="960" y="544" font-size="12" text-anchor="end" font-weight="600" >DATA BUS · 16 bit</text>
+<rect class="relay" x="110" y="160" width="170" height="74" rx="8" stroke-width="1.6"/>
+<text class="t" x="195.0" y="194.0" font-size="16" text-anchor="middle" font-weight="700" >TMP</text>
+<text class="m" x="195.0" y="212.0" font-size="12" text-anchor="middle" >16-bit · 16 D-triggers</text>
+<rect class="relay" x="110" y="300" width="170" height="64" rx="8" stroke-width="1.6"/>
+<text class="t" x="195.0" y="329.0" font-size="16" text-anchor="middle" font-weight="700" >CMD</text>
+<text class="m" x="195.0" y="347.0" font-size="12" text-anchor="middle" >12-bit immediate</text>
+<rect class="relay" x="110" y="364" width="170" height="40" rx="6" stroke-width="1.6"/>
+<text class="t" x="195.0" y="388.55" font-size="13" text-anchor="middle" font-weight="700" >OPCODE · 4 bit</text>
+<path class="ln" d="M70,520 L70,197 L110,197" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M110.0,197.0 L101.0,201.9 L101.0,192.1 Z"/>
+<path class="ln" d="M70,332 L110,332" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M110.0,332.0 L101.0,336.9 L101.0,327.1 Z"/>
+<text class="m" x="62" y="470" font-size="11" text-anchor="start" transform="rotate(-90 62 470)">*AP / insn</text>
+<path class="ln" d="M195,100 L195,160" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M195.0,160.0 L190.1,151.0 L199.9,151.0 Z"/>
+<text class="m" x="203" y="138" font-size="11" text-anchor="start" >IP or AP</text>
+<path class="relay" d="M350,165 L470,215 L470,355 L350,405 Z" stroke-width="1.6"/>
+<text class="t" x="410" y="272" font-size="17" text-anchor="middle" font-weight="700" >ADDER</text>
+<text class="m" x="410" y="291" font-size="12" text-anchor="middle" >16-bit</text>
+<text class="m" x="410" y="306" font-size="12" text-anchor="middle" >parallel carry</text>
+<text class="a" x="410" y="330" font-size="12" text-anchor="middle" font-weight="600" >≈2 ms</text>
+<path class="lnA" d="M280,197 L315,197 L315,225 L350,225" stroke-width="2.4" stroke-linejoin="round"/>
+<path class="arrA" d="M350.0,225.0 L341.0,229.9 L341.0,220.1 Z"/>
+<text class="a" x="318" y="215" font-size="12" text-anchor="start" font-weight="700" >A</text>
+<path class="lnA" d="M280,332 L315,332 L315,345 L350,345" stroke-width="2.4" stroke-linejoin="round"/>
+<path class="arrA" d="M350.0,345.0 L341.0,349.9 L341.0,340.1 Z"/>
+<text class="a" x="318" y="365" font-size="12" text-anchor="start" font-weight="700" >B ±</text>
+<path class="lnA" d="M470,285 L545,285" stroke-width="3" stroke-linejoin="round"/>
+<path class="lnA" d="M545,175 L545,520" stroke-width="3" stroke-linejoin="round"/>
+<path class="arrA" d="M545.0,520.0 L540.0,511.0 L550.0,511.0 Z"/>
+<text class="a" x="553" y="500" font-size="11" text-anchor="start" font-weight="600" >*AP ← sum</text>
+<circle class="arrA" cx="545" cy="285" r="4.5"/>
+<rect class="relay" x="600" y="150" width="150" height="70" rx="8" stroke-width="1.6"/>
+<text class="t" x="675.0" y="182.0" font-size="16" text-anchor="middle" font-weight="700" >IP</text>
+<text class="m" x="675.0" y="200.0" font-size="12" text-anchor="middle" >instruction pointer</text>
+<rect class="relay" x="600" y="270" width="150" height="70" rx="8" stroke-width="1.6"/>
+<text class="t" x="675.0" y="302.0" font-size="16" text-anchor="middle" font-weight="700" >AP</text>
+<text class="m" x="675.0" y="320.0" font-size="12" text-anchor="middle" >address pointer</text>
+<path class="lnA" d="M545,185 L600,185" stroke-width="2.4" stroke-linejoin="round"/>
+<path class="arrA" d="M600.0,185.0 L591.0,189.9 L591.0,180.1 Z"/>
+<path class="lnA" d="M545,305 L600,305" stroke-width="2.4" stroke-linejoin="round"/>
+<path class="arrA" d="M600.0,305.0 L591.0,309.9 L591.0,300.1 Z"/>
+<path class="ln" d="M750,185 L785,185 L785,100" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M785.0,100.0 L790.0,109.0 L780.0,109.0 Z"/>
+<path class="ln" d="M750,305 L785,305 L785,185" stroke-width="2" stroke-linejoin="round"/>
+<text class="m" x="675" y="250" font-size="11" text-anchor="middle" >via 16-bit RES43 latches</text>
+<rect class="si" x="820" y="135" width="130" height="100" rx="8" stroke-width="1.6"/>
+<text class="t" x="885.0" y="182.0" font-size="16" text-anchor="middle" font-weight="700" >RAM</text>
+<text class="m" x="885.0" y="200.0" font-size="12" text-anchor="middle" >64K × 16 SRAM</text>
+<path class="ln" d="M885,100 L885,135" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M885.0,135.0 L880.0,126.0 L890.0,126.0 Z"/>
+<path class="ln" d="M935,235 L935,520" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M935,520 l-5,-10 l10,0 Z"/>
+<path class="arr" d="M935,235 l-5,10 l10,0 Z"/>
+<rect class="si" x="800" y="290" width="110" height="46" rx="8" stroke-width="1.6"/>
+<text class="t" x="855.0" y="317.9" font-size="14" text-anchor="middle" font-weight="700" >COUT</text>
+<rect class="si" x="800" y="350" width="110" height="46" rx="8" stroke-width="1.6"/>
+<text class="t" x="855.0" y="377.9" font-size="14" text-anchor="middle" font-weight="700" >CIN</text>
+<path class="ln" d="M890,520 L890,336" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M890.0,336.0 L895.0,345.0 L885.0,345.0 Z"/>
+<path class="ln" d="M820,396 L820,520" stroke-width="2" stroke-linejoin="round"/>
+<path class="arr" d="M820.0,520.0 L815.0,511.0 L825.0,511.0 Z"/>
+<text class="m" x="855" y="418" font-size="11" text-anchor="middle" >MCU · UART</text>
+<rect class="logic" x="300" y="430" width="220" height="54" rx="8" stroke-width="1.6"/>
+<text class="t" x="410.0" y="454.0" font-size="14" text-anchor="middle" font-weight="700" >CONTROL LOGIC</text>
+<text class="m" x="410.0" y="472.0" font-size="11" text-anchor="middle" >11-step impulse sequencer</text>
+<path class="lnR" d="M195,404 L195,457 L300,457" stroke-width="2" stroke-linejoin="round"/>
+<path class="arrR" d="M300.0,457.0 L291.0,461.9 L291.0,452.1 Z"/>
+<text class="r" x="660" y="470" font-size="11" text-anchor="middle" >drives every latch / WR / RD line</text>
+<path class="lnR" d="M520,457 L535,457" stroke-width="2" stroke-linejoin="round"/>
+<path class="lnR" d="M555,457 L575,457" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round"/>
+<path class="arrR" d="M575.0,457.0 L566.0,461.9 L566.0,452.1 Z"/>
+<rect class="relay" x="40" y="563" width="22" height="14" rx="3" stroke-width="1.4"/>
+<text class="m" x="70" y="575" font-size="12" text-anchor="start" >reed-relay logic (RES55 / RES64 / RES43)</text>
+<rect class="si" x="350" y="563" width="22" height="14" rx="3" stroke-width="1.4"/>
+<text class="m" x="380" y="575" font-size="12" text-anchor="start" >silicon periphery</text>
+<rect class="logic" x="520" y="563" width="22" height="14" rx="3" stroke-width="1.4"/>
+<text class="m" x="550" y="575" font-size="12" text-anchor="start" >control</text>
+<text class="a" x="960" y="575" font-size="12" text-anchor="end" font-weight="700" >578 relays total</text>
+</svg>

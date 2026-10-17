@@ -100,11 +100,18 @@ endif(NOT AVR_MCU)
 
 #default avr-size args
 if(NOT AVR_SIZE_ARGS)
-    if(APPLE)
-        set(AVR_SIZE_ARGS -B)
-    else(APPLE)
+    # '-C --mcu' exists only in Atmel/Debian-patched binutils;
+    # fall back to Berkeley format on vanilla binutils.
+    execute_process(
+        COMMAND ${AVR_SIZE_TOOL} --help
+        OUTPUT_VARIABLE AVR_SIZE_HELP
+        ERROR_QUIET
+    )
+    if(AVR_SIZE_HELP MATCHES "--mcu")
         set(AVR_SIZE_ARGS -C;--mcu=${AVR_MCU})
-    endif(APPLE)
+    else()
+        set(AVR_SIZE_ARGS -B)
+    endif()
 endif(NOT AVR_SIZE_ARGS)
 
 # prepare base flags for upload tool

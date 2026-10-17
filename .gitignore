@@ -31,3 +31,11 @@ bf/calcPi/calcPi/calcPi/x64/
 fw/memorybrd/build/
 fw/iv6brd/build/
 fw/bin/
+
+# IDE caches
+.vs/
+*.atsuo
+# local CI-style builds
+fw/build/
+fw/bin/
+img/svg/src/__pycache__/

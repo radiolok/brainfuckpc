@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" role="img" aria-label="BrainfuckPC clock tick: fetch on falling edge, execute on rising edge">
+<style>
+  .bg{fill:#fbf8f1}
+  .t{fill:#1f2328}.m{fill:#6e6656}.a{fill:#9a6b00}.r{fill:#c93c37}.b{fill:#2f62a8}
+  .relay{fill:#fbecc6;stroke:#b8860b}
+  .si{fill:#e3ecf8;stroke:#4a77b4}
+  .logic{fill:#fde2e1;stroke:#d1453b}
+  .neutral{fill:#f1ebdd;stroke:#c9b98f}
+  .bus{stroke:#57606a;fill:none}
+  .busfill{fill:#57606a}
+  .ln{stroke:#57606a;fill:none}
+  .lnA{stroke:#b8860b;fill:none}
+  .lnR{stroke:#d1453b;fill:none}
+  .arr{fill:#57606a}.arrA{fill:#b8860b}.arrR{fill:#d1453b}
+  .grid{stroke:#e2d8c3}
+  .wave{stroke:#9a6b00;fill:none}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#0f1318}
+    .t{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#e3b341}.r{fill:#ff7b72}.b{fill:#79b0ff}
+    .relay{fill:#2b2414;stroke:#c9a14a}
+    .si{fill:#142033;stroke:#5a8fd0}
+    .logic{fill:#2d1517;stroke:#e5534b}
+    .neutral{fill:#1a1f27;stroke:#39404b}
+    .bus{stroke:#8b949e}.busfill{fill:#8b949e}
+    .ln{stroke:#8b949e}.arr{fill:#8b949e}
+    .lnA{stroke:#c9a14a}.arrA{fill:#c9a14a}
+    .lnR{stroke:#e5534b}.arrR{fill:#e5534b}
+    .grid{stroke:#262c35}
+    .wave{stroke:#e3b341}
+  }
+  text{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+</style>
+<rect class="bg" width="1000" height="470" rx="12"/>
+<text class="t" x="30" y="40" font-size="22" text-anchor="start" font-weight="700" >One clock tick = one instruction</text>
+<text class="m" x="30" y="62" font-size="14" text-anchor="start" >Fetch on the falling edge, execute on the rising edge. Both phases reuse the same adder.</text>
+<path class="wave" d="M60,100 L150,100 L150,140 L530,140 L530,100 L910,100 L910,140 L950,140" stroke-width="2.6" stroke-linejoin="round"/>
+<path class="arrA" d="M150.0,128.0 L144.5,118.0 L155.5,118.0 Z"/>
+<path class="arrA" d="M530.0,112.0 L535.5,122.0 L524.5,122.0 Z"/>
+<text class="m mono" x="40" y="125" font-size="12" text-anchor="end" font-weight="700" >CLK</text>
+<text class="a" x="340" y="128" font-size="13" text-anchor="middle" font-weight="600" >↓ falling edge</text>
+<text class="a" x="720" y="92" font-size="13" text-anchor="middle" font-weight="600" >↑ rising edge</text>
+<rect class="relay" x="130" y="165" width="400" height="210" rx="8" stroke-width="1.6"/>
+<text class="t" x="150" y="195" font-size="18" text-anchor="start" font-weight="700" >1 · FETCH</text>
+<text class="m" x="150" y="215" font-size="12" text-anchor="start" >same for every instruction</text>
+<circle class="lnA" cx="162" cy="243" r="12" stroke-width="1.8"/>
+<text class="t" x="162" y="248" font-size="13" text-anchor="middle" font-weight="700" >1</text>
+<text class="t mono" x="186" y="244" font-size="14" text-anchor="start" >TMP ← IP</text>
+<text class="m" x="186" y="261" font-size="11" text-anchor="start" >old IP goes through the address bus latches</text>
+<circle class="lnA" cx="162" cy="285" r="12" stroke-width="1.8"/>
+<text class="t" x="162" y="290" font-size="13" text-anchor="middle" font-weight="700" >2</text>
+<text class="t mono" x="186" y="286" font-size="14" text-anchor="start" >IP ← TMP + 1</text>
+<text class="m" x="186" y="303" font-size="11" text-anchor="start" >adder with carry-in = 1</text>
+<circle class="lnA" cx="162" cy="327" r="12" stroke-width="1.8"/>
+<text class="t" x="162" y="332" font-size="13" text-anchor="middle" font-weight="700" >3</text>
+<text class="t mono" x="186" y="328" font-size="14" text-anchor="start" >CMD ← RAM[IP]</text>
+<text class="m" x="186" y="345" font-size="11" text-anchor="start" >opcode → logic, imm12 → adder input B</text>
+<rect class="relay" x="560" y="165" width="400" height="210" rx="8" stroke-width="1.6"/>
+<text class="t" x="580" y="195" font-size="18" text-anchor="start" font-weight="700" >2 · EXECUTE</text>
+<text class="m" x="580" y="215" font-size="12" text-anchor="start" >depends on opcode</text>
+<circle class="lnA" cx="592" cy="243" r="12" stroke-width="1.8"/>
+<text class="t" x="592" y="248" font-size="13" text-anchor="middle" font-weight="700" >1</text>
+<text class="t mono" x="616" y="244" font-size="14" text-anchor="start" >TMP ← AP | *AP | IP</text>
+<text class="m" x="616" y="261" font-size="11" text-anchor="start" >source picked by the opcode</text>
+<circle class="lnA" cx="592" cy="285" r="12" stroke-width="1.8"/>
+<text class="t" x="592" y="290" font-size="13" text-anchor="middle" font-weight="700" >2</text>
+<text class="t mono" x="616" y="286" font-size="14" text-anchor="start" >SUM ← TMP + imm</text>
+<text class="m" x="616" y="303" font-size="11" text-anchor="start" >parallel carry: 3 relay delays ≈ 2 ms</text>
+<circle class="lnA" cx="592" cy="327" r="12" stroke-width="1.8"/>
+<text class="t" x="592" y="332" font-size="13" text-anchor="middle" font-weight="700" >3</text>
+<text class="t mono" x="616" y="328" font-size="14" text-anchor="start" >AP | *AP | IP ← SUM</text>
+<text class="m" x="616" y="345" font-size="11" text-anchor="start" >jumps write IP only if Z-flag matches</text>
+<text class="m" x="500" y="410" font-size="13" text-anchor="middle" >CTRLIO skips the adder: the logic strobes COUT / CIN / MODE / HALT lines instead.</text>
+<text class="a" x="500" y="440" font-size="13" text-anchor="middle" font-weight="600" >Nominal 25 Hz · max ≈ 40 Hz (adder alone runs at 500 Hz) · each phase is an 11-step relay impulse sequencer</text>
+</svg>
