@@ -1,0 +1,206 @@
+[
+ {
+  "id": "Vkg3DC9bF2k",
+  "ru": "BrainfuckPC#3 Архитектура релейной машины",
+  "en": "BrainfuckPC#3 Relay Computer Architecture",
+  "dur": "11:05"
+ },
+ {
+  "id": "CcuIM6Z8ibQ",
+  "ru": "BrainfuckPC#2 Основы релейной логики",
+  "en": "BrainfuckPC#2 Basics of Relay Logic",
+  "dur": "5:58"
+ },
+ {
+  "id": "whk8NKAdsB8",
+  "ru": "BrainfuckPC#1 Обзор релейных компьютеров",
+  "en": "BrainfuckPC#1 Overview of Relay Computers",
+  "dur": "7:37"
+ },
+ {
+  "id": "eaObw0Ac1S0",
+  "ru": "BrainfuckPC#4 План работ",
+  "en": "BrainfuckPC#4 Work Plan",
+  "dur": "12:20"
+ },
+ {
+  "id": "mU3KTtWeB-s",
+  "ru": "BrainfuckPC#5 Набор инструкций",
+  "en": "BrainfuckPC#5 Instruction Set",
+  "dur": "12:18"
+ },
+ {
+  "id": "MGDlfUbEfZg",
+  "ru": "BrainfuckPC#6 Параллельный сумматор",
+  "en": "BrainfuckPC#6 Parallel Adder",
+  "dur": "9:30"
+ },
+ {
+  "id": "urRz3QqpLkc",
+  "ru": "BrainfuckPC#7 Плата памяти",
+  "en": "BrainfuckPC#7 Memory board",
+  "dur": "4:15"
+ },
+ {
+  "id": "Bmlq4-TQYF0",
+  "ru": "Печатная машинка Robotron S6130",
+  "en": "Robotron S6130 typewriter",
+  "dur": "11:19"
+ },
+ {
+  "id": "CVM_kUdpYJo",
+  "ru": "BrainfuckPC#9 Тестер модулей",
+  "en": "BrainfuckPC#9 Module Tester",
+  "dur": "4:43"
+ },
+ {
+  "id": "ITOvUsOz4D8",
+  "ru": "BrainfuckPC#10 Блок сумматора",
+  "en": "BrainfuckPC#10 Adder block",
+  "dur": "8:39"
+ },
+ {
+  "id": "qt5j-cp09JQ",
+  "ru": "BrainfuckPC#11 Корпус и механическое ПЗУ",
+  "en": "BrainfuckPC#11 Case and Mechanical ROM",
+  "dur": "16:55"
+ },
+ {
+  "id": "iSUq5iGlJQY",
+  "ru": "BrainfuckPC#12 Итоги 2017 и планы на 2018",
+  "en": "BrainfuckPC#12 2017 results and 2018 plans",
+  "dur": "22:21"
+ },
+ {
+  "id": "epKDDrXUENw",
+  "ru": "BrainfuckPC#13 Плата индикации на вакуумных семисегментниках",
+  "en": "BrainfuckPC#13 VFD seven-segment indicator board",
+  "dur": "4:57"
+ },
+ {
+  "id": "Skp5epUs-tM",
+  "ru": "BrainfuckPC#14 Блок регистров - начало сборки",
+  "en": "BrainfuckPC#14 Register block — assembly begins",
+  "dur": "19:29"
+ },
+ {
+  "id": "ctT1eXD5qDE",
+  "ru": "BrainfuckPC#15 Монтаж накруткой блока регистров",
+  "en": "BrainfuckPC#15 Wire-wrapping the register block",
+  "dur": "13:04"
+ },
+ {
+  "id": "zqWaLdvAkPY",
+  "ru": "BrainfuckPC#16 Блоки работают!",
+  "en": "BrainfuckPC#16 The blocks work!",
+  "dur": "17:54"
+ },
+ {
+  "id": "8WnqqeKWtjw",
+  "ru": "BrainfuckPC#17 500 сложений в секунду на релейном сумматоре!",
+  "en": "BrainfuckPC#17 500 additions per second on a relay adder!",
+  "dur": "14:13"
+ },
+ {
+  "id": "ySQDlRPBA_4",
+  "ru": "BrainfuckPC#18 Обзор [English]",
+  "en": "BrainfuckPC#18 Overview [English]",
+  "dur": "10:15"
+ },
+ {
+  "id": "ZZ1ySaOimjo",
+  "ru": "BrainfuckPC#19 3D-модель компьютера и тест MIDI",
+  "en": "BrainfuckPC#19 3D Computer Model and MIDI Test",
+  "dur": "11:20"
+ },
+ {
+  "id": "C9Xb2MUKdUw",
+  "ru": "Сборка релейного компьютера. Установка блоков и модулей.",
+  "en": "Relay computer assembly: installing blocks and modules",
+  "dur": "9:42"
+ },
+ {
+  "id": "HTYh7WxUHuo",
+  "ru": "Перфокарты ничто по сравнению с этим устройством!",
+  "en": "Punch cards are nothing compared to this device!",
+  "dur": "8:58"
+ },
+ {
+  "id": "R7ZZ5SoqIDg",
+  "ru": "Сборка релейного компьютера - раскидываем шлейфы",
+  "en": "Relay computer assembly: laying out the ribbon cables",
+  "dur": "7:27"
+ },
+ {
+  "id": "OsPinBNLMro",
+  "ru": "Сборка релейного компьютера. Подаем питание",
+  "en": "Relay computer assembly: power up",
+  "dur": "9:49"
+ },
+ {
+  "id": "8PEWXZFjvvA",
+  "ru": "Релейный музыкальный инструмент [ENG]",
+  "en": "Reed relay musical instrument [ENG]",
+  "dur": "4:50"
+ },
+ {
+  "id": "jh2PmGSnjQA",
+  "ru": "Блок логики релейного компьютера и ошибки проектирования",
+  "en": "Relay computer logic block and design mistakes",
+  "dur": "18:22"
+ },
+ {
+  "id": "MGb6U_M67Wg",
+  "ru": "Сборка релейного компьютера. [Не]логичная слесарка",
+  "en": "Relay computer assembly: [il]logical metalwork",
+  "dur": "10:08"
+ },
+ {
+  "id": "3DgU2Xs-H1U",
+  "ru": "Блок логики релейного компьютера",
+  "en": "Relay Computer Logic Block",
+  "dur": "15:57"
+ },
+ {
+  "id": "5hhbGBlP3_4",
+  "ru": "Пожалуй, самый быстрый релейный компьютер в мире",
+  "en": "Perhaps the fastest relay computer in the world",
+  "dur": "15:57"
+ },
+ {
+  "id": "CjOYOlJl9wg",
+  "ru": "Тройной Brainfuck, или что такое безумие. Артём Кашканов. Митап 17.11.18",
+  "en": "Triple Brainfuck, or what madness is — meetup talk, 17.11.2018",
+  "dur": "24:53"
+ },
+ {
+  "id": "GQyRmFs23HQ",
+  "ru": "BrainfuckPC Rewind 2018 и планы на 2019",
+  "en": "BrainfuckPC Rewind 2018 and plans for 2019",
+  "dur": "1:11:31"
+ },
+ {
+  "id": "UwRxRw0NNDI",
+  "ru": "Пи=4! и другие ошибки вычислений на реле",
+  "en": "Pi = 4! and other relay computing bugs",
+  "dur": "15:03"
+ },
+ {
+  "id": "BjQQjhtGF4E",
+  "ru": "Деревянная тумба для релейного компьютера",
+  "en": "A wooden stand for the relay computer",
+  "dur": "8:22"
+ },
+ {
+  "id": "8Ui1VDmc7R4",
+  "ru": "Анонс: Релейный компьютер на ВДНХ 31 августа!",
+  "en": "Announcement: the relay computer at VDNKh, August 31",
+  "dur": "1:21"
+ },
+ {
+  "id": "kuoVp4o0ClQ",
+  "ru": "BrainfuckPC Rewind 2019 и планы на 2020",
+  "en": "BrainfuckPC Rewind 2019 and plans for 2020",
+  "dur": "2:20:35"
+ }
+]

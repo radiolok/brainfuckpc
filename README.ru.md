@@ -6,6 +6,7 @@
   <a href="https://github.com/radiolok/brainfuckpc/actions/workflows/build.yml"><img src="https://github.com/radiolok/brainfuckpc/actions/workflows/build.yml/badge.svg" alt="build"></a>
   <a href="LICENCE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="GPL-3.0"></a>
   <a href="https://habr.com/ru/articles/442732/"><img src="https://img.shields.io/badge/Habr-3%20статьи-6a9fb5" alt="Хабр"></a>
+  <a href="https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn"><img src="https://img.shields.io/badge/YouTube-34%20видео-red" alt="YouTube"></a>
   <a href="https://hackaday.io/project/18599-brainfuck-relay-computer"><img src="https://img.shields.io/badge/hackaday.io-build%20log-1a1a1a" alt="hackaday.io"></a>
   <img src="https://img.shields.io/badge/готовность-98%25-d4a72c" alt="status">
 </p>
@@ -78,6 +79,18 @@ Brainfuck нужны только лента, указатель на неё и 
 | РЭС55 переключается на 1,7 кГц | сумматор и регистры — первый запуск | блоки и индикаторы, 2018 |
 
 Подробнее: [описание железа](doc/hardware.md) — модули, платы и где лежит каждая схема.
+
+## Видео
+
+Вся постройка снята на видео — 34 выпуска от первых набросков в 2017 году до
+готовой машины, считающей π:
+**[▶ плейлист](https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn)** ·
+[список с описанием](doc/videos.md)
+
+| | | |
+|:---:|:---:|:---:|
+| <a href="https://youtu.be/5hhbGBlP3_4"><img src="https://img.youtube.com/vi/5hhbGBlP3_4/mqdefault.jpg" alt="Пожалуй, самый быстрый релейный компьютер в мире"></a> | <a href="https://youtu.be/CjOYOlJl9wg"><img src="https://img.youtube.com/vi/CjOYOlJl9wg/mqdefault.jpg" alt="Тройной Brainfuck — доклад на митапе, 2018"></a> | <a href="https://youtu.be/UwRxRw0NNDI"><img src="https://img.youtube.com/vi/UwRxRw0NNDI/mqdefault.jpg" alt="Пи = 4! и другие ошибки вычислений на реле"></a> |
+| Пожалуй, самый быстрый релейный компьютер в мире | Тройной Brainfuck — доклад на митапе, 2018 | Пи = 4! и другие ошибки вычислений на реле |
 
 ## Программы и прошивки
 
@@ -156,6 +169,7 @@ sudo apt install cmake gcc-avr avr-libc binutils-avr
 | 2018 | [Мои маленькие реле: Brainfuck компьютер — это реальность](https://habr.com/ru/articles/411145/) — модули, блоки, первые тесты |
 | 2019 | [Мои маленькие реле: Тройной Brainfuck, или что такое безумие](https://habr.com/ru/articles/442732/) — готовая машина |
 
+Серия видео: [34 ролика на YouTube](doc/videos.md).
 Журнал сборки на английском: [hackaday.io/project/18599](https://hackaday.io/project/18599-brainfuck-relay-computer).
 
 BrainfuckPC стал первым из трёх «невозможных» компьютеров: за ним последовали

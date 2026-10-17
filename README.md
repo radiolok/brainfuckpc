@@ -6,6 +6,7 @@
   <a href="https://github.com/radiolok/brainfuckpc/actions/workflows/build.yml"><img src="https://github.com/radiolok/brainfuckpc/actions/workflows/build.yml/badge.svg" alt="build"></a>
   <a href="LICENCE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="GPL-3.0"></a>
   <a href="https://habr.com/ru/articles/442732/"><img src="https://img.shields.io/badge/Habr-3%20articles-6a9fb5" alt="Habr"></a>
+  <a href="https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn"><img src="https://img.shields.io/badge/YouTube-34%20videos-red" alt="YouTube"></a>
   <a href="https://hackaday.io/project/18599-brainfuck-relay-computer"><img src="https://img.shields.io/badge/hackaday.io-build%20log-1a1a1a" alt="hackaday.io"></a>
   <img src="https://img.shields.io/badge/status-finished%20(98%25)-d4a72c" alt="status">
 </p>
@@ -73,6 +74,18 @@ machine.
 | a RES55 relay switching at 1.7 kHz | adder + registers, first run | blocks and indicators, 2018 |
 
 More: [hardware guide](doc/hardware.md) — modules, boards and where every schematic lives.
+
+## Videos
+
+The whole build is on video — 34 episodes from the first sketches in 2017 to the
+finished machine computing π (in Russian):
+**[▶ playlist](https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn)** ·
+[annotated list](doc/videos.md)
+
+| | | |
+|:---:|:---:|:---:|
+| <a href="https://youtu.be/5hhbGBlP3_4"><img src="https://img.youtube.com/vi/5hhbGBlP3_4/mqdefault.jpg" alt="Perhaps the fastest relay computer in the world"></a> | <a href="https://youtu.be/CjOYOlJl9wg"><img src="https://img.youtube.com/vi/CjOYOlJl9wg/mqdefault.jpg" alt="Triple Brainfuck — meetup talk, 2018"></a> | <a href="https://youtu.be/UwRxRw0NNDI"><img src="https://img.youtube.com/vi/UwRxRw0NNDI/mqdefault.jpg" alt="Pi = 4! and other relay computing bugs"></a> |
+| Perhaps the fastest relay computer in the world | Triple Brainfuck — meetup talk, 2018 | Pi = 4! and other relay computing bugs |
 
 ## Software
 
@@ -150,6 +163,7 @@ The full story, in Russian, with videos:
 | 2018 | [Мои маленькие реле: Brainfuck компьютер — это реальность](https://habr.com/ru/articles/411145/) — modules, blocks, first tests |
 | 2019 | [Мои маленькие реле: Тройной Brainfuck, или что такое безумие](https://habr.com/ru/articles/442732/) — the finished machine |
 
+Video series: [34 videos on YouTube](doc/videos.md).
 Build log in English: [hackaday.io/project/18599](https://hackaday.io/project/18599-brainfuck-relay-computer).
 
 BrainfuckPC was the first of three "impossible" computers: it was followed by

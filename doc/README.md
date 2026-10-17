@@ -7,6 +7,7 @@
 | [hardware.md](hardware.md) | relays, modules, blocks, latches, memory board, indicators, schematic map |
 | [firmware.md](firmware.md) | AVR firmware projects, building, flashing, CI |
 | [programming.md](programming.md) | bfutils compiler & emulator, binary format, writing programs |
+| [videos.md](videos.md) | all 34 YouTube videos in order, with English titles; transcripts tooling |
 
 Articles on Habr (in Russian) — the most complete story of the build:
 
