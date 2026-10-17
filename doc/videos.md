@@ -84,8 +84,17 @@ Videos are listed oldest first, as in the playlist.
 
 ## Transcripts
 
-The spoken content is not in the repository yet. YouTube refuses to hand out
-subtitles to cloud machines, so they have to be downloaded from a home
-connection: [`tools/youtube/`](../tools/youtube) has a script that fetches the
-auto-generated Russian subtitles and turns them into readable, timestamped text
-in `doc/videos/`.
+**[Timestamped transcripts of all 34 videos](videos/README.md)** are in
+[`doc/videos/`](videos). They come from YouTube's captions: auto-generated
+Russian for most videos, English for #18 and #24, manual captions for a few.
+Every paragraph starts with a link that opens the video at that moment. The
+author's name and a few recurring terms are corrected; the rest is as
+recognised.
+
+To refresh them, run [`tools/youtube/fetch_subs.sh`](../tools/youtube) from a
+home connection. YouTube refuses subtitles to cloud machines, and may need
+`COOKIES_FROM=firefox`.
+
+Facts that appear only in the videos — not in the Habr articles — are folded
+into [architecture.md](architecture.md) and [hardware.md](hardware.md), each
+with a link to the moment in the video.
