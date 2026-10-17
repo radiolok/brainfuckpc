@@ -109,5 +109,6 @@ Rules of thumb:
 | 355/113, 6 digits, 16-bit mode | ~60 000 | ~40 min | failed: memory board bit-13 fault |
 | 355/113, 2 digits, 8-bit mode | ~1 600 | ~1 min | ✔ "3.14" |
 
-Videos of these runs are on the author's YouTube channel (*Artem Kashkanov*):
-"Hello world 25hz", "pi=4", "Calculate Pi on 25Hz", "Seven nations army in relays".
+The π runs and their bugs are the subject of
+[“Пи=4! и другие ошибки вычислений на реле”](https://youtu.be/UwRxRw0NNDI);
+the rest of the series is listed in [videos.md](videos.md).

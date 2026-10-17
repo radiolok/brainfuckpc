@@ -39,3 +39,7 @@ fw/bin/
 fw/build/
 fw/bin/
 img/svg/src/__pycache__/
+
+# raw YouTube subtitles
+tools/youtube/.subs/
+tools/youtube/__pycache__/

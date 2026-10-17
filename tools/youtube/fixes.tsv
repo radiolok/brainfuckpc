@@ -1,0 +1,26 @@
+# Recurring speech-recognition errors in the auto-captions, fixed by vtt2md.py.
+# One rule per line: <python regex> TAB <replacement>. Case-insensitive.
+# Applied in order to every caption line. Keep the list conservative: only
+# words that are always wrong in this playlist.
+#
+# the author's name
+\b(?:ярким|я рким)\s+(?:каштанов|каскадов|кашкаров|кошкаров|кашканов)\b	Артём Кашканов
+\bартем\s+(?:каштанов|каскадов|кашкаров|кошкаров|кашканов)\b	Артём Кашканов
+\b(?:каштанов|кашкаров|кошкаров|каскадов)\b	Кашканов
+# "релейный" heard as rally / roles / oil
+\bраллийн	релейн
+\bролей\s+нов(?:ого|а)\b	релейного
+\bролей\s+н(?:ам|ом|а|о)\b	релейном
+(?<![а-яё])елейн	релейн
+\bорлин	релейн
+\bрулежк	релюшк
+\bрюшк	релюшк
+# the language
+\b(?:brain|браян|бренд|брин|bryan)\s*(?:фак|факт|faq|fact)\b	Brainfuck
+\bbrainfct\b	Brainfuck
+\bgreenfog\b	Brainfuck
+# tubes and the adder
+\bд[еи]к[оа]\s?трон	декатрон
+\bсуматр	сумматор
+# where the articles are
+\bхабре\s+гектор\b	Хабре, Geektimes
