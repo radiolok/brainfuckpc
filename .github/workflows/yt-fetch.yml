@@ -1,9 +1,13 @@
 name: yt-fetch
 on: push
+permissions:
+  contents: write
 jobs:
   fetch:
     runs-on: ubuntu-24.04
+    if: "!contains(github.event.head_commit.message, '[yt-data]')"
     steps:
+      - uses: actions/checkout@v7
       - run: pip install -q yt-dlp && yt-dlp --version
       - name: Playlist metadata
         run: |
@@ -17,9 +21,11 @@ jobs:
           yt-dlp --skip-download --write-info-json --write-subs --write-auto-subs \
                  --sub-langs "ru.*,ru,en,en.*" --sub-format vtt --no-overwrites --ignore-errors \
                  --sleep-requests 1 -o "%(playlist_index)03d_%(id)s.%(ext)s" \
-                 "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" 2>&1 | tail -80
+                 "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" 2>&1 | tee yt-dlp.log | tail -80
           ls | head -200
-      - uses: actions/upload-artifact@v7
-        with:
-          name: yt
-          path: out/
+          cd .. ; ls out > out/_files.txt
+      - name: Commit results
+        run: |
+          rm -rf yt && mv out yt
+          git config user.name ci && git config user.email ci@users.noreply.github.com
+          git add yt && git commit -qm "[yt-data] results" && git push
