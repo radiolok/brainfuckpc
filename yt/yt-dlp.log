@@ -1,0 +1,1949 @@
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Writing playlist metadata as JSON to: 000_PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn.info.json
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading tv simply player API JSON
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading tv simply player API JSON
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading tv simply player API JSON
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading tv simply player API JSON
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading tv simply player API JSON
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading tv simply player API JSON
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading tv simply player API JSON
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading tv simply player API JSON
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading tv simply player API JSON
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading tv simply player API JSON
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading tv simply player API JSON
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading tv simply player API JSON
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading tv simply player API JSON
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading tv simply player API JSON
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading tv simply player API JSON
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading tv simply player API JSON
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading tv simply player API JSON
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading tv simply player API JSON
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading tv simply player API JSON
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading tv simply player API JSON
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading tv simply player API JSON
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading tv simply player API JSON
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading tv simply player API JSON
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading tv simply player API JSON
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading tv simply player API JSON
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading tv simply player API JSON
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading tv simply player API JSON
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading tv simply player API JSON
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading tv simply player API JSON
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading tv simply player API JSON
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading tv simply player API JSON
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading tv simply player API JSON
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading tv simply player API JSON
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading tv simply player API JSON
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[info] Writing updated playlist metadata as JSON to: 000_PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn.info.json
+[download] Finished downloading playlist: BrainfuckPC
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Playlist metadata is already present
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading mweb client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading mweb player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Finished downloading playlist: BrainfuckPC
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Playlist metadata is already present
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading web safari client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading web safari player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Finished downloading playlist: BrainfuckPC
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Playlist metadata is already present
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading android vr player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Finished downloading playlist: BrainfuckPC
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Playlist metadata is already present
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading player 0229cd64-main
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+WARNING: [youtube] BjQQjhtGF4E: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+WARNING: [youtube] BjQQjhtGF4E: Some tv client https formats have been skipped as they are missing a URL. YouTube may have enabled the SABR-only streaming experiment for the current session. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading tv client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading tv player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Finished downloading playlist: BrainfuckPC
+WARNING: [youtube:tab] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube:tab] Extracting URL: https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Downloading webpage
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn: Redownloading playlist API JSON with unavailable videos
+[download] Downloading playlist: BrainfuckPC
+[youtube:tab] Sleeping 1.0 seconds ...
+[youtube:tab] PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn page 1: Downloading API JSON
+[info] Playlist metadata is already present
+[youtube:tab] Playlist BrainfuckPC: Downloading 34 items of 34
+[download] Downloading item 1 of 34
+WARNING: [youtube] Preferring "ru" translated fields. Note that some metadata extraction may fail or be incorrect.
+[youtube] Extracting URL: https://www.youtube.com/watch?v=kuoVp4o0ClQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading player 0229cd64-main
+[youtube] Sleeping 1.0 seconds ...
+[youtube] kuoVp4o0ClQ: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] kuoVp4o0ClQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 2 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8Ui1VDmc7R4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8Ui1VDmc7R4: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8Ui1VDmc7R4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 3 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=BjQQjhtGF4E
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] BjQQjhtGF4E: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] BjQQjhtGF4E: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 4 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=UwRxRw0NNDI
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] UwRxRw0NNDI: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] UwRxRw0NNDI: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 5 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=GQyRmFs23HQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] GQyRmFs23HQ: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] GQyRmFs23HQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 6 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CjOYOlJl9wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CjOYOlJl9wg: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CjOYOlJl9wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 7 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=5hhbGBlP3_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 5hhbGBlP3_4: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 5hhbGBlP3_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 8 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=3DgU2Xs-H1U
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 3DgU2Xs-H1U: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 3DgU2Xs-H1U: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 9 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGb6U_M67Wg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGb6U_M67Wg: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGb6U_M67Wg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 10 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=jh2PmGSnjQA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] jh2PmGSnjQA: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] jh2PmGSnjQA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 11 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8PEWXZFjvvA
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8PEWXZFjvvA: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8PEWXZFjvvA: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 12 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=OsPinBNLMro
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] OsPinBNLMro: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] OsPinBNLMro: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 13 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=R7ZZ5SoqIDg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] R7ZZ5SoqIDg: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] R7ZZ5SoqIDg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 14 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=HTYh7WxUHuo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] HTYh7WxUHuo: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] HTYh7WxUHuo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 15 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=C9Xb2MUKdUw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] C9Xb2MUKdUw: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] C9Xb2MUKdUw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 16 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ZZ1ySaOimjo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ZZ1ySaOimjo: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ZZ1ySaOimjo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 17 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ySQDlRPBA_4
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ySQDlRPBA_4: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ySQDlRPBA_4: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 18 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=8WnqqeKWtjw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] 8WnqqeKWtjw: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] 8WnqqeKWtjw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 19 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=zqWaLdvAkPY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] zqWaLdvAkPY: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] zqWaLdvAkPY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 20 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ctT1eXD5qDE
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ctT1eXD5qDE: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ctT1eXD5qDE: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 21 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Skp5epUs-tM
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Skp5epUs-tM: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Skp5epUs-tM: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 22 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=epKDDrXUENw
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] epKDDrXUENw: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] epKDDrXUENw: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 23 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iSUq5iGlJQY
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] iSUq5iGlJQY: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] iSUq5iGlJQY: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 24 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qt5j-cp09JQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] qt5j-cp09JQ: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] qt5j-cp09JQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 25 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=ITOvUsOz4D8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] ITOvUsOz4D8: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] ITOvUsOz4D8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 26 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CVM_kUdpYJo
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CVM_kUdpYJo: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CVM_kUdpYJo: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 27 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Bmlq4-TQYF0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Bmlq4-TQYF0: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Bmlq4-TQYF0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 28 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=urRz3QqpLkc
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] urRz3QqpLkc: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] urRz3QqpLkc: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 29 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MGDlfUbEfZg
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] MGDlfUbEfZg: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] MGDlfUbEfZg: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 30 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mU3KTtWeB-s
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] mU3KTtWeB-s: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] mU3KTtWeB-s: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 31 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=eaObw0Ac1S0
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] eaObw0Ac1S0: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] eaObw0Ac1S0: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 32 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=whk8NKAdsB8
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] whk8NKAdsB8: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] whk8NKAdsB8: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 33 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=CcuIM6Z8ibQ
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] CcuIM6Z8ibQ: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] CcuIM6Z8ibQ: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Downloading item 34 of 34
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Vkg3DC9bF2k
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading webpage
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading web embedded client config
+[youtube] Sleeping 1.0 seconds ...
+[youtube] Vkg3DC9bF2k: Downloading web embedded player API JSON
+WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+ERROR: [youtube] Vkg3DC9bF2k: Войдите в аккаунт, чтобы подтвердить, что вы не бот
+[download] Finished downloading playlist: BrainfuckPC
