@@ -12,16 +12,22 @@ jobs:
       - name: Playlist metadata
         run: |
           mkdir -p out
-          yt-dlp --flat-playlist -J "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" > out/playlist.json
+          yt-dlp --extractor-args "youtube:lang=ru" --flat-playlist -J "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" > out/playlist.json
           python3 -c "import json;d=json.load(open('out/playlist.json'));[print(e['id'],e.get('duration'),e['title']) for e in d['entries']]"
       - name: Per-video info and subtitles
         continue-on-error: true
         run: |
           cd out
-          yt-dlp --skip-download --write-info-json --write-subs --write-auto-subs \
-                 --sub-langs "ru.*,ru,en,en.*" --sub-format vtt --no-overwrites --ignore-errors \
-                 --sleep-requests 1 -o "%(playlist_index)03d_%(id)s.%(ext)s" \
-                 "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" 2>&1 | tee yt-dlp.log | tail -80
+          for pc in tv_simply mweb web_safari android_vr tv web_embedded; do
+            echo "=== player_client=$pc"
+            yt-dlp --skip-download --write-info-json --write-subs --write-auto-subs \
+                   --extractor-args "youtube:lang=ru;player_client=$pc" \
+                   --sub-langs "ru,ru-orig,en" --sub-format vtt --no-overwrites --ignore-errors \
+                   --sleep-requests 1 -o "%(playlist_index)03d_%(id)s.%(ext)s" \
+                   "https://www.youtube.com/playlist?list=PLHI3L7Als_GPlqEA98NgcnIerBVcbE5Fn" 2>&1 | tee -a yt-dlp.log | grep -E "ERROR|Writing video subtitles" | head -8
+            n=$(ls *.vtt 2>/dev/null | wc -l); echo "vtt so far: $n"
+            [ "$n" -ge 30 ] && break
+          done
           ls | head -200
           cd .. ; ls out > out/_files.txt
       - name: Commit results
